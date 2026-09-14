@@ -1,0 +1,155 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-brand-warm: var(--brand-warm);
+  --color-brand-sky: var(--brand-sky);
+  --color-hero: var(--hero);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-hero-muted: var(--hero-muted);
+  --color-ink: var(--ink);
+  --color-ink-panel: var(--ink-panel);
+  --color-ink-line: var(--ink-line);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-dashboard: var(--dashboard);
+  --color-dashboard-panel: var(--dashboard-panel);
+  --color-dashboard-line: var(--dashboard-line);
+  --color-dashboard-foreground: var(--dashboard-foreground);
+  --color-dashboard-muted: var(--dashboard-muted);
+  --color-dashboard-accent: var(--dashboard-accent);
+  --color-dashboard-success: var(--dashboard-success);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+  --shadow-brand: var(--shadow-brand);
+  --shadow-dashboard: var(--shadow-dashboard);
+}
+
+:root {
+  --radius: .55rem;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", "Manrope", sans-serif;
+  --background: oklch(.99 .003 250);
+  --foreground: oklch(.20 .05 252);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(.20 .05 252);
+  --primary: oklch(.53 .18 255);
+  --primary-foreground: oklch(.99 .004 250);
+  --secondary: oklch(.94 .025 244);
+  --secondary-foreground: oklch(.28 .08 254);
+  --muted: oklch(.965 .009 245);
+  --muted-foreground: oklch(.49 .035 252);
+  --accent: oklch(.93 .035 226);
+  --accent-foreground: oklch(.34 .11 252);
+  --destructive: oklch(.62 .19 28);
+  --border: oklch(.90 .018 247);
+  --input: oklch(.86 .025 247);
+  --ring: oklch(.59 .17 254);
+  --success: oklch(.63 .15 155);
+  --brand-warm: oklch(.77 .17 67);
+  --brand-sky: oklch(.76 .13 220);
+  --hero: oklch(.19 .065 255);
+  --hero-foreground: oklch(.99 .004 245);
+  --hero-muted: oklch(.79 .035 240);
+  --ink: oklch(.16 .045 255);
+  --ink-panel: oklch(.205 .052 255);
+  --ink-line: oklch(.31 .045 252);
+  --ink-foreground: oklch(.98 .005 245);
+  --ink-muted: oklch(.75 .03 245);
+  --dashboard: oklch(.145 .045 254);
+  --dashboard-panel: oklch(.19 .05 254);
+  --dashboard-line: oklch(.29 .045 254);
+  --dashboard-foreground: oklch(.98 .005 245);
+  --dashboard-muted: oklch(.68 .035 245);
+  --dashboard-accent: oklch(.67 .16 235);
+  --dashboard-success: oklch(.72 .14 155);
+  --shadow-soft: 0 3px 16px color-mix(in oklab, var(--foreground) 5%, transparent);
+  --shadow-card: 0 16px 40px color-mix(in oklab, var(--foreground) 10%, transparent);
+  --shadow-brand: 0 12px 28px color-mix(in oklab, var(--primary) 28%, transparent);
+  --shadow-dashboard: 0 32px 80px color-mix(in oklab, var(--ink) 45%, transparent);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { margin: 0; overflow-x: hidden; background: var(--background); color: var(--foreground); font-family: var(--font-body); letter-spacing: 0; }
+  button, a, input, textarea { letter-spacing: 0; }
+  button { cursor: pointer; }
+  ::selection { background: color-mix(in oklab, var(--primary) 25%, transparent); }
+}
+
+@utility container { width: min(100% - 2rem, 1180px); margin-inline: auto; }
+@utility section { padding-block: clamp(4.5rem, 8vw, 7.5rem); }
+@utility hero-grid {
+  background-image: linear-gradient(color-mix(in oklab, var(--hero-foreground) 4%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklab, var(--hero-foreground) 4%, transparent) 1px, transparent 1px), radial-gradient(circle at 50% 20%, color-mix(in oklab, var(--primary) 35%, transparent), transparent 45%);
+  background-size: 48px 48px, 48px 48px, 100% 100%;
+}
+
+@media (max-width: 640px) {
+  .dashboard-shell { font-size: 90%; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dashboard-shell { animation: dashboard-in .8s ease-out both; }
+  @keyframes dashboard-in { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: none; } }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 6s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s ease-in-out infinite;
+}
+
+.glass-panel {
+  background: color-mix(in oklab, var(--card) 80%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+

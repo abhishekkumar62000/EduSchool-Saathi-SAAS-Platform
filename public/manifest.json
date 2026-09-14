@@ -1,0 +1,63 @@
+{
+  "name": "EduSchool-Saathi — HAR SCHOOL KA SAATHI",
+  "short_name": "EduSchool-Saathi",
+  "description": "HAR SCHOOL KA SAATHI: #1 Cloud School Management ERP & SaaS Platform for Schools across Bihar & India",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#020617",
+  "theme_color": "#1E40AF",
+  "categories": ["education", "productivity", "business"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/logo-optimized.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Quick Attendance",
+      "short_name": "Attendance",
+      "description": "Take 10-Second Daily School Attendance",
+      "url": "/#dashboard",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Fee Collection",
+      "short_name": "Fees",
+      "description": "Collect Fees & Generate Digital Receipts",
+      "url": "/#features",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "School Pricing Plans",
+      "short_name": "Pricing",
+      "description": "Explore Starter & Pro Subscriptions",
+      "url": "/#pricing",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
