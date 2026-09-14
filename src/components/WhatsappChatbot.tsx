@@ -227,40 +227,45 @@ export function WhatsappChatbot() {
         </div>
       )}
 
-      {/* Main Floating Trigger Button */}
-      <button
-        type="button"
-        onClick={() => {
-          setIsOpen(!isOpen);
-          setHasUnread(false);
-        }}
-        aria-label="Open WhatsApp Chat"
-        className="group relative flex items-center gap-2.5 rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 px-4 py-3 text-white shadow-[0_8px_30px_rgba(4,120,87,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 ring-2 ring-emerald-400/40"
-      >
-        {/* Glow pulse effect */}
-        <span className="absolute -inset-0.5 rounded-full bg-emerald-400 opacity-30 blur-md group-hover:opacity-60 transition-opacity" />
+      {/* Main Floating Trigger Button - Round ChatBot Icon */}
+      <div className="relative group">
+        <button
+          type="button"
+          onClick={() => {
+            setIsOpen(!isOpen);
+            setHasUnread(false);
+          }}
+          aria-label="Open WhatsApp Chat Support"
+          className="relative grid size-14 place-items-center rounded-full bg-gradient-to-tr from-emerald-600 via-emerald-500 to-teal-500 text-white shadow-[0_10px_35px_rgba(4,120,87,0.55)] transition-all duration-300 hover:scale-110 active:scale-95 ring-4 ring-emerald-400/30 group-hover:ring-emerald-400/50"
+        >
+          {/* Ambient Outer Pulse */}
+          <span className="absolute -inset-1 rounded-full bg-emerald-400 opacity-30 blur-md group-hover:opacity-75 transition-opacity animate-pulse" />
 
-        {/* WhatsApp Icon */}
-        <div className="relative size-7 rounded-full bg-white/20 grid place-items-center shrink-0">
-          <MessageSquare className="size-4 fill-white text-white" />
+          {/* Inner WhatsApp Chat Icon */}
+          <MessageSquare className="relative size-7 fill-white text-white drop-shadow-md transition-transform duration-300 group-hover:rotate-6" />
+
+          {/* Online Live Indicator dot */}
+          <span className="absolute bottom-1 right-1 size-3.5 rounded-full bg-emerald-400 ring-2 ring-slate-950 shadow-sm">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-300 opacity-75" />
+          </span>
+
+          {/* Unread Message Badge */}
           {hasUnread && !isOpen && (
-            <span className="absolute -top-1 -right-1 flex size-3">
+            <span className="absolute -top-1 -right-1 flex size-4">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-amber-400 opacity-75" />
-              <span className="relative inline-flex size-3 rounded-full bg-amber-400 border border-slate-950" />
+              <span className="relative inline-flex size-4 items-center justify-center rounded-full bg-amber-400 border-2 border-slate-950 text-[9px] font-black text-slate-950">
+                1
+              </span>
             </span>
           )}
-        </div>
+        </button>
 
-        {/* Label */}
-        <div className="relative text-left pr-1">
-          <span className="block text-[11px] font-black uppercase tracking-wide leading-none text-white">
-            WhatsApp Support
-          </span>
-          <span className="block text-[9px] font-bold text-emerald-200 leading-tight mt-0.5">
-            3 Lines Active (Madhubani HQ)
-          </span>
+        {/* Hover Tooltip for Desktop */}
+        <div className="pointer-events-none absolute right-full top-1/2 -translate-y-1/2 mr-3 hidden lg:group-hover:flex items-center gap-1.5 whitespace-nowrap rounded-xl bg-slate-950/95 px-3 py-1.5 text-[11px] font-extrabold text-white shadow-xl border border-emerald-500/30 backdrop-blur-md">
+          <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+          WhatsApp Support (3 Lines)
         </div>
-      </button>
+      </div>
     </div>
   );
 }

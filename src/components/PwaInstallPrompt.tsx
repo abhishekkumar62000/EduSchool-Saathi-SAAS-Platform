@@ -378,25 +378,26 @@ export function DesktopPwaInstallWidget() {
 
   return (
     <>
-      {/* Visible ONLY on desktop screens (hidden on mobile, lg:flex) */}
-      <div className="hidden lg:flex items-center gap-2.5 rounded-full border border-primary/30 bg-slate-950/90 py-1.5 pl-2 pr-3 text-white shadow-xl backdrop-blur-xl ring-1 ring-white/10 transition-all hover:scale-105 hover:border-primary/60 group">
-        <div className="size-7 rounded-full bg-white p-0.5 shadow-sm overflow-hidden shrink-0 flex items-center justify-center">
+      {/* Floating Install App Widget (Visible on BOTH Mobile & Desktop, docked above Chatbot) */}
+      <div className="flex items-center gap-2 rounded-full border border-primary/30 bg-slate-950/95 py-1 pl-1.5 pr-2.5 sm:py-1.5 sm:pl-2 sm:pr-3 text-white shadow-xl backdrop-blur-xl ring-1 ring-white/10 transition-all hover:scale-105 hover:border-primary/60 group">
+        <div className="size-6 sm:size-7 rounded-full bg-white p-0.5 shadow-sm overflow-hidden shrink-0 flex items-center justify-center">
           <img src="/logo-optimized.png" alt="EduSchool Logo" className="size-full object-contain" />
         </div>
         <div className="text-left">
-          <div className="text-[10px] font-black uppercase tracking-wider text-[#FF671F]">
-            Install Desktop App
+          <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-[#FF671F]">
+            Install App
           </div>
-          <div className="text-[9px] text-slate-300 -mt-0.5">
-            1-Click Chrome Shortcut
+          <div className="text-[8px] sm:text-[9px] text-slate-300 -mt-0.5 hidden xs:block">
+            1-Click Shortcut
           </div>
         </div>
         <button
           type="button"
           onClick={handleInstallClick}
-          className="ml-1 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-2.5 py-1 text-[10px] font-extrabold text-white shadow-brand hover:brightness-110 active:scale-95 transition-all"
+          className="ml-0.5 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-2 py-0.5 sm:px-2.5 sm:py-1 text-[9px] sm:text-[10px] font-extrabold text-white shadow-brand hover:brightness-110 active:scale-95 transition-all"
         >
-          <Download className="size-2.5" /> Install
+          <Download className="size-2.5" />
+          <span>Install</span>
         </button>
       </div>
 
