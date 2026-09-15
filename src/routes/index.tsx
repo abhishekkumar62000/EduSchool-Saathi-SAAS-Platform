@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import schoolImage from "../assets/bihar-school-classroom.jpg";
 import logoImg from "../assets/logo-optimized.png";
+import founderCeoImg from "../assets/Founder CEO.png";
+import founderImg from "../assets/Founder.jpeg";
 import { PwaInstallPrompt, InstallAppButton } from "../components/PwaInstallPrompt";
 import { WhatsappChatbot } from "../components/WhatsappChatbot";
 
@@ -235,11 +237,10 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
   }, []);
 
   const links = [
-    ["Home", "home"],
     ["About", "about"],
+    ["Founder & CEO", "founder"],
+    ["25+ Schools Network", "schools-network-link"],
     ["Partners", "ecosystem"],
-    ["Solutions", "solutions"],
-    ["ROI Calculator", "roi-calculator"],
     ["Features", "features"],
     ["Roles", "roles"],
     ["Pricing", "pricing"],
@@ -263,9 +264,14 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             {links.map(([label, id]) => (
               <a
                 key={id}
-                href={`#${id}`}
-                className="text-xs font-bold text-muted-foreground transition-colors hover:text-primary"
+                href={id === "schools-network-link" ? "/schools-network" : `#${id}`}
+                className={`text-xs font-bold transition-colors ${
+                  id === "schools-network-link"
+                    ? "text-sky-400 hover:text-sky-300 font-extrabold flex items-center gap-1 bg-sky-500/10 border border-sky-400/30 px-2.5 py-1 rounded-full"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
+                {id === "schools-network-link" && <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />}
                 {label}
               </a>
             ))}
@@ -301,11 +307,18 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             {links.map(([label, id]) => (
               <a
                 key={id}
-                href={`#${id}`}
+                href={id === "schools-network-link" ? "/schools-network" : `#${id}`}
                 onClick={() => setMobile(false)}
-                className="flex items-center justify-between rounded-md px-3 py-2.5 text-sm font-semibold hover:bg-accent hover:text-primary transition-colors"
+                className={`flex items-center justify-between rounded-md px-3 py-2.5 text-sm font-semibold transition-colors ${
+                  id === "schools-network-link"
+                    ? "bg-sky-500/10 text-sky-400 font-extrabold border border-sky-400/25"
+                    : "hover:bg-accent hover:text-primary"
+                }`}
               >
-                {label}
+                <span className="flex items-center gap-1.5">
+                  {id === "schools-network-link" && <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />}
+                  {label}
+                </span>
                 <ChevronRight className="size-4 text-muted-foreground" />
               </a>
             ))}
@@ -1600,6 +1613,272 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
   );
 }
 
+{/* ============================================================ */}
+{/* FOUNDER & LEADERSHIP SPOTLIGHT (Abhishek Kumar) */}
+{/* ============================================================ */}
+function FounderLeadership({ openDemo }: { openDemo: () => void }) {
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-20 text-white border-y border-white/10" id="founder">
+      {/* 🇮🇳 Indian Tricolor Ambient Backlight */}
+      <div className="pointer-events-none absolute -top-32 left-1/4 size-96 rounded-full bg-[#FF671F]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 right-1/4 size-96 rounded-full bg-[#047857]/20 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(30,64,175,0.12),transparent)]" />
+
+      <div className="container relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#FF671F]/40 bg-gradient-to-r from-[#FF671F]/20 via-blue-950/40 to-[#047857]/20 px-4 py-1 text-xs font-black backdrop-blur-md shadow-inner">
+            <Sparkles className="size-3.5 text-amber-400" />
+            <span className="text-[#FB923C] font-black tracking-wider uppercase">LEADERSHIP &amp; VISION</span>
+            <span className="text-white/40">•</span>
+            <span className="text-emerald-400 font-extrabold">EMPOWERING SMART EDUCATION</span>
+          </div>
+
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+            Meet The Founder &amp; CEO —{" "}
+            <span className="block mt-1 bg-gradient-to-r from-[#38BDF8] via-[#FB923C] to-[#4ADE80] bg-clip-text text-transparent">
+              Abhishek Kumar
+            </span>
+          </h2>
+
+          <p className="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Tech visionary, product architect, and serial entrepreneur building high-impact platforms across Education, Healthcare, and Enterprise IT.
+          </p>
+        </div>
+
+        {/* Founder Card - Two Column Grid */}
+        <div className="max-w-6xl mx-auto rounded-3xl border border-[#FF671F]/30 bg-slate-900/60 backdrop-blur-2xl shadow-[0_20px_70px_rgba(0,0,0,0.6)] overflow-hidden ring-1 ring-white/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            
+            {/* Left Column: Official High-Res Photo & Social Links */}
+            <div className="lg:col-span-5 relative p-6 sm:p-8 flex flex-col items-center justify-center bg-gradient-to-b from-slate-900 to-slate-950 border-b lg:border-b-0 lg:border-r border-white/10">
+              <div className="relative group w-full max-w-sm">
+                {/* Tricolor Ring Glow behind photo */}
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#FF671F] via-[#1E40AF] to-[#047857] opacity-60 blur-lg group-hover:opacity-90 transition-opacity duration-500" />
+                
+                {/* Photo container with natural full height so photo is never cropped */}
+                <div className="relative rounded-2xl overflow-hidden border-2 border-white/25 shadow-2xl bg-slate-950">
+                  <img
+                    src={founderImg}
+                    alt="Abhishek Kumar - Founder & CEO of EduSchool-Saathi"
+                    className="w-full h-auto max-h-[380px] sm:max-h-[440px] object-contain object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Subtle edge vignette */}
+                  <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-slate-950/80 to-transparent pointer-events-none" />
+                </div>
+
+                {/* Compact, clean Name & Title badge placed directly below the photo */}
+                <div className="mt-3.5 w-full py-2.5 px-3 rounded-xl bg-slate-950/90 border border-white/15 text-center shadow-lg">
+                  <b className="text-base sm:text-lg font-black text-white block tracking-tight">
+                    Abhishek Kumar
+                  </b>
+                  <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#FF671F] block mt-0.5">
+                    Founder &amp; Chief Executive Officer
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] font-bold text-emerald-400 block mt-0.5">
+                    Serial Entrepreneur • Tech Innovator
+                  </span>
+                </div>
+              </div>
+
+              {/* Founder Social Connect Profiles */}
+              <div className="mt-4 w-full max-w-sm">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block text-center mb-2.5">
+                  Connect Directly With Abhishek Kumar
+                </span>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/in/abhishek-kumar-807853375/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-[#0A66C2]/15 border border-[#0A66C2]/40 text-sky-300 hover:bg-[#0A66C2] hover:text-white transition-all text-[11px] font-extrabold shadow-xs group"
+                  >
+                    <span>LinkedIn</span>
+                    <ExternalLink className="size-3 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+
+                  {/* GitHub */}
+                  <a
+                    href="https://github.com/abhishekkumar62000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-white/10 border border-white/20 text-slate-200 hover:bg-white/20 hover:text-white transition-all text-[11px] font-extrabold shadow-xs group"
+                  >
+                    <span>GitHub</span>
+                    <ExternalLink className="size-3 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+
+                  {/* Instagram */}
+                  <a
+                    href="https://www.instagram.com/developer__abhiii/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-gradient-to-r from-[#833AB4]/20 via-[#FD1D1D]/20 to-[#F77737]/20 border border-pink-500/40 text-pink-300 hover:border-pink-400 hover:text-white transition-all text-[11px] font-extrabold shadow-xs group"
+                  >
+                    <span>Instagram</span>
+                    <ExternalLink className="size-3 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Clear Founder Message & Venture Portfolio */}
+            <div className="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+              <div>
+                {/* Top Badge */}
+                <div className="flex items-center gap-2 text-xs font-bold text-slate-400 mb-2">
+                  <span className="text-[#FF671F] font-black uppercase tracking-widest text-[10px]">
+                    MESSAGE FROM THE FOUNDER
+                  </span>
+                </div>
+
+                <h3 className="font-display text-2xl sm:text-3xl font-black text-white leading-tight">
+                  &ldquo;Technology Should Be Simple, Fast &amp; Accessible To Every School.&rdquo;
+                </h3>
+
+                {/* Easy to Understand Founder Message */}
+                <div className="mt-4 space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  <p>
+                    <b className="text-white">Namaste! I am Abhishek Kumar.</b> When I looked at how schools manage their daily work, I saw teachers and principals wasting hours every day on paper registers, fee collection mistakes, and slow manual reports.
+                  </p>
+                  <p>
+                    Most software in the market was too complex, expensive, and difficult to operate. We created <b>EduSchool-Saathi</b> to solve this completely — giving school owners full control on their smartphone, giving teachers 10-second attendance, and giving parents instant WhatsApp receipts.
+                  </p>
+                  <p className="text-amber-200/90 font-medium">
+                    Our commitment is simple: <b>No heavy setup, zero hidden costs, and 24/7 dedicated support.</b>
+                  </p>
+                </div>
+
+                {/* Multiple Companies Run by Abhishek Kumar with Clickable Live Links */}
+                <div className="mt-6 pt-5 border-t border-white/10">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[11px] font-black uppercase tracking-wider text-[#FF671F]">
+                      Portfolio Of Ventures Founded &amp; Led By Abhishek Kumar:
+                    </span>
+                    <span className="text-[10px] text-slate-400 hidden sm:inline">
+                      Click to visit live platforms ↗
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    {/* Venture 1: EduSchool-Saathi */}
+                    <a
+                      href="https://eduschool-saathi.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-950/50 to-slate-950 p-3.5 hover:border-blue-400 hover:scale-[1.02] transition-all group block shadow-md"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="size-8 rounded-lg bg-blue-500/20 grid place-items-center text-blue-400 group-hover:scale-110 transition-transform">
+                          <School className="size-4" />
+                        </div>
+                        <ExternalLink className="size-3.5 text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </div>
+                      <b className="text-xs font-bold text-white block group-hover:text-sky-300 transition-colors">
+                        EduSchool-Saathi
+                      </b>
+                      <span className="text-[10px] text-sky-300 block font-semibold mt-0.5">
+                        School ERP SaaS
+                      </span>
+                      <p className="text-[10px] text-slate-400 mt-1 leading-tight">
+                        Complete cloud ERP engine for 25+ schools with zero data leakage.
+                      </p>
+                    </a>
+
+                    {/* Venture 2: Sehaat Saathi App */}
+                    <a
+                      href="https://sehaat-saathi.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl border border-emerald-500/30 bg-gradient-to-br from-emerald-950/50 to-slate-950 p-3.5 hover:border-emerald-400 hover:scale-[1.02] transition-all group block shadow-md"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="size-8 rounded-lg bg-emerald-500/20 grid place-items-center text-emerald-400 group-hover:scale-110 transition-transform">
+                          <HeartHandshake className="size-4" />
+                        </div>
+                        <ExternalLink className="size-3.5 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </div>
+                      <b className="text-xs font-bold text-white block group-hover:text-emerald-300 transition-colors">
+                        Sehaat Saathi App
+                      </b>
+                      <span className="text-[10px] text-emerald-300 block font-semibold mt-0.5">
+                        Digital Healthcare Platform
+                      </span>
+                      <p className="text-[10px] text-slate-400 mt-1 leading-tight">
+                        Healthcare access &amp; doctor consultation platform for Bharat.
+                      </p>
+                    </a>
+
+                    {/* Venture 3: TechSeva IT Solutions Agency */}
+                    <a
+                      href="https://techseva-it-solutions.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl border border-amber-500/30 bg-gradient-to-br from-amber-950/50 to-slate-950 p-3.5 hover:border-amber-400 hover:scale-[1.02] transition-all group block shadow-md"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="size-8 rounded-lg bg-amber-500/20 grid place-items-center text-amber-400 group-hover:scale-110 transition-transform">
+                          <Zap className="size-4" />
+                        </div>
+                        <ExternalLink className="size-3.5 text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </div>
+                      <b className="text-xs font-bold text-white block group-hover:text-amber-300 transition-colors">
+                        TechSeva IT Agency
+                      </b>
+                      <span className="text-[10px] text-amber-300 block font-semibold mt-0.5">
+                        Full-Suite IT Solutions
+                      </span>
+                      <p className="text-[10px] text-slate-400 mt-1 leading-tight">
+                        Custom web apps, enterprise software &amp; digital marketing.
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Direct Founder Access & CTA */}
+              <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block">Direct Founder Helpline</span>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <a href="tel:6200087830" className="text-xs sm:text-sm font-black text-amber-300 hover:underline">
+                      +91 62000 87830
+                    </a>
+                    <span className="text-white/30">•</span>
+                    <a href="mailto:eduschoolsaathi@gmail.com" className="text-xs sm:text-sm font-bold text-slate-300 hover:text-white">
+                      eduschoolsaathi@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2.5">
+                  <a
+                    href="https://wa.me/916200087830?text=Hello%20Abhishek%20Sir!%20I%20visited%20EduSchool-Saathi%20and%20want%20to%20discuss%20school%20ERP."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-lg hover:brightness-110 active:scale-95 transition-all"
+                  >
+                    <Phone className="size-3.5" /> WhatsApp Founder
+                  </a>
+                  <Button
+                    onClick={openDemo}
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-brand hover:brightness-110 active:scale-95 transition-all"
+                  >
+                    Schedule Demo <ArrowRight className="size-3.5" />
+                  </Button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function MultiSchool() {
   const [selectedSchool, setSelectedSchool] = useState<number>(0);
   const schools = [
@@ -2816,7 +3095,7 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
 
 function Footer() {
   const cols = [
-    { t: "Platform", a: [["About Platform", "#about"], ["Partners", "#ecosystem"], ["All Features", "#features"], ["How It Works", "#how-it-works"], ["Pricing Plans", "#pricing"]] },
+    { t: "Platform", a: [["About Platform", "#about"], ["25+ Schools Network", "/schools-network"], ["Partners", "#ecosystem"], ["All Features", "#features"], ["How It Works", "#how-it-works"], ["Pricing Plans", "#pricing"]] },
     { t: "Portals", a: [["School Management", "#roles"], ["Teacher Portal", "#roles"], ["Student Dashboard", "#roles"], ["Parent App", "#roles"]] },
     { t: "Resources", a: [["FAQ", "#faq"], ["Request Demo", "#home"], ["School Benefits", "#benefits"], ["Contact Us", "#contact"]] },
     { t: "Ecosystem", a: [["Sehaat Saathi App", "https://sehaat-saathi.vercel.app/"], ["TechSeva IT Solutions", "https://techseva-it-solutions.vercel.app/"], ["Privacy Policy", "#about"], ["Terms of Service", "#about"]] },
@@ -3035,6 +3314,7 @@ function Index() {
         <HowItWorks />
         <Benefits />
         <Mission />
+        <FounderLeadership openDemo={() => setDemo(true)} />
         <Showcase />
         <MobileExperience />
         <Pricing openDemo={() => setDemo(true)} />
