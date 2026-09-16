@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RolesRouteImport } from './routes/roles'
 import { Route as SchoolsNetworkRouteImport } from './routes/schools-network'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RolesRoute = RolesRouteImport.update({
+  id: '/roles',
+  path: '/roles',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SchoolsNetworkRoute = SchoolsNetworkRouteImport.update({
@@ -25,27 +31,31 @@ const SchoolsNetworkRoute = SchoolsNetworkRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/roles': typeof RolesRoute
   '/schools-network': typeof SchoolsNetworkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/roles': typeof RolesRoute
   '/schools-network': typeof SchoolsNetworkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/roles': typeof RolesRoute
   '/schools-network': typeof SchoolsNetworkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/schools-network'
+  fullPaths: '/' | '/roles' | '/schools-network'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/schools-network'
-  id: '__root__' | '/' | '/schools-network'
+  to: '/' | '/roles' | '/schools-network'
+  id: '__root__' | '/' | '/roles' | '/schools-network'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  RolesRoute: typeof RolesRoute
   SchoolsNetworkRoute: typeof SchoolsNetworkRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roles': {
+      id: '/roles'
+      path: '/roles'
+      fullPath: '/roles'
+      preLoaderRoute: typeof RolesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/schools-network': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  RolesRoute: RolesRoute,
   SchoolsNetworkRoute: SchoolsNetworkRoute,
 }
 export const routeTree = rootRouteImport

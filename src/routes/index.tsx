@@ -13,6 +13,11 @@ import schoolImage from "../assets/bihar-school-classroom.jpg";
 import logoImg from "../assets/logo-optimized.png";
 import founderCeoImg from "../assets/Founder CEO.png";
 import founderImg from "../assets/Founder.jpeg";
+import founderPosterImg from "../../EduSchoolSaathi Poster Image/Founder Advertisment2.jpeg";
+import aboutPosterImg from "../../EduSchoolSaathi Poster Image/Poster1.jpeg";
+import featuresPosterImg from "../../EduSchoolSaathi Poster Image/Poster6.jpeg";
+import founderAdvertisementImg from "../../EduSchoolSaathi Poster Image/Founder Advertisment.jpeg";
+import heroPosterImg from "../../EduSchoolSaathi Poster Image/hero section poster.png";
 import { PwaInstallPrompt, InstallAppButton } from "../components/PwaInstallPrompt";
 import { WhatsappChatbot } from "../components/WhatsappChatbot";
 
@@ -203,11 +208,11 @@ function SectionTitle({
           dark ? "text-brand-warm" : "text-primary"
         }`}
       >
-        <span className={`h-px w-6 ${dark ? "bg-brand-warm" : "bg-primary"}`} />
+        <span className="tricolor-sheen h-1 w-10 rounded-full shadow-[0_0_0_1px_rgba(15,23,42,0.08)]" />
         {eyebrow}
       </div>
       <h2
-        className={`font-display text-3xl font-extrabold leading-[1.12] sm:text-4xl lg:text-5xl ${
+        className={`animate-section-heading font-display text-3xl font-extrabold leading-[1.12] sm:text-4xl lg:text-5xl ${
           dark ? "text-white" : "text-foreground"
         }`}
       >
@@ -278,12 +283,6 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="tel:6200087830"
-              className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-3 py-2 text-xs font-bold text-foreground hover:bg-accent transition-colors shadow-xs"
-            >
-              <Phone className="size-3.5 text-primary" /> +91 62000 87830
-            </a>
             <Button onClick={openDemo} className={`${primaryCta} min-h-10 px-4 py-2 text-xs`}>
               Request Free Demo <ArrowRight className="size-4" />
             </Button>
@@ -324,12 +323,6 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             ))}
             <div className="pt-3 border-t border-border mt-2 space-y-2">
               <InstallAppButton className="w-full justify-center py-2.5" />
-              <a
-                href="tel:6200087830"
-                className="flex items-center justify-center gap-2 rounded-md border border-border bg-card py-2.5 text-xs font-bold text-foreground"
-              >
-                <Phone className="size-3.5 text-primary" /> Call Advisor: +91 62000 87830
-              </a>
               <Button
                 onClick={() => {
                   setMobile(false);
@@ -754,30 +747,32 @@ function Dashboard({ compact = false }: { compact?: boolean }) {
 
 function Hero({ openDemo }: { openDemo: () => void }) {
   return (
-    <section id="home" className="hero-grid relative overflow-hidden bg-hero pt-32 sm:pt-36 pb-16 text-hero-foreground">
-      {/* Background ambient lighting effects */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 size-[650px] rounded-full bg-gradient-to-b from-primary/25 via-brand-sky/15 to-transparent blur-3xl pointer-events-none" />
-      <div className="absolute top-48 -left-24 size-80 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
-      <div className="absolute top-64 -right-24 size-80 rounded-full bg-sky-500/10 blur-3xl pointer-events-none" />
+    <section id="home" className="hero-grid relative overflow-hidden bg-hero pt-36 sm:pt-32 pb-16 text-hero-foreground">
+      {/* Ambient background glow behind Hero */}
+      <div className="absolute top-16 left-1/2 -translate-x-1/2 size-[600px] rounded-full bg-gradient-to-b from-primary/20 via-brand-sky/10 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-40 -left-20 size-72 rounded-full bg-[#FF671F]/10 blur-3xl pointer-events-none" />
+      <div className="absolute top-48 -right-20 size-72 rounded-full bg-[#047857]/15 blur-3xl pointer-events-none" />
 
       <div className="container relative z-10">
         <div className="mx-auto max-w-5xl text-center">
           {/* Top Pill with Pulsing Dot */}
-          <div className="mb-5 inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-full border border-hero-foreground/20 bg-hero-foreground/5 px-3.5 py-1.5 text-[11px] sm:text-xs font-bold text-hero-muted backdrop-blur-xl shadow-lg">
+          <div className="mb-5 inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1.5 rounded-full border border-hero-foreground/20 bg-hero-foreground/5 px-3.5 py-2 text-[11px] leading-tight sm:text-xs font-bold text-hero-muted backdrop-blur-xl shadow-lg">
             <span className="flex items-center gap-1.5 text-emerald-400 font-extrabold">
               <span className="size-2 rounded-full bg-emerald-400 animate-ping" />
               Live Cloud ERP
+              <span className="opacity-40">•</span>
             </span>
-            <span className="opacity-40">•</span>
-            <div className="size-4 rounded-full bg-white p-0.5 overflow-hidden shrink-0 inline-flex items-center justify-center">
-              <img src={logoImg} alt="Logo" className="size-full object-contain" />
-            </div>
-            <span className="text-brand-warm font-extrabold">#1 in Bihar</span>
+            <span className="inline-flex max-w-full items-center justify-center gap-1.5 text-center">
+              <span className="size-4 rounded-full bg-white p-0.5 overflow-hidden shrink-0 inline-flex items-center justify-center">
+                <img src={logoImg} alt="Logo" className="size-full object-contain" />
+              </span>
+              <span className="text-brand-warm font-extrabold">Bihar No1 👑 School ERP Software</span>
+            </span>
             <span className="opacity-40 hidden xs:inline">•</span>
             <span className="hidden xs:inline">Pre-Nursery to 12th</span>
           </div>
 
-          <h1 className="font-display text-3xl font-black leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
+          <h1 className="animate-hero-title font-display text-3xl font-black leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
             <span className="text-white/95">Har School Ka Saathi —</span>
             <span className="mt-3 block font-black">
               <span className="text-[#38BDF8] drop-shadow-[0_0_25px_rgba(56,189,248,0.4)]">Edu</span>
@@ -835,6 +830,36 @@ function Hero({ openDemo }: { openDemo: () => void }) {
             <span>•</span>
             <span className="flex items-center gap-1.5"><Check className="size-3.5 text-success" /> 100% Isolated Data</span>
           </div>
+
+          {/* ========================================================================= */}
+          {/* CENTERED HERO POSTER IMAGE PRESENTATION (FULL VISIBILITY & WOW FACTOR) */}
+          {/* ========================================================================= */}
+          <div className="mt-12 mx-auto max-w-4xl relative group">
+            {/* Tricolor Ambient Aura around Poster */}
+            <div className="absolute -inset-2 sm:-inset-3 rounded-3xl bg-gradient-to-r from-[#FF671F] via-[#38BDF8] to-[#047857] opacity-60 blur-xl group-hover:opacity-90 transition-opacity duration-700 pointer-events-none" />
+
+            {/* Poster Card Container */}
+            <div className="relative rounded-2xl sm:rounded-3xl border-2 border-white/30 bg-slate-950/90 p-2 sm:p-3.5 shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden">
+              <img
+                src={heroPosterImg}
+                alt="EduSchool-Saathi Official Campaign Poster - Padhega Bihar Tabhi To Badhega Bihar"
+                className="w-full h-auto max-h-[380px] sm:max-h-[500px] md:max-h-[560px] object-contain object-center rounded-xl sm:rounded-2xl mx-auto select-none transition-transform duration-500 group-hover:scale-[1.01]"
+                loading="eager"
+                decoding="async"
+              />
+
+              {/* Bottom Quick Feature Tagline bar below the image */}
+              <div className="mt-2.5 pt-2 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 px-2 text-[10px] sm:text-xs font-bold text-slate-300">
+                <span className="flex items-center gap-1 text-emerald-400">
+                  <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+                  पढ़ेंगा बिहार तभी तो बढ़ेगा बिहार
+                </span>
+                <span className="text-amber-300 font-extrabold uppercase tracking-wider">
+                  📞 Helpdesk: +91 62000 87830
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Hero Interactive Dashboard Container with Floating Badges */}
@@ -891,7 +916,41 @@ function Hero({ openDemo }: { openDemo: () => void }) {
   );
 }
 
+function FounderPoster() {
+  return (
+    <section className="relative overflow-hidden border-b border-slate-200 bg-[radial-gradient(circle_at_10%_20%,rgba(255,103,31,0.12),transparent_28%),radial-gradient(circle_at_90%_75%,rgba(19,136,8,0.12),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)] py-8 sm:py-12">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="container relative">
+        <div className="mx-auto max-w-6xl rounded-3xl border border-[#138808]/25 bg-white/85 p-3 shadow-card backdrop-blur sm:p-5">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-gradient-to-r from-orange-50 via-white to-green-50 px-4 py-3 sm:px-5">
+            <div>
+              <span className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#c2410c]">
+                <Sparkles className="size-3.5 text-[#FF671F]" /> Founder message
+              </span>
+              <h2 className="mt-1 font-display text-lg font-black text-foreground sm:text-xl">Digital power for every Indian school</h2>
+            </div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-bold text-emerald-800">
+              <span className="size-2 rounded-full bg-emerald-500 animate-pulse" /> EduSchool-Saathi Bihar
+            </span>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/70">
+            <img
+              src={founderPosterImg}
+              alt="EduSchool-Saathi founder advertisement and school management ERP features"
+              className="mx-auto block h-auto w-full max-w-5xl object-contain"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function TrustStrip() {
+  const [selectedCapability, setSelectedCapability] = useState(0);
+
   const impacts = [
     { num: "24+", label: "Verified Partner Schools", sub: "Madhubani, Darbhanga & Patna" },
     { num: "7,500+", label: "Active Students & Parents", sub: "100% Digitally Connected" },
@@ -899,16 +958,34 @@ function TrustStrip() {
     { num: "₹0", label: "Hidden Setup Cost", sub: "Zero Annual AMC Trap" },
   ];
 
+  const capabilities = [
+    [ClipboardCheck, "10-Second Attendance", "Mark a complete class from any phone, review absences, and keep monthly history ready for parents and principals.", "Teachers & Admin"],
+    [IndianRupee, "Online & Cash Fee Receipts", "Track paid and pending fees, issue branded receipts, and keep every collection visible in one school ledger.", "Accounts & Admin"],
+    [Award, "CBSE Marksheet Suite", "Enter marks once and generate calculated grades, percentages, report cards, and exam performance insights.", "Teachers & Principal"],
+    [BookOpen, "Digital Homework Desk", "Publish subject-wise work, track learning tasks, and keep students and parents aligned beyond the classroom.", "Teachers & Students"],
+    [MessageCircle, "Parent WhatsApp Updates", "Connect families with attendance, fee reminders, notices, homework, and academic updates at the right time.", "Parents & School"],
+    [CalendarDays, "Teacher Time-Table", "Coordinate periods, subjects, sections, and teacher schedules without clashes or last-minute confusion.", "School Admin"],
+    [Building2, "Multi-Branch Architecture", "Run multiple independent schools with separate access, records, permissions, and a clear super-admin view.", "Super Admin"],
+    [ShieldCheck, "Secure Student Records", "Keep admissions, profiles, certificates, documents, and academic history organized in an isolated cloud workspace.", "Every School Role"],
+    [RouteIcon, "Transport & Bus Routes", "Organize vehicles, routes, drivers, and student allocations from the same connected school platform.", "School Admin"],
+    [Library, "School Library ERP", "Track book records, issue and return activity, student history, and library reports without paper registers.", "Librarian & Students"],
+    [TrendingUp, "Daily Principal Dashboard", "See attendance, fee collection, class performance, staff activity, and the next action in one live command view.", "Principal & Owner"],
+  ] as const;
+  const [CapabilityIcon, capabilityTitle, capabilityDescription, capabilityRole] = capabilities[selectedCapability];
+
   return (
-    <section className="border-b border-border bg-gradient-to-b from-background via-muted/30 to-background py-16">
+    <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-background via-muted/30 to-background py-16">
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
+      <div className="absolute -right-32 top-20 size-80 rounded-full bg-[#138808]/10 blur-3xl pointer-events-none" />
       <div className="container text-center">
         {/* Impact Cards Grid */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto mb-10">
           {impacts.map((item) => (
             <div
               key={item.label}
-              className="rounded-xl border border-border/80 bg-card p-5 shadow-soft hover:border-primary/40 hover:shadow-card transition-all"
+              className="relative overflow-hidden rounded-xl border border-border/80 bg-card p-5 shadow-soft transition-all hover:-translate-y-1 hover:border-[#138808]/40 hover:shadow-card"
             >
+              <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
               <b className="font-display text-3xl sm:text-4xl font-black bg-gradient-to-r from-primary to-brand-sky bg-clip-text text-transparent">
                 {item.num}
               </b>
@@ -918,24 +995,51 @@ function TrustStrip() {
           ))}
         </div>
 
-        <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
-          One Unified Platform • Endless Capabilities
+        <p className="inline-flex items-center gap-2 rounded-full border border-[#FF671F]/30 bg-[#FF671F]/5 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.16em] text-[#d94d0b]">
+          <span className="size-2 rounded-full bg-[#138808] shadow-[0_0_0_3px_rgba(19,136,8,0.12)]" />
+          One Unified Platform <span className="text-slate-400">•</span> Endless Capabilities
         </p>
         <h3 className="mt-2 font-display text-2xl sm:text-3xl font-black text-foreground">
           Built Specifically for the Daily Operations of Indian Schools
         </h3>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
-          {[
-            "10-Second Attendance", "Online & Cash Fee Receipts", "CBSE Marksheet Suite",
-            "Digital Homework Desk", "Parent WhatsApp Updates", "Teacher Time-Table",
-            "Multi-Branch Architecture", "Student ID Cards", "Transport & Bus Routes",
-            "School Library ERP", "Daily Cashbook Audit"
-          ].map(x => (
-            <span key={x} className="rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-foreground shadow-xs hover:border-primary/40 transition-colors">
-              ✓ {x}
-            </span>
-          ))}
+        <div className="mx-auto mt-7 grid max-w-5xl gap-4 text-left lg:grid-cols-[1fr_1.15fr]">
+          <div className="flex flex-wrap content-start justify-center gap-2 rounded-2xl border border-border bg-card p-4 shadow-soft">
+            {capabilities.map(([Icon, title], idx) => (
+              <button
+                key={title}
+                type="button"
+                onClick={() => setSelectedCapability(idx)}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-bold transition-all ${
+                  selectedCapability === idx
+                    ? "border-[#138808]/50 bg-[#138808]/10 text-[#0b6d06] shadow-sm"
+                    : "border-border bg-background text-muted-foreground hover:border-[#FF671F]/50 hover:text-foreground"
+                }`}
+              >
+                {selectedCapability === idx ? <CheckCircle2 className="size-3.5" /> : <Icon className="size-3.5" />}
+                {title}
+              </button>
+            ))}
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl border border-[#138808]/30 bg-gradient-to-br from-[#063b19] via-slate-950 to-[#102c20] p-6 text-white shadow-card sm:p-7">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-full bg-[#138808]/20 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-emerald-300">
+                  <CapabilityIcon className="size-3.5" /> Live capability view
+                </span>
+                <h4 className="mt-4 font-display text-xl font-black sm:text-2xl">{capabilityTitle}</h4>
+              </div>
+              <span className="hidden size-12 place-items-center rounded-xl bg-[#FF671F]/15 text-[#ff9b6d] sm:grid">
+                <CapabilityIcon className="size-6" />
+              </span>
+            </div>
+            <p className="mt-3 max-w-xl text-sm leading-7 text-white/70">{capabilityDescription}</p>
+            <div className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4 text-xs font-bold text-white/60">
+              <Users className="size-4 text-[#ff9b6d]" /> Designed for: <span className="text-white">{capabilityRole}</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -944,43 +1048,51 @@ function TrustStrip() {
 
 function Problems() {
   const [problemMode, setProblemMode] = useState<"after" | "before">("after");
+  const [selectedProblem, setSelectedProblem] = useState(0);
 
   const beforeProblems = [
-    [Clock3, "30% Time Lost to Registers", "Teachers waste precious morning teaching periods calling rollcall and marking paper logs."],
-    [IndianRupee, "Fee Leakage & Cash Mismatch", "Paper slips get lost, parents claim they paid, and accounting totals don't match cash in drawer."],
-    [FileBarChart, "Exam Marksheet Chaos", "Manual report card preparation takes days of calculating totals and handwriting grades."],
-    [MessageCircle, "Disconnected Parents", "Parents only find out about attendance or homework issues when they physically visit school."],
-    [Layers3, "Scattered Paperwork", "Student documents, transfer certificates, and admission files stored in dusty paper folders."],
-    [Search, "Zero Financial Visibility", "Directors have no live dashboard to see how much fee was collected today vs what is due."],
+    [Clock3, "Morning Lost to Roll Call", "Teachers begin the day with paper registers, missing names, manual totals, and no instant attendance history."],
+    [IndianRupee, "Fees Without a Single Source of Truth", "Handwritten slips, scattered ledgers, and cash reconciliation make every collection harder to trust."],
+    [FileBarChart, "Results Built by Hand", "Marks, totals, grades, and report cards are calculated repeatedly, creating delays and avoidable errors."],
+    [MessageCircle, "Parents Outside the Loop", "Attendance, homework, notices, and dues reach families late because updates depend on phone calls and diaries."],
+    [Layers3, "Records Buried in Files", "Admissions, student profiles, certificates, and academic history stay scattered across cupboards and spreadsheets."],
+    [Search, "No Live Principal View", "School leaders cannot instantly see attendance, fee dues, staff activity, or the health of each class."],
   ];
 
   const afterSolutions = [
-    [Zap, "10-Second Digital Rollcall", "Complete entire class attendance on any mobile phone in 10 seconds with zero paperwork."],
-    [ShieldCheck, "Zero-Leakage Fee Management", "1-click branded digital receipts, auto ledger updates, and instant WhatsApp dues reminders."],
-    [Award, "Automated CBSE Gradecards", "Enter subject marks once. System auto-calculates total, percentage, grade, and generates printable PDF."],
-    [HeartHandshake, "Connected Parent Portal", "Parents check real-time attendance, pending fees, homework, and exam timetables 24/7 on mobile."],
-    [LockKeyhole, "Encrypted Cloud Records", "Every student admission, document, and certificate safely stored in 100% isolated cloud storage."],
-    [TrendingUp, "360° Principal Intelligence", "Directors check live cashflow, class attendance %, and pending fee collection from anywhere."],
+    [Zap, "Attendance in 10 Seconds", "Mark a complete class on any phone, see absences instantly, and keep a searchable daily and monthly history."],
+    [ShieldCheck, "Fees to Receipt in One Flow", "Create branded receipts, update the student ledger, track dues, and keep collection visibility crystal clear."],
+    [Award, "Marks In. Report Card Out.", "Enter subject marks once and generate totals, grades, rankings, and school-ready digital report cards in moments."],
+    [HeartHandshake, "Parents Stay Connected", "Give families one mobile-friendly view for attendance, fees, homework, results, timetables, and notices."],
+    [LockKeyhole, "Every Record Ready When Needed", "Keep student profiles, admissions, certificates, documents, and academic history organized in a secure cloud workspace."],
+    [TrendingUp, "One Dashboard. Full Control.", "Give principals live signals for attendance, fee collection, school activity, class performance, and next action."],
   ];
 
   const currentCards = problemMode === "after" ? afterSolutions : beforeProblems;
+  const selectedCard = currentCards[selectedProblem];
+  const SelectedIcon = selectedCard[0];
 
   return (
-    <section className="section bg-muted/40 relative overflow-hidden">
-      <div className="container">
+    <section className="section relative overflow-hidden bg-muted/40">
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
+      <div className="absolute -right-40 top-24 size-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute -left-40 bottom-0 size-96 rounded-full bg-[#FF671F]/10 blur-3xl pointer-events-none" />
+      <div className="container relative">
         <SectionTitle
           eyebrow="The Transformation"
           title="From Traditional Chaos to Modern School Excellence"
-          copy="See the clear contrast between running a school on paper registers vs. running on the EduSchool-Saathi cloud."
+          copy="Every school day has a pressure point. Tap one to see how EduSchool-Saathi turns it into a faster workflow, a clearer record, and a better experience for every role."
           center
         />
 
-        {/* Interactive Chaos vs Clarity Switcher */}
         <div className="mt-8 flex justify-center">
-          <div className="inline-flex rounded-xl border border-border bg-card p-1.5 shadow-sm">
+          <div className="inline-flex max-w-full flex-wrap justify-center rounded-xl border border-border bg-card p-1.5 shadow-sm">
             <button
               type="button"
-              onClick={() => setProblemMode("before")}
+              onClick={() => {
+                setProblemMode("before");
+                setSelectedProblem(0);
+              }}
               className={`flex items-center gap-2 rounded-lg px-4 py-2 text-xs sm:text-sm font-bold transition-all ${
                 problemMode === "before"
                   ? "bg-destructive text-destructive-foreground shadow-sm"
@@ -988,11 +1100,14 @@ function Problems() {
               }`}
             >
               <XCircle className="size-4" />
-              Without EduSchool-Saathi (The Chaos)
+              Without ERP (Daily Friction)
             </button>
             <button
               type="button"
-              onClick={() => setProblemMode("after")}
+              onClick={() => {
+                setProblemMode("after");
+                setSelectedProblem(0);
+              }}
               className={`flex items-center gap-2 rounded-lg px-4 py-2 text-xs sm:text-sm font-bold transition-all ${
                 problemMode === "after"
                   ? "bg-emerald-600 text-white shadow-brand scale-105"
@@ -1000,35 +1115,73 @@ function Problems() {
               }`}
             >
               <CheckCircle2 className="size-4" />
-              With EduSchool-Saathi (The Clarity & Order)
+              With EduSchool-Saathi (The Smart School)
             </button>
           </div>
         </div>
 
-        {/* Grid of 6 cards */}
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {currentCards.map(([I, t, d]) => (
-            <div
-              key={String(t)}
-              className={`group rounded-xl border p-6 transition-all duration-300 hover:-translate-y-1 shadow-soft ${
-                problemMode === "after"
-                  ? "border-emerald-500/30 bg-card hover:border-emerald-500/60 hover:shadow-[0_10px_30px_rgba(16,185,129,0.1)]"
-                  : "border-destructive/20 bg-card hover:border-destructive/40 hover:shadow-card"
-              }`}
-            >
-              <span
-                className={`grid size-12 place-items-center rounded-lg ${
-                  problemMode === "after"
-                    ? "bg-emerald-500/15 text-emerald-600"
-                    : "bg-destructive/10 text-destructive"
-                }`}
-              >
-                <I className="size-6" />
-              </span>
-              <h3 className="mt-5 font-display text-lg font-bold text-foreground">{t as string}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d as string}</p>
+        <div className="mt-10 grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-stretch">
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-3 shadow-card">
+            <div className="absolute bottom-5 left-7 top-5 w-px bg-gradient-to-b from-[#FF671F] via-slate-200 to-[#138808]" />
+            <div className="relative space-y-1">
+              {currentCards.map(([I, t], idx) => (
+                <button
+                  key={String(t)}
+                  type="button"
+                  onClick={() => setSelectedProblem(idx)}
+                  className={`relative flex w-full items-center gap-3 rounded-xl p-3 text-left transition-all ${
+                    selectedProblem === idx
+                      ? problemMode === "after"
+                        ? "bg-emerald-500/10 text-foreground shadow-sm"
+                        : "bg-destructive/10 text-foreground shadow-sm"
+                      : "text-muted-foreground hover:bg-muted"
+                  }`}
+                >
+                  <span className={`grid size-8 shrink-0 place-items-center rounded-full border-2 bg-card ${
+                    selectedProblem === idx
+                      ? problemMode === "after" ? "border-emerald-500 text-emerald-600" : "border-destructive text-destructive"
+                      : "border-border text-muted-foreground"
+                  }`}>
+                    <I className="size-4" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-[10px] font-extrabold uppercase tracking-[0.12em] text-muted-foreground">Step {String(idx + 1).padStart(2, "0")}</span>
+                    <span className="block truncate text-sm font-bold">{t as string}</span>
+                  </span>
+                  {selectedProblem === idx && <ChevronRight className="ml-auto size-4 shrink-0 text-primary" />}
+                </button>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className={`relative overflow-hidden rounded-2xl border p-6 sm:p-8 shadow-card ${
+            problemMode === "after" ? "border-emerald-500/30 bg-gradient-to-br from-emerald-950 to-slate-950 text-white" : "border-destructive/20 bg-gradient-to-br from-slate-950 to-red-950 text-white"
+          }`}>
+            <div className="absolute right-0 top-0 h-1 w-full bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] ${
+                  problemMode === "after" ? "bg-emerald-400/15 text-emerald-300" : "bg-red-400/15 text-red-300"
+                }`}>
+                  {problemMode === "after" ? <CheckCircle2 className="size-3.5" /> : <XCircle className="size-3.5" />}
+                  {problemMode === "after" ? "Built for Indian Schools" : "The daily friction"}
+                </span>
+                <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-white/50">School operations / {String(selectedProblem + 1).padStart(2, "0")}</p>
+                <h3 className="mt-2 font-display text-2xl font-black leading-tight sm:text-3xl">{selectedCard[1] as string}</h3>
+              </div>
+              <span className={`hidden size-16 shrink-0 place-items-center rounded-2xl sm:grid ${problemMode === "after" ? "bg-emerald-400/15 text-emerald-300" : "bg-red-400/15 text-red-300"}`}>
+                <SelectedIcon className="size-8" />
+              </span>
+            </div>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-white/70">{selectedCard[2] as string}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-white/10 pt-5">
+              <span className="text-xs font-bold text-white/50">{problemMode === "after" ? "Result:" : "What changes:"}</span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-black text-white">
+                {problemMode === "after" ? "More time. More trust. More control." : "A better way is one tap away."}
+                <ArrowRight className="size-4 text-brand-warm" />
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="mt-12 text-center">
@@ -1047,10 +1200,11 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
 
   return (
     <>
-      <section className="section overflow-hidden bg-background relative" id="about">
+      <section className="section relative overflow-hidden bg-background" id="about">
         {/* Subtle decorative glows */}
         <div className="absolute top-1/4 -left-40 size-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-0 size-96 rounded-full bg-brand-sky/5 blur-3xl pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
 
         <div className="container relative">
           <SectionTitle
@@ -1059,8 +1213,9 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
             copy="Crafted specifically to solve the grassroots ground realities of schools in Madhubani, Darbhanga, Patna, and Bihar. We empower educators with a unified, zero-friction cloud ERP that turns chaotic manual registers into instant digital intelligence."
           />
 
-          {/* Interactive Navigation Pills for About Section */}
-          <div className="mt-8 flex flex-wrap gap-2 border-b border-border/80 pb-4">
+          {/* Interactive Navigation for About Section */}
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card p-2 shadow-soft">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { id: "overview", label: "🌟 Why EduSchool-Saathi?", subtitle: "Core Philosophy" },
               { id: "comparison", label: "⚡ Kaise Dusre Software Se Alag Hai?", subtitle: "Comparison Matrix" },
@@ -1071,15 +1226,30 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
                 key={tab.id}
                 type="button"
                 onClick={() => setAboutTab(tab.id as any)}
-                className={`group flex items-center gap-2 rounded-lg px-4 py-2.5 text-xs sm:text-sm font-bold transition-all ${
+                aria-selected={aboutTab === tab.id}
+                className={`group relative flex min-h-16 items-center gap-2 rounded-xl border px-3 py-3 text-left text-xs sm:text-sm font-bold transition-all duration-300 ${
                   aboutTab === tab.id
-                    ? "bg-primary text-primary-foreground shadow-brand scale-[1.02]"
-                    : "bg-card border border-border text-muted-foreground hover:text-foreground hover:bg-accent hover:border-primary/30"
+                    ? "border-[#138808]/50 bg-gradient-to-br from-[#138808]/15 via-white to-[#FF671F]/10 text-foreground shadow-sm"
+                    : "border-transparent bg-background text-muted-foreground hover:border-[#FF671F]/40 hover:bg-muted hover:text-foreground"
                 }`}
               >
-                <span>{tab.label}</span>
+                <span className={`grid size-8 shrink-0 place-items-center rounded-lg text-[10px] font-black ${aboutTab === tab.id ? "bg-[#138808] text-white" : "bg-muted text-muted-foreground"}`}>
+                  {String(["overview", "comparison", "vision", "features"].indexOf(tab.id) + 1).padStart(2, "0")}
+                </span>
+                <span className="min-w-0">
+                  <span className="block truncate">{tab.label}</span>
+                  <span className={`mt-0.5 block text-[10px] font-semibold ${aboutTab === tab.id ? "text-[#d94d0b]" : "text-muted-foreground"}`}>{tab.subtitle}</span>
+                </span>
+                {aboutTab === tab.id && <span className="absolute inset-x-3 bottom-0 h-0.5 rounded-full bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />}
               </button>
             ))}
+            </div>
+          </div>
+
+          <div className="mt-4 flex items-center gap-3 text-[10px] font-extrabold uppercase tracking-[0.16em] text-muted-foreground">
+            <span className="h-1 flex-1 rounded-full bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
+            <span>Explore the Saathi system</span>
+            <span className="h-1 flex-1 rounded-full bg-gradient-to-r from-[#138808] via-white to-[#FF671F]" />
           </div>
 
           {/* Tabbed Content Area with Official Logo Showcase on Right */}
@@ -1087,7 +1257,7 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
             {/* Left Content Column based on Tab */}
             <div className="flex flex-col justify-between">
               {aboutTab === "overview" && (
-                <div className="space-y-5 animate-fadeIn">
+                <div className="space-y-5 animate-about-panel">
                   <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-extrabold text-primary">
                     <Sparkles className="size-3.5 text-brand-warm" />
                     Built for Ground Realities in Bihar & Beyond
@@ -1108,8 +1278,8 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
                       { icon: IndianRupee, title: "No Hidden AMC Traps", desc: "Transparent, predictable monthly subscription starting from just ₹5,000." },
                       { icon: MessageCircle, title: "Direct Parent Connectivity", desc: "Instant SMS/WhatsApp-ready notifications for fees, attendance, and homework." },
                     ].map((item, idx) => (
-                      <div key={idx} className="rounded-lg border border-border bg-card p-3.5 shadow-xs hover:border-primary/40 transition-colors">
-                        <span className="grid size-8 place-items-center rounded-md bg-accent text-primary mb-2">
+                      <div key={idx} className="group rounded-lg border border-border bg-card p-3.5 shadow-xs transition-all hover:-translate-y-1 hover:border-[#138808]/40 hover:shadow-card">
+                        <span className="grid size-8 place-items-center rounded-md bg-gradient-to-br from-[#FF671F]/15 via-white to-[#138808]/15 text-[#0b6d06] mb-2 transition-transform group-hover:scale-110">
                           <item.icon className="size-4" />
                         </span>
                         <b className="text-xs font-bold text-foreground block">{item.title}</b>
@@ -1132,7 +1302,7 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
               )}
 
               {aboutTab === "comparison" && (
-                <div className="space-y-4 animate-fadeIn">
+                <div className="space-y-4 animate-about-panel">
                   <div className="inline-flex items-center gap-2 rounded-full border border-brand-warm/30 bg-brand-warm/10 px-3 py-1 text-xs font-extrabold text-brand-warm">
                     <Flame className="size-3.5" />
                     Dusre Software Se Kaise Alag Hai?
@@ -1196,7 +1366,7 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
               )}
 
               {aboutTab === "vision" && (
-                <div className="space-y-4 animate-fadeIn">
+                <div className="space-y-4 animate-about-panel">
                   <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-extrabold text-emerald-600">
                     <Target className="size-3.5" />
                     Our Core Purpose & North Star
@@ -1244,7 +1414,7 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
               )}
 
               {aboutTab === "features" && (
-                <div className="space-y-4 animate-fadeIn">
+                <div className="space-y-4 animate-about-panel">
                   <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-extrabold text-sky-600">
                     <Zap className="size-3.5" />
                     Instant High-Impact Capabilities
@@ -1287,7 +1457,8 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
               {/* Outer decorative ambient glow */}
               <div className="absolute -inset-4 rounded-2xl bg-gradient-to-tr from-primary/20 via-teal-500/10 to-brand-warm/20 blur-xl" />
 
-              <div className="relative w-full rounded-2xl border-2 border-primary/25 bg-gradient-to-b from-card via-card/95 to-muted p-6 sm:p-8 shadow-card flex flex-col items-center text-center">
+              <div className="relative w-full rounded-2xl border-2 border-[#138808]/30 bg-gradient-to-b from-card via-card/95 to-muted p-6 sm:p-8 shadow-card flex flex-col items-center text-center">
+                <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
                 {/* Official Verification Seal */}
                 <div className="w-full flex items-center justify-between pb-4 border-b border-border/70 mb-6">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-emerald-700">
@@ -1300,12 +1471,14 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
 
                 {/* Central Official Logo Presentation */}
                 <div className="relative group my-2">
-                  <div className="absolute -inset-4 rounded-2xl bg-primary/20 blur-md group-hover:bg-primary/30 transition-all" />
-                  <div className="relative size-44 sm:size-52 rounded-2xl bg-white p-3 shadow-dashboard border-2 border-primary/30 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                  <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-[#FF671F]/25 via-white to-[#138808]/25 blur-md group-hover:bg-primary/30 transition-all" />
+                  <div className="relative aspect-square w-full max-w-sm rounded-2xl bg-white p-2 shadow-dashboard border-2 border-[#FF671F]/30 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
                     <img
-                      src={logoImg}
-                      alt="EduSchool-Saathi Official Logo"
-                      className="size-full object-contain filter drop-shadow-md"
+                      src={aboutPosterImg}
+                      alt="EduSchool-Saathi Poster - Smart Schools Stronger Bharat"
+                      className="size-full object-contain rounded-xl filter drop-shadow-md"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -1368,76 +1541,83 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
       </section>
 
       {/* Dedicated Partnerships & Ecosystem Highlight */}
-      <section className="section bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden" id="ecosystem">
-        {/* Ambient background glows */}
-        <div className="absolute -top-32 left-1/4 size-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 right-1/4 size-96 rounded-full bg-sky-500/10 blur-3xl pointer-events-none" />
+      <section className="ecosystem-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.16),transparent_28%),radial-gradient(circle_at_92%_78%,rgba(19,136,8,0.14),transparent_30%),linear-gradient(135deg,#fffdf9_0%,#ffffff_48%,#f5fbf4_100%)] text-foreground" id="ecosystem">
+        <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+        <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:42px_42px] pointer-events-none" />
+        <div className="absolute -top-32 left-1/4 size-96 rounded-full bg-[#FF671F]/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 right-1/4 size-96 rounded-full bg-[#138808]/10 blur-3xl pointer-events-none" />
 
         <div className="container relative z-10">
           <div className="mx-auto text-center max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-emerald-400">
-              <Sparkles className="size-3.5 text-emerald-300" /> Strategic Tech Ecosystem
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FF671F]/40 bg-white/5 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-[#ff9b6d]">
+              <Sparkles className="size-3.5 text-[#FF671F]" /> Strategic Tech Ecosystem
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white">
-              Backed by Healthcare Innovation & Modern IT Engineering
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-foreground">
+              Two Forces. One Mission. Smarter Schools.
             </h2>
-            <p className="mt-4 text-sm sm:text-base leading-7 text-slate-300">
-              EduSchool-Saathi stands on a rock-solid foundation of cross-industry technology synergy — bringing together healthcare diagnostics, digital wellness, and enterprise cloud software.
+            <p className="mt-4 text-sm sm:text-base leading-7 text-muted-foreground">
+              EduSchool-Saathi connects trusted healthcare innovation with enterprise-grade cloud engineering, so every Indian school gets technology that is healthier, safer, faster, and built for real daily operations.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+          <div className="relative mx-auto mt-14 grid max-w-5xl gap-8 md:grid-cols-2">
+            <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 md:block">
+              <span className="grid size-14 place-items-center rounded-full border border-[#FF671F]/30 bg-white text-[#138808] shadow-card">
+                <span className="text-lg font-black">+</span>
+              </span>
+            </div>
             {/* Sponsor Card */}
-            <div className="group relative rounded-2xl border border-emerald-500/30 bg-gradient-to-b from-emerald-950/50 via-slate-900/80 to-slate-950/90 p-7 sm:p-9 backdrop-blur-xl transition-all duration-300 hover:border-emerald-400/60 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(16,185,129,0.15)] flex flex-col justify-between">
+            <div className="ecosystem-card group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-emerald-600/25 bg-white/90 p-6 shadow-card backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-emerald-500/60 hover:shadow-[0_24px_70px_rgba(19,136,8,0.18)] sm:p-9">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-emerald-500/20 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-emerald-300 border border-emerald-500/40">
+                  <span className="rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-emerald-700 border border-emerald-300">
                     Official Sponsor
                   </span>
-                  <span className="flex items-center gap-1 text-[10px] font-bold text-emerald-400">
-                    <span className="size-2 rounded-full bg-emerald-400 animate-ping" /> Active Alliance
+                  <span className="flex items-center gap-1 text-[10px] font-bold text-emerald-700">
+                    <span className="size-2 rounded-full bg-emerald-500 animate-ping" /> Active Alliance
                   </span>
                 </div>
 
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="size-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 grid place-items-center text-emerald-300">
+                  <div className="size-12 rounded-xl bg-emerald-50 border border-emerald-300 grid place-items-center text-emerald-700">
                     <Award className="size-6" />
                   </div>
                   <div>
-                    <h3 className="font-display text-2xl font-black text-white group-hover:text-emerald-300 transition-colors">
+                    <h3 className="font-display text-2xl font-black text-foreground group-hover:text-emerald-700 transition-colors sm:text-3xl">
                       Sehaat Saathi App
                     </h3>
-                    <span className="text-xs font-semibold text-emerald-400/90">Healthcare & Diagnostics Companion</span>
+                    <span className="text-xs font-semibold text-emerald-700">Healthcare & Diagnostics Companion</span>
                   </div>
                 </div>
 
-                <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  India's pioneering digital healthcare and diagnostics platform, empowering students, faculty families, and communities with telemedicine, OPD booking, and digital health records.
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  A trusted digital healthcare and diagnostics companion helping schools care for student wellness through telemedicine, OPD access, diagnostics, and secure digital health records.
                 </p>
 
-                <div className="mt-6 space-y-2.5 rounded-xl border border-emerald-500/20 bg-emerald-950/30 p-4 text-xs text-emerald-200">
+                <div className="mt-6 space-y-2.5 rounded-xl border border-emerald-200 bg-emerald-50/90 p-4 text-xs text-emerald-900">
                   <div className="flex items-center gap-2 font-medium">
-                    <Check className="size-4 text-emerald-400 shrink-0" />
-                    <span>Student health & diagnostic checkup integration</span>
+                    <Check className="size-4 text-emerald-600 shrink-0" />
+                    <span>Student wellness and diagnostic checkup integration</span>
                   </div>
                   <div className="flex items-center gap-2 font-medium">
-                    <Check className="size-4 text-emerald-400 shrink-0" />
-                    <span>Annual on-campus school health wellness camps</span>
+                    <Check className="size-4 text-emerald-600 shrink-0" />
+                    <span>On-campus health and awareness initiatives</span>
                   </div>
                   <div className="flex items-center gap-2 font-medium">
-                    <Check className="size-4 text-emerald-400 shrink-0" />
-                    <span>Digital student medical health card generation</span>
+                    <Check className="size-4 text-emerald-600 shrink-0" />
+                    <span>Digital student health card readiness</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-5 border-t border-emerald-500/20 flex items-center justify-between">
-                <span className="text-xs text-slate-400">Official Health Partner</span>
+              <div className="mt-8 pt-5 border-t border-emerald-200 flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">Official Health Partner</span>
                 <a
                   href="https://sehaat-saathi.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/30 px-4 py-2 text-xs font-bold text-emerald-300 hover:text-white transition-all"
+                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 px-4 py-2 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition-all"
                 >
                   Visit Sehaat Saathi App <ExternalLink className="size-3.5" />
                 </a>
@@ -1445,56 +1625,57 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
             </div>
 
             {/* Powered By Card */}
-            <div className="group relative rounded-2xl border border-sky-500/30 bg-gradient-to-b from-sky-950/50 via-slate-900/80 to-slate-950/90 p-7 sm:p-9 backdrop-blur-xl transition-all duration-300 hover:border-sky-400/60 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(14,165,233,0.15)] flex flex-col justify-between">
+            <div className="ecosystem-card ecosystem-card-delay group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-sky-600/25 bg-white/90 p-6 shadow-card backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-sky-500/60 hover:shadow-[0_24px_70px_rgba(14,165,233,0.16)] sm:p-9">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#138808] via-white to-[#FF671F]" />
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-sky-500/20 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-sky-300 border border-sky-500/40">
+                  <span className="rounded-full bg-sky-50 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-sky-700 border border-sky-300">
                     Engineering & Infrastructure
                   </span>
-                  <span className="flex items-center gap-1 text-[10px] font-bold text-sky-400">
-                    <span className="size-2 rounded-full bg-sky-400 animate-ping" /> Enterprise Grade
+                  <span className="flex items-center gap-1 text-[10px] font-bold text-sky-700">
+                    <span className="size-2 rounded-full bg-sky-500 animate-ping" /> Enterprise Grade
                   </span>
                 </div>
 
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="size-12 rounded-xl bg-sky-500/20 border border-sky-500/30 grid place-items-center text-sky-300">
+                  <div className="size-12 rounded-xl bg-sky-50 border border-sky-300 grid place-items-center text-sky-700">
                     <Zap className="size-6" />
                   </div>
                   <div>
-                    <h3 className="font-display text-2xl font-black text-white group-hover:text-sky-300 transition-colors">
+                    <h3 className="font-display text-2xl font-black text-foreground group-hover:text-sky-700 transition-colors sm:text-3xl">
                       TechSeva IT Solutions Agency
                     </h3>
-                    <span className="text-xs font-semibold text-sky-400/90">Software Engineering & Cloud Architecture</span>
+                    <span className="text-xs font-semibold text-sky-700">Software Engineering & Cloud Architecture</span>
                   </div>
                 </div>
 
-                <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                  Full-cycle software engineering and cloud transformation powerhouse delivering high-performance SaaS platforms, enterprise data pipelines, and responsive digital products.
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  The engineering backbone behind dependable school technology, from multi-tenant SaaS architecture and secure data systems to responsive products that work across phones, tablets, and desktops.
                 </p>
 
-                <div className="mt-6 space-y-2.5 rounded-xl border border-sky-500/20 bg-sky-950/30 p-4 text-xs text-sky-200">
+                <div className="mt-6 space-y-2.5 rounded-xl border border-sky-200 bg-sky-50/90 p-4 text-xs text-sky-900">
                   <div className="flex items-center gap-2 font-medium">
-                    <Check className="size-4 text-sky-400 shrink-0" />
+                    <Check className="size-4 text-sky-600 shrink-0" />
                     <span>Multi-tenant isolated cloud architecture</span>
                   </div>
                   <div className="flex items-center gap-2 font-medium">
-                    <Check className="size-4 text-sky-400 shrink-0" />
-                    <span>99.9% uptime SLA & bank-grade 256-bit encryption</span>
+                    <Check className="size-4 text-sky-600 shrink-0" />
+                    <span>Reliable uptime and bank-grade data protection</span>
                   </div>
                   <div className="flex items-center gap-2 font-medium">
-                    <Check className="size-4 text-sky-400 shrink-0" />
-                    <span>Continuous backup & instant disaster recovery</span>
+                    <Check className="size-4 text-sky-600 shrink-0" />
+                    <span>Continuous backup and recovery-ready infrastructure</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-5 border-t border-sky-500/20 flex items-center justify-between">
-                <span className="text-xs text-slate-400">Technology & Cloud Partner</span>
+              <div className="mt-8 pt-5 border-t border-sky-200 flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">Technology & Cloud Partner</span>
                 <a
                   href="https://techseva-it-solutions.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 border border-sky-500/30 px-4 py-2 text-xs font-bold text-sky-300 hover:text-white transition-all"
+                  className="inline-flex items-center gap-2 rounded-lg bg-sky-50 hover:bg-sky-100 border border-sky-300 px-4 py-2 text-xs font-bold text-sky-700 hover:text-sky-900 transition-all"
                 >
                   Visit TechSeva IT Solutions <ExternalLink className="size-3.5" />
                 </a>
@@ -1505,10 +1686,11 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
       </section>
 
       {/* The Genesis & Vision Story */}
-      <section className="section bg-gradient-to-br from-slate-950 via-teal-950/70 to-slate-950 text-white relative overflow-hidden">
+      <section className="genesis-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_20%,rgba(255,103,31,0.14),transparent_28%),radial-gradient(circle_at_92%_75%,rgba(19,136,8,0.14),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)] text-foreground">
         {/* Decorative Grid & Glow */}
-        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-        <div className="absolute top-10 right-10 size-80 rounded-full bg-brand-warm/10 blur-3xl pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(#138808_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+        <div className="absolute top-10 right-10 size-80 rounded-full bg-[#FF671F]/10 blur-3xl pointer-events-none" />
 
         <div className="container relative z-10">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] items-center">
@@ -1517,45 +1699,45 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
                 <Sparkles className="size-3.5 text-brand-warm" /> The Genesis & Vision
               </div>
 
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.12] text-white">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.12] text-foreground">
                 Why Was EduSchool-Saathi Born?
               </h2>
 
-              <p className="mt-5 text-base sm:text-lg leading-relaxed text-slate-300">
+              <p className="mt-5 text-base sm:text-lg leading-relaxed text-muted-foreground">
                 In small towns and rural districts across Bihar — from <b>Bara Bazar Madhubani</b> and Darbhanga to Samastipur and Patna — thousands of dedicated school owners and teachers wake up every morning fighting a war against paper registers, missing fee ledgers, and uncoordinated schedules.
               </p>
 
-              <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-400">
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
                 When they looked for software, big metro vendors demanded ₹1,00,000+ upfront and locked them into painful annual maintenance contracts. We said: <b>No more.</b> Every school in Bihar deserves modern, high-speed digital power at a price that fits their budget.
               </p>
 
               {/* Quote Box */}
-              <div className="mt-6 rounded-xl border-l-4 border-brand-warm bg-white/5 p-5 backdrop-blur-sm">
+              <div className="mt-6 rounded-xl border-l-4 border-[#FF671F] bg-white/85 p-5 shadow-soft backdrop-blur-sm">
                 <div className="flex items-center gap-3">
                   <div className="size-11 rounded-lg bg-white p-1 shrink-0 overflow-hidden shadow-sm">
                     <img src={logoImg} alt="EduSchool-Saathi" className="size-full object-contain" />
                   </div>
                   <div>
-                    <b className="text-sm font-bold text-white block">
+                    <b className="text-sm font-bold text-foreground block">
                       <span className="text-sky-300">Edu</span>
                       <span className="text-amber-400">School</span>
-                      <span className="text-white/60">-</span>
-                      <span className="text-emerald-400">Saathi</span>
-                      <span className="text-white/80 font-medium text-xs ml-1.5">— &ldquo;Har School Ka Saathi&rdquo;</span>
+                      <span className="text-slate-400">-</span>
+                      <span className="text-emerald-700">Saathi</span>
+                      <span className="text-muted-foreground font-medium text-xs ml-1.5">— &ldquo;Har School Ka Saathi&rdquo;</span>
                     </b>
-                    <p className="text-xs text-amber-300/90 font-medium mt-0.5">
+                    <p className="text-xs text-[#c2410c] font-medium mt-0.5">
                       Built for rural, semi-urban & progressive schools across Bihar & India.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-bold text-slate-300">
-                <span className="flex items-center gap-1.5"><Check className="size-4 text-emerald-400" /> ₹5,000/mo Base Plan</span>
+              <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-bold text-muted-foreground">
+                <span className="flex items-center gap-1.5"><Check className="size-4 text-emerald-600" /> ₹5,000/mo Base Plan</span>
                 <span>•</span>
-                <span className="flex items-center gap-1.5"><Check className="size-4 text-emerald-400" /> No Heavy Server</span>
+                <span className="flex items-center gap-1.5"><Check className="size-4 text-emerald-600" /> No Heavy Server</span>
                 <span>•</span>
-                <span className="flex items-center gap-1.5"><Check className="size-4 text-emerald-400" /> WhatsApp & SMS Ready</span>
+                <span className="flex items-center gap-1.5"><Check className="size-4 text-emerald-600" /> WhatsApp & SMS Ready</span>
               </div>
             </div>
 
@@ -1566,43 +1748,43 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
                   step: "01",
                   title: "The Problem We Saw",
                   desc: "Principals losing up to 30% of their day resolving fee disputes, attendance discrepancies, and manual exam calculations.",
-                  border: "border-red-500/30 hover:border-red-400/60 bg-red-950/20",
-                  badge: "bg-red-500/20 text-red-300",
+                  border: "border-[#FF671F]/35 hover:border-[#FF671F]/70 bg-orange-50",
+                  badge: "bg-orange-100 text-orange-700",
                 },
                 {
                   step: "02",
                   title: "The Zero-Friction Solution",
                   desc: "A pure cloud SaaS ERP that requires zero IT setup and runs smoothly on normal Android phones and slow village internet.",
-                  border: "border-sky-500/30 hover:border-sky-400/60 bg-sky-950/20",
-                  badge: "bg-sky-500/20 text-sky-300",
+                  border: "border-sky-500/35 hover:border-sky-400/70 bg-sky-50",
+                  badge: "bg-sky-100 text-sky-700",
                 },
                 {
                   step: "03",
                   title: "The Honest Pricing Model",
                   desc: "No hidden setup fees, no compulsory AMC traps. Pay a simple predictable monthly fee with continuous free upgrades.",
-                  border: "border-emerald-500/30 hover:border-emerald-400/60 bg-emerald-950/20",
-                  badge: "bg-emerald-500/20 text-emerald-300",
+                  border: "border-emerald-500/35 hover:border-emerald-400/70 bg-emerald-50",
+                  badge: "bg-emerald-100 text-emerald-700",
                 },
                 {
                   step: "04",
                   title: "The Lasting Impact",
                   desc: "Schools report 100% fee transparency, 95%+ parent satisfaction, and over 2 hours saved daily for every teacher.",
-                  border: "border-amber-500/30 hover:border-amber-400/60 bg-amber-950/20",
-                  badge: "bg-amber-500/20 text-amber-300",
+                  border: "border-amber-500/35 hover:border-amber-400/70 bg-amber-50",
+                  badge: "bg-amber-100 text-amber-700",
                 },
               ].map((card) => (
                 <div
                   key={card.step}
-                  className={`rounded-xl border ${card.border} p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 shadow-lg`}
+                  className={`genesis-card rounded-xl border ${card.border} p-5 shadow-soft backdrop-blur-md transition-all duration-300 hover:-translate-y-1`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <span className={`text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full ${card.badge}`}>
                       Phase {card.step}
                     </span>
-                    <span className="font-mono text-xs text-slate-400 font-extrabold">{card.step}</span>
+                    <span className="font-mono text-xs text-muted-foreground font-extrabold">{card.step}</span>
                   </div>
-                  <h3 className="font-display text-base font-bold text-white">{card.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300">{card.desc}</p>
+                  <h3 className="font-display text-base font-bold text-foreground">{card.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{card.desc}</p>
                 </div>
               ))}
             </div>
@@ -2089,24 +2271,25 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
   const parentTrustScore = studentCount > 800 ? "98.5%" : studentCount > 400 ? "96.8%" : "95.2%";
 
   return (
-    <section className="section bg-gradient-to-b from-ink via-slate-900 to-ink text-ink-foreground relative overflow-hidden" id="roi-calculator">
-      <div className="absolute -top-32 left-1/3 size-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 right-1/4 size-96 rounded-full bg-brand-warm/10 blur-3xl pointer-events-none" />
+    <section className="roi-light section relative overflow-hidden bg-[radial-gradient(circle_at_12%_20%,rgba(255,103,31,0.14),transparent_28%),radial-gradient(circle_at_88%_78%,rgba(19,136,8,0.14),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)] text-foreground" id="roi-calculator">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="absolute -top-32 left-1/3 size-96 rounded-full bg-[#FF671F]/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 right-1/4 size-96 rounded-full bg-[#138808]/10 blur-3xl pointer-events-none" />
 
       <div className="container relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-warm/40 bg-brand-warm/15 px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-brand-warm">
             <TrendingUp className="size-3.5 text-brand-warm" /> Interactive Value Simulator
           </span>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-black text-foreground">
             Calculate How Much Time & Money EduSchool-Saathi Saves Your School
           </h2>
-          <p className="mt-4 text-sm sm:text-base leading-relaxed text-ink-muted">
+          <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
             Drag the slider below to match your school's student strength and witness the real monthly and annual impact on administration, fee recovery, and teacher efficiency.
           </p>
         </div>
 
-        <div className="mt-12 mx-auto max-w-4xl rounded-2xl border border-ink-line bg-ink-panel p-6 sm:p-10 shadow-dashboard backdrop-blur-xl">
+        <div className="roi-panel mt-12 mx-auto max-w-4xl rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-card backdrop-blur-xl sm:p-10">
           {/* Slider & Presets Header */}
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -2115,10 +2298,10 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
                   Select Total School Strength
                 </span>
                 <div className="flex items-baseline gap-2 mt-1">
-                  <span className="font-display text-4xl sm:text-5xl font-black text-white">
+                  <span className="font-display text-4xl sm:text-5xl font-black text-foreground">
                     {studentCount}
                   </span>
-                  <span className="text-sm font-semibold text-ink-muted">Enrolled Students</span>
+                  <span className="text-sm font-semibold text-muted-foreground">Enrolled Students</span>
                 </div>
               </div>
 
@@ -2134,7 +2317,7 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
                     className={`rounded-lg px-3 py-1.5 text-xs font-bold transition-all ${
                       studentCount === preset
                         ? "bg-primary text-primary-foreground shadow-brand"
-                        : "border border-ink-line bg-ink text-ink-muted hover:text-white hover:border-brand-sky/40"
+                        : "border border-slate-200 bg-slate-50 text-slate-600 hover:text-foreground hover:border-brand-sky/40"
                     }`}
                   >
                     {preset}
@@ -2152,9 +2335,9 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
                 step="25"
                 value={studentCount}
                 onChange={(e) => setStudentCount(Number(e.target.value))}
-                className="w-full h-3 bg-ink rounded-lg appearance-none cursor-pointer accent-primary"
+                className="w-full h-3 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-primary"
               />
-              <div className="flex justify-between text-[11px] font-mono text-ink-muted mt-2">
+              <div className="flex justify-between gap-2 text-[11px] font-mono text-muted-foreground mt-2">
                 <span>100 Students (Pre-School)</span>
                 <span>500 Students (Standard)</span>
                 <span>1,000 Students (High School)</span>
@@ -2165,24 +2348,24 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
 
           {/* Impact Metric Cards Grid */}
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-xl border border-ink-line bg-ink p-4 transition-all hover:border-primary/50">
-              <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-ink-muted">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition-all hover:-translate-y-1 hover:border-[#FF671F]/50">
+              <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-slate-600">
                 Admin Hours Saved
                 <Clock3 className="size-4 text-primary" />
               </span>
               <div className="mt-3 flex items-baseline gap-1">
-                <b className="font-display text-2xl sm:text-3xl font-black text-white">
+                <b className="font-display text-2xl sm:text-3xl font-black text-foreground">
                   {adminHoursSaved}
                 </b>
-                <span className="text-xs text-ink-muted">hrs / month</span>
+                <span className="text-xs text-muted-foreground">hrs / month</span>
               </div>
-              <p className="mt-2 text-[11px] text-ink-muted leading-relaxed">
+              <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed">
                 Automated attendance, fast fee receipts & one-click marks cards.
               </p>
             </div>
 
-            <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4 transition-all hover:border-emerald-400/60">
-              <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-emerald-400">
+            <div className="rounded-xl border border-emerald-300 bg-emerald-50 p-4 transition-all hover:-translate-y-1 hover:border-emerald-500/60">
+              <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-emerald-700">
                 Fee Leakage Prevented
                 <IndianRupee className="size-4 text-emerald-400" />
               </span>
@@ -2190,30 +2373,30 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
                 <b className="font-display text-2xl sm:text-3xl font-black text-emerald-400">
                   ₹{feeLeakagePrevented.toLocaleString("en-IN")}
                 </b>
-                <span className="text-xs text-emerald-300">/ year</span>
+                <span className="text-xs text-emerald-700">/ year</span>
               </div>
-              <p className="mt-2 text-[11px] text-emerald-200/70 leading-relaxed">
+              <p className="mt-2 text-[11px] text-emerald-800 leading-relaxed">
                 Zero missed dues through instant WhatsApp/SMS receipts & alerts.
               </p>
             </div>
 
-            <div className="rounded-xl border border-ink-line bg-ink p-4 transition-all hover:border-brand-sky/50">
-              <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-brand-sky">
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 transition-all hover:-translate-y-1 hover:border-brand-sky/60">
+              <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-sky-700">
                 Paper Registers Eliminated
                 <FileText className="size-4 text-brand-sky" />
               </span>
               <div className="mt-3 flex items-baseline gap-1">
-                <b className="font-display text-2xl sm:text-3xl font-black text-white">
+                <b className="font-display text-2xl sm:text-3xl font-black text-foreground">
                   {paperRegistersSaved}
                 </b>
-                <span className="text-xs text-ink-muted">registers / yr</span>
+                <span className="text-xs text-muted-foreground">registers / yr</span>
               </div>
-              <p className="mt-2 text-[11px] text-ink-muted leading-relaxed">
+              <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed">
                 Save paper costs, printing hassle, and storage shelf space.
               </p>
             </div>
 
-            <div className="rounded-xl border border-ink-line bg-ink p-4 transition-all hover:border-brand-warm/50">
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-4 transition-all hover:-translate-y-1 hover:border-[#FF671F]/60">
               <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-brand-warm">
                 Parent Engagement Rate
                 <HeartHandshake className="size-4 text-brand-warm" />
@@ -2222,21 +2405,21 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
                 <b className="font-display text-2xl sm:text-3xl font-black text-brand-warm">
                   {parentTrustScore}
                 </b>
-                <span className="text-xs text-ink-muted">Satisfaction</span>
+                <span className="text-xs text-muted-foreground">Satisfaction</span>
               </div>
-              <p className="mt-2 text-[11px] text-ink-muted leading-relaxed">
+              <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed">
                 Parents stay connected with real-time academic progress.
               </p>
             </div>
           </div>
 
           {/* Bottom Action CTA */}
-          <div className="mt-8 pt-6 border-t border-ink-line flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left">
-              <p className="text-xs font-bold text-white">
+              <p className="text-xs font-bold text-foreground">
                 Ready to unlock ₹{(feeLeakagePrevented).toLocaleString("en-IN")} in annual recovered value?
               </p>
-              <span className="text-[11px] text-ink-muted">
+              <span className="text-[11px] text-muted-foreground">
                 Setup takes under 24 hours. No expensive hardware or server required.
               </span>
             </div>
@@ -2255,6 +2438,7 @@ function Features() {
   const cats = ["All", "Core", "Academic", "Finance", "Portals", "Connect", "Insights", "Admin", "Extended"];
   const [active, setActive] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedFeature, setSelectedFeature] = useState(featureGroups[0].title);
 
   const filteredList = featureGroups.filter((module) => {
     const matchesCategory = active === "All" || module.cat === active;
@@ -2265,25 +2449,36 @@ function Features() {
       module.items.some((item) => item.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+  const selectedModule = filteredList.find((module) => module.title === selectedFeature) ?? filteredList[0];
 
   return (
-    <section id="features" className="section bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+    <section id="features" className="features-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_15%,rgba(255,103,31,0.13),transparent_28%),radial-gradient(circle_at_92%_82%,rgba(19,136,8,0.13),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]">
       {/* Ambient glows */}
-      <div className="pointer-events-none absolute -top-40 left-1/4 size-96 rounded-full bg-blue-600/15 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 right-1/4 size-96 rounded-full bg-violet-600/15 blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="pointer-events-none absolute -top-40 left-1/4 size-96 rounded-full bg-[#FF671F]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 right-1/4 size-96 rounded-full bg-[#138808]/10 blur-3xl" />
       <div className="container relative z-10">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-primary mb-5">
-            <Sparkles className="size-3.5" />Complete Platform Modules
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#FF671F]/35 bg-[#FF671F]/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-[#c2410c] mb-5">
+            <Sparkles className="size-3.5" />Complete Platform Modules <span className="text-[#138808]">• 19+ ERP Tools</span>
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+          <div className="features-poster-frame mx-auto mb-8 mt-2 max-w-4xl overflow-hidden rounded-3xl border border-[#138808]/25 bg-white p-2 shadow-card sm:p-4">
+            <img
+              src={featuresPosterImg}
+              alt="EduSchool-Saathi complete school management ERP platform poster"
+              className="mx-auto block h-auto w-full rounded-2xl object-contain"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-foreground leading-tight">
             Everything Your School Needs{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#FF671F] via-[#1E40AF] to-[#138808] bg-clip-text text-transparent">
               Built into 19+ High-Speed Modules
             </span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-400">
+          <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
             From pre-nursery to Class 12 — manage student admissions, instant fee collection, exam marks, and bus transport from a single lightning-fast dashboard.
           </p>
         </div>
@@ -2292,18 +2487,18 @@ function Features() {
         {/* Live Search & Category Bar */}
         <div className="mt-10 max-w-2xl mx-auto space-y-4">
           <div className="relative">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-[#138808]" />
             <input
               type="text"
               placeholder="Search modules (e.g., 'attendance', 'fees', 'exam', 'parent')..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="h-12 w-full rounded-full border border-white/10 bg-white/5 backdrop-blur-md pl-10 pr-4 text-xs sm:text-sm font-medium text-white placeholder:text-slate-500 outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20 shadow-sm"
+              className="h-12 w-full rounded-full border border-slate-200 bg-white/90 backdrop-blur-md pl-10 pr-4 text-xs sm:text-sm font-medium text-foreground placeholder:text-slate-400 outline-none transition focus:border-[#138808]/60 focus:ring-2 focus:ring-[#138808]/20 shadow-soft"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-500 hover:text-foreground"
               >
                 Clear
               </button>
@@ -2318,8 +2513,8 @@ function Features() {
                 onClick={() => setActive(c)}
                 className={`rounded-full px-4 py-1.5 text-xs font-bold transition-all duration-300 ${
                   active === c
-                    ? "bg-primary text-primary-foreground shadow-brand scale-105"
-                    : "border border-white/15 bg-white/5 text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/10"
+                    ? "bg-[#138808] text-white shadow-[0_8px_20px_rgba(19,136,8,0.22)] scale-105"
+                    : "border border-slate-200 bg-white/80 text-slate-600 hover:text-foreground hover:border-[#FF671F]/40 hover:bg-orange-50"
                 }`}
               >
                 {c}
@@ -2334,49 +2529,62 @@ function Features() {
             filteredList.map(({ icon: I, title, desc, items, cat }, idx) => {
               type Palette = { grad: string; iconBg: string; badge: string; badgeText: string; border: string; glow: string };
               const palettes: Record<string, Palette> = {
-                Core:     { grad: "from-blue-600 via-blue-500 to-indigo-600",     iconBg: "bg-white/20", badge: "bg-blue-900/50 text-blue-100 border border-blue-400/40",       badgeText: "text-blue-100/75",    border: "border-blue-500/30",    glow: "hover:shadow-[0_0_40px_rgba(59,130,246,0.4)]"    },
-                Academic: { grad: "from-violet-600 via-purple-500 to-pink-600",   iconBg: "bg-white/20", badge: "bg-violet-900/50 text-violet-100 border border-violet-400/40", badgeText: "text-violet-100/75",  border: "border-violet-500/30",  glow: "hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]"    },
-                Finance:  { grad: "from-emerald-600 via-green-500 to-teal-600",   iconBg: "bg-white/20", badge: "bg-emerald-900/50 text-emerald-100 border border-emerald-400/40", badgeText: "text-emerald-100/75", border: "border-emerald-500/30", glow: "hover:shadow-[0_0_40px_rgba(16,185,129,0.4)]"    },
-                Portals:  { grad: "from-orange-500 via-amber-500 to-yellow-500",  iconBg: "bg-white/20", badge: "bg-amber-900/50 text-amber-100 border border-amber-400/40",     badgeText: "text-amber-100/75",   border: "border-amber-500/30",   glow: "hover:shadow-[0_0_40px_rgba(245,158,11,0.4)]"    },
-                Connect:  { grad: "from-rose-600 via-pink-500 to-fuchsia-600",    iconBg: "bg-white/20", badge: "bg-rose-900/50 text-rose-100 border border-rose-400/40",         badgeText: "text-rose-100/75",    border: "border-rose-500/30",    glow: "hover:shadow-[0_0_40px_rgba(244,63,94,0.4)]"     },
-                Insights: { grad: "from-cyan-600 via-sky-500 to-blue-500",        iconBg: "bg-white/20", badge: "bg-cyan-900/50 text-cyan-100 border border-cyan-400/40",         badgeText: "text-cyan-100/75",    border: "border-cyan-500/30",    glow: "hover:shadow-[0_0_40px_rgba(6,182,212,0.4)]"     },
-                Admin:    { grad: "from-slate-600 via-slate-500 to-zinc-600",     iconBg: "bg-white/20", badge: "bg-slate-800/60 text-slate-100 border border-slate-400/40",     badgeText: "text-slate-100/75",   border: "border-slate-400/30",   glow: "hover:shadow-[0_0_40px_rgba(100,116,139,0.4)]"   },
-                Extended: { grad: "from-indigo-600 via-violet-500 to-purple-700", iconBg: "bg-white/20", badge: "bg-indigo-900/50 text-indigo-100 border border-indigo-400/40",   badgeText: "text-indigo-100/75",  border: "border-indigo-500/30",  glow: "hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]"    },
+                Core:     { grad: "from-white via-blue-50 to-white", iconBg: "bg-blue-100", badge: "bg-blue-50 text-blue-700 border border-blue-200", badgeText: "text-slate-600", border: "border-blue-200", glow: "hover:shadow-[0_18px_45px_rgba(30,64,175,0.16)]" },
+                Academic: { grad: "from-white via-orange-50 to-white", iconBg: "bg-orange-100", badge: "bg-orange-50 text-orange-700 border border-orange-200", badgeText: "text-slate-600", border: "border-orange-200", glow: "hover:shadow-[0_18px_45px_rgba(255,103,31,0.16)]" },
+                Finance:  { grad: "from-white via-emerald-50 to-white", iconBg: "bg-emerald-100", badge: "bg-emerald-50 text-emerald-700 border border-emerald-200", badgeText: "text-slate-600", border: "border-emerald-200", glow: "hover:shadow-[0_18px_45px_rgba(19,136,8,0.16)]" },
+                Portals:  { grad: "from-white via-amber-50 to-white", iconBg: "bg-amber-100", badge: "bg-amber-50 text-amber-700 border border-amber-200", badgeText: "text-slate-600", border: "border-amber-200", glow: "hover:shadow-[0_18px_45px_rgba(245,158,11,0.16)]" },
+                Connect:  { grad: "from-white via-rose-50 to-white", iconBg: "bg-rose-100", badge: "bg-rose-50 text-rose-700 border border-rose-200", badgeText: "text-slate-600", border: "border-rose-200", glow: "hover:shadow-[0_18px_45px_rgba(244,63,94,0.14)]" },
+                Insights: { grad: "from-white via-cyan-50 to-white", iconBg: "bg-cyan-100", badge: "bg-cyan-50 text-cyan-700 border border-cyan-200", badgeText: "text-slate-600", border: "border-cyan-200", glow: "hover:shadow-[0_18px_45px_rgba(6,182,212,0.16)]" },
+                Admin:    { grad: "from-white via-slate-50 to-white", iconBg: "bg-slate-100", badge: "bg-slate-100 text-slate-700 border border-slate-200", badgeText: "text-slate-600", border: "border-slate-200", glow: "hover:shadow-[0_18px_45px_rgba(100,116,139,0.14)]" },
+                Extended: { grad: "from-white via-green-50 to-white", iconBg: "bg-green-100", badge: "bg-green-50 text-green-700 border border-green-200", badgeText: "text-slate-600", border: "border-green-200", glow: "hover:shadow-[0_18px_45px_rgba(22,101,52,0.16)]" },
               };
               const p = palettes[cat] ?? palettes["Core"];
               return (
                 <article
                   key={title}
-                  className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${p.grad} p-6 shadow-xl border ${p.border} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] ${p.glow} flex flex-col justify-between cursor-default`}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={selectedFeature === title}
+                  onClick={() => setSelectedFeature(title)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setSelectedFeature(title);
+                    }
+                  }}
+                  className={`features-card group relative overflow-hidden rounded-2xl bg-gradient-to-br ${p.grad} p-6 shadow-soft border ${p.border} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] ${p.glow} flex flex-col justify-between cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF671F] ${selectedFeature === title ? "ring-2 ring-[#138808] ring-offset-2" : ""}`}
                   style={{ animationDelay: `${idx * 60}ms` }}
                 >
                   <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
                   <div className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/10 blur-2xl" />
-                  <div className="pointer-events-none absolute -bottom-8 -left-6 size-28 rounded-full bg-black/15 blur-2xl" />
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-1 tricolor-sheen opacity-80" />
                   <div>
                     <div className="flex items-start justify-between">
-                      <span className={`grid size-12 place-items-center rounded-xl ${p.iconBg} text-white backdrop-blur-sm shadow-md ring-1 ring-white/25 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-                        <I className="size-6 drop-shadow" />
+                      <span className={`grid size-12 place-items-center rounded-xl ${p.iconBg} text-[#138808] shadow-sm ring-1 ring-black/5 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                        <I className="size-6" />
                       </span>
                       <span className={`rounded-full ${p.badge} px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider backdrop-blur-sm`}>
                         {cat}
                       </span>
                     </div>
-                    <h3 className="mt-5 font-display text-xl font-black text-white drop-shadow leading-tight transition-colors duration-300 group-hover:text-yellow-100">
+                    <h3 className="mt-5 font-display text-xl font-black text-foreground leading-tight transition-colors duration-300 group-hover:text-[#c2410c]">
                       {title}
                     </h3>
                     <p className={`mt-2 min-h-12 text-xs sm:text-sm leading-6 ${p.badgeText}`}>
                       {desc}
                     </p>
                   </div>
-                  <ul className="mt-5 grid gap-2 border-t border-white/20 pt-4">
+                  <ul className="mt-5 grid gap-2 border-t border-slate-200 pt-4">
                     {items.map((x) => (
-                      <li key={x} className="flex items-center gap-2 text-xs font-semibold text-white/90">
-                        <Check className="size-3.5 shrink-0 text-white/70 drop-shadow" />
+                      <li key={x} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
+                        <Check className="size-3.5 shrink-0 text-[#138808]" />
                         {x}
                       </li>
                     ))}
                   </ul>
+                  <span className="mt-4 inline-flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#c2410c] opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                    Open module view <ArrowRight className="size-3" />
+                  </span>
                 </article>
               );
             })
@@ -2397,6 +2605,32 @@ function Features() {
             </div>
           )}
         </div>
+
+        {selectedModule && (
+          <div className="feature-command-panel mt-8 overflow-hidden rounded-2xl border border-[#138808]/25 bg-white/90 shadow-card backdrop-blur-xl">
+            <div className="h-1 tricolor-sheen" />
+            <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[auto_1fr_auto] lg:items-center">
+              <div className="grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-orange-100 via-white to-green-100 text-[#138808] shadow-sm ring-1 ring-[#FF671F]/25">
+                <selectedModule.icon className="size-8" />
+              </div>
+              <div>
+                <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#c2410c]">Live ERP module view • {selectedModule.cat}</span>
+                <h3 className="mt-1 font-display text-2xl font-black text-foreground">{selectedModule.title}</h3>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">{selectedModule.desc}</p>
+              </div>
+              <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 lg:min-w-52">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-700">Included workflow</span>
+                <ul className="mt-2 space-y-1.5">
+                  {selectedModule.items.slice(0, 3).map((item) => (
+                    <li key={item} className="flex items-start gap-1.5 text-xs font-semibold text-emerald-950">
+                      <Check className="mt-0.5 size-3.5 shrink-0 text-emerald-600" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -2415,7 +2649,10 @@ function Roles() {
   };
 
   return (
-    <section id="roles" className="section">
+    <section id="roles" className="roles-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.12),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.12),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="pointer-events-none absolute -left-40 top-1/3 size-96 rounded-full bg-[#FF671F]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-40 bottom-10 size-96 rounded-full bg-[#138808]/10 blur-3xl" />
       <div className="container">
         <SectionTitle
           eyebrow="Role-Based Experiences"
@@ -2424,7 +2661,7 @@ function Roles() {
           center
         />
 
-        <div className="mt-10 flex flex-wrap justify-center gap-2" role="tablist">
+        <div className="mt-10 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-center" role="tablist">
           {(Object.keys(roles) as (keyof typeof roles)[]).map((k) => {
             const I = roles[k].icon;
             return (
@@ -2433,10 +2670,10 @@ function Roles() {
                 aria-selected={active === k}
                 key={k}
                 onClick={() => setActive(k)}
-                className={`flex items-center gap-2 rounded-xl border px-4 py-3 text-xs font-bold transition-all ${
+                className={`relative flex items-center justify-center gap-2 rounded-xl border px-3 py-3 text-xs font-bold transition-all sm:px-4 ${
                   active === k
-                    ? "border-primary bg-primary text-primary-foreground shadow-brand"
-                    : "border-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/30"
+                    ? "border-[#138808]/45 bg-gradient-to-br from-[#138808]/15 via-white to-[#FF671F]/10 text-foreground shadow-sm ring-1 ring-[#138808]/15"
+                    : "border-slate-200 bg-white/85 text-muted-foreground hover:text-foreground hover:border-[#FF671F]/40 hover:-translate-y-0.5"
                 }`}
               >
                 <I className="size-4" />
@@ -2446,13 +2683,14 @@ function Roles() {
           })}
         </div>
 
-        <div className="mt-8 grid overflow-hidden rounded-2xl border border-border bg-card shadow-card lg:grid-cols-[.8fr_1.2fr]">
+        <div className="role-workspace relative mt-8 grid overflow-hidden rounded-2xl border border-[#138808]/20 bg-white/90 shadow-card backdrop-blur-xl lg:grid-cols-[.8fr_1.2fr]">
+          <div className="absolute inset-x-0 top-0 z-10 h-1 tricolor-sheen" />
           {/* Left Column: Role Details */}
-          <div className="flex flex-col justify-center p-7 sm:p-10">
-            <span className="grid size-12 place-items-center rounded-xl bg-accent text-primary">
+          <div className="flex flex-col justify-center p-6 sm:p-10">
+            <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-orange-100 via-white to-green-100 text-[#138808] shadow-sm ring-1 ring-[#FF671F]/25">
               <r.icon className="size-6" />
             </span>
-            <p className="mt-6 text-xs font-extrabold uppercase tracking-[.14em] text-primary">
+            <p className="mt-6 text-xs font-extrabold uppercase tracking-[.14em] text-[#c2410c]">
               {active} Experience
             </p>
             <h3 className="mt-2 font-display text-2xl sm:text-3xl font-black">
@@ -2499,35 +2737,36 @@ function Roles() {
           </div>
 
           {/* Right Column: Live Simulator View */}
-          <div className="bg-ink p-5 sm:p-8 flex flex-col justify-center">
-            <div className="rounded-xl border border-ink-line bg-ink-panel p-5 sm:p-6 text-ink-foreground shadow-dashboard">
-              <div className="flex items-center justify-between border-b border-ink-line pb-4">
+          <div className="role-preview relative bg-gradient-to-br from-orange-50/70 via-white to-green-50/70 p-5 sm:p-8 flex flex-col justify-center">
+            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-soft sm:p-6">
+              <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-sky">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0369a1]">
                     Role Simulation Active
                   </span>
-                  <h4 className="font-display text-lg font-bold text-white">
+                  <h4 className="font-display text-lg font-bold text-foreground">
                     {active} Portal Interface
                   </h4>
                 </div>
-                <span className="rounded-full bg-emerald-500/20 px-2.5 py-1 text-[10px] font-bold text-emerald-400 border border-emerald-500/30">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-bold text-emerald-700 border border-emerald-200">
+                  <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   Online
                 </span>
               </div>
 
               <div className="mt-5 grid grid-cols-2 gap-3">
                 {r.stats.map(([label, value]) => (
-                  <div key={label} className="rounded-lg border border-ink-line bg-ink p-3.5">
-                    <b className="font-display text-xl font-bold text-white">{value}</b>
-                    <span className="mt-1 block text-[10px] text-ink-muted uppercase font-semibold">
+                  <div key={label} className="rounded-lg border border-slate-200 bg-slate-50 p-3.5 transition-all hover:-translate-y-1 hover:border-[#FF671F]/40">
+                    <b className="font-display text-xl font-bold text-foreground">{value}</b>
+                    <span className="mt-1 block text-[10px] text-muted-foreground uppercase font-semibold">
                       {label}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-4 rounded-lg border border-ink-line bg-ink p-4">
-                <b className="text-xs font-bold text-white block mb-3">Live Active Actions</b>
+              <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <b className="text-xs font-bold text-foreground block mb-3">Live Active Actions</b>
                 <div className="space-y-2">
                   {r.tasks.map((x, i) => {
                     const isDone = !!completedTasks[`${active}-${x}`];
@@ -2535,16 +2774,16 @@ function Roles() {
                       <div
                         key={x}
                         className={`flex items-center justify-between rounded p-2 text-xs transition-colors ${
-                          isDone ? "bg-emerald-950/40 text-emerald-300" : "bg-ink-panel text-ink-muted"
+                          isDone ? "bg-emerald-50 text-emerald-800 border border-emerald-200" : "bg-white text-slate-600 border border-slate-200"
                         }`}
                       >
                         <span className="flex items-center gap-2">
-                          <span className="grid size-4 place-items-center rounded-full bg-brand-sky/20 text-[10px] font-bold text-brand-sky">
+                          <span className="grid size-4 place-items-center rounded-full bg-sky-100 text-[10px] font-bold text-sky-700">
                             {i + 1}
                           </span>
                           <span>{x}</span>
                         </span>
-                        {isDone && <span className="text-[10px] text-emerald-400 font-bold">Processed</span>}
+                        {isDone && <span className="text-[10px] text-emerald-700 font-bold">Processed</span>}
                       </div>
                     );
                   })}
@@ -2558,7 +2797,55 @@ function Roles() {
   );
 }
 
-function HowItWorks(){const steps=[[Phone,"Talk to Us","Tell us about your school and everyday needs."],[Settings,"School Onboarding","Set up school information, classes and staff."],[Users,"Create School Accounts","Prepare appropriate access for every role."],[Play,"Start Managing","Move attendance, fees, exams and records online."],[TrendingUp,"Grow Digitally","Add more workflows as your school evolves."]];return <section id="how-it-works" className="section bg-muted/40"><div className="container"><SectionTitle eyebrow="Simple onboarding" title="Get Your School Digitally Connected in Simple Steps" center/><div className="relative mt-14 grid gap-4 md:grid-cols-5 md:before:absolute md:before:left-[10%] md:before:right-[10%] md:before:top-7 md:before:h-px md:before:bg-border">{steps.map(([I,t,d],i)=><div key={String(t)} className="relative rounded-md border border-border bg-card p-5 shadow-soft md:border-0 md:bg-transparent md:p-0 md:text-center md:shadow-none"><span className="relative mx-auto grid size-14 place-items-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-brand"><I className="size-5"/></span><span className="mt-4 block text-[10px] font-extrabold uppercase tracking-widest text-primary">Step {i+1}</span><h3 className="mt-1 font-display font-bold">{t as string}</h3><p className="mt-2 text-xs leading-5 text-muted-foreground">{d as string}</p></div>)}</div></div></section>}
+function HowItWorks() {
+  const steps = [
+    [Phone, "Talk to Us", "Tell us about your school, student strength, and everyday needs."],
+    [Settings, "School Onboarding", "Set up school information, classes, sections, staff, and academic sessions."],
+    [Users, "Create School Accounts", "Prepare the right access for principals, teachers, students, and parents."],
+    [Play, "Start Managing", "Move attendance, fees, exams, homework, and records online."],
+    [TrendingUp, "Grow Digitally", "Add more workflows as your school evolves across Bihar and India."],
+  ] as const;
+  const [activeStep, setActiveStep] = useState(0);
+  const [ActiveIcon, activeTitle, activeCopy] = steps[activeStep];
+
+  return (
+    <section id="how-it-works" className="onboarding-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.12),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.12),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="container relative z-10">
+        <SectionTitle eyebrow="Simple onboarding" title="Get Your School Digitally Connected in Simple Steps" copy="A guided path from first conversation to a confident, connected school operation." center />
+        <div className="onboarding-journey mt-10 grid gap-4 lg:grid-cols-[1.15fr_.85fr]">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {steps.map(([Icon, title], index) => (
+              <button
+                key={title}
+                type="button"
+                onClick={() => setActiveStep(index)}
+                className={`onboarding-step group relative rounded-2xl border p-4 text-left transition-all sm:text-center ${activeStep === index ? "border-[#138808]/50 bg-white shadow-card ring-1 ring-[#138808]/15" : "border-slate-200 bg-white/70 hover:-translate-y-1 hover:border-[#FF671F]/50"}`}
+              >
+                <span className={`relative mx-auto grid size-12 place-items-center rounded-full border-4 border-white shadow-sm transition-transform group-hover:scale-110 ${activeStep === index ? "bg-[#138808] text-white" : "bg-orange-50 text-[#c2410c]"}`}>
+                  <Icon className="size-5" />
+                </span>
+                <span className="mt-3 block text-[10px] font-extrabold uppercase tracking-widest text-[#c2410c]">Step {String(index + 1).padStart(2, "0")}</span>
+                <span className="mt-1 block font-display text-sm font-black text-foreground">{title}</span>
+                {activeStep === index && <span className="absolute inset-x-4 bottom-0 h-1 rounded-full bg-gradient-to-r from-[#FF671F] via-white to-[#138808]" />}
+              </button>
+            ))}
+          </div>
+          <div className="onboarding-detail relative overflow-hidden rounded-2xl border border-[#138808]/25 bg-white p-6 shadow-card sm:p-8">
+            <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+            <span className="inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#c2410c]"><ActiveIcon className="size-3.5" /> Your next milestone</span>
+            <h3 className="mt-5 font-display text-2xl font-black text-foreground">{activeTitle}</h3>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">{activeCopy}</p>
+            <div className="mt-6 flex items-center gap-3 border-t border-slate-200 pt-5">
+              <span className="font-display text-3xl font-black text-[#138808]">{String(activeStep + 1).padStart(2, "0")}</span>
+              <span className="text-xs font-semibold text-muted-foreground">of 05 steps to a smarter school day</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Benefits() {
   const groups = [
@@ -2615,43 +2902,55 @@ function Benefits() {
       ],
     },
   ];
+  const [activeBenefit, setActiveBenefit] = useState(0);
+  const ActiveBenefitIcon = groups[activeBenefit].icon;
 
   return (
-    <section id="benefits" className="section bg-gradient-to-b from-ink via-slate-900 to-ink text-ink-foreground relative overflow-hidden">
+    <section id="benefits" className="benefits-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.13),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.13),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
       <div className="container relative z-10">
         <SectionTitle
           eyebrow="Benefits for everyone"
           title="A Better School Day, for Every Role"
           copy="Reduce administrative friction and give each member of the school community the right information at the right time."
-          dark
+          center
         />
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
-          {groups.map((g) => (
+        <div className="mt-10 grid gap-4 lg:grid-cols-[.8fr_1.2fr]">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+          {groups.map((g, index) => (
             <div
               key={g.title}
-              className="rounded-xl border border-ink-line bg-ink-panel p-6 sm:p-8 transition-all hover:border-brand-sky/50 hover:shadow-lg"
+              role="button"
+              tabIndex={0}
+              onClick={() => setActiveBenefit(index)}
+              onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setActiveBenefit(index); } }}
+              className={`benefit-card cursor-pointer rounded-2xl border p-5 transition-all hover:-translate-y-1 ${activeBenefit === index ? "border-[#138808]/45 bg-white shadow-card ring-1 ring-[#138808]/15" : "border-slate-200 bg-white/75 hover:border-[#FF671F]/45"}`}
             >
               <div className="flex items-center gap-3">
-                <span className="grid size-11 place-items-center rounded-lg bg-brand-sky/15 text-brand-sky">
+                <span className={`grid size-11 place-items-center rounded-xl ${activeBenefit === index ? "bg-[#138808] text-white" : "bg-orange-50 text-[#c2410c]"}`}>
                   <g.icon className="size-5" />
                 </span>
-                <span className="text-xs font-bold uppercase tracking-widest text-brand-warm">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#c2410c]">
                   {g.sub}
                 </span>
               </div>
-              <h3 className="mt-5 font-display text-xl sm:text-2xl font-bold text-white">
+              <h3 className="mt-4 font-display text-lg font-black text-foreground">
                 {g.title}
               </h3>
-              <div className="mt-5 grid grid-cols-2 gap-3">
-                {g.items.map((x) => (
-                  <span key={x} className="flex items-center gap-2 text-xs font-medium text-slate-300">
-                    <Check className="size-3.5 text-success shrink-0" />
-                    {x}
-                  </span>
-                ))}
-              </div>
             </div>
           ))}
+          </div>
+          <div className="benefit-detail relative overflow-hidden rounded-2xl border border-[#138808]/25 bg-white p-6 shadow-card sm:p-8">
+            <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+            <div className="flex items-start justify-between gap-4">
+              <div><span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#c2410c]">Impact for {groups[activeBenefit].sub.replace("For ", "")}</span><h3 className="mt-2 font-display text-2xl font-black text-foreground sm:text-3xl">{groups[activeBenefit].title}</h3></div>
+              <span className="hidden size-14 place-items-center rounded-2xl bg-gradient-to-br from-orange-100 via-white to-green-100 text-[#138808] sm:grid"><ActiveBenefitIcon className="size-7" /></span>
+            </div>
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">A focused experience keeps the right people moving with less friction and more visibility throughout the school day.</p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {groups[activeBenefit].items.map((item) => <div key={item} className="flex items-center gap-2 rounded-xl border border-emerald-100 bg-emerald-50/70 p-3 text-xs font-bold text-emerald-950"><Check className="size-4 shrink-0 text-emerald-600" />{item}</div>)}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -2660,7 +2959,17 @@ function Benefits() {
 
 function Mission(){const values=[[Sparkles,"Simplicity","Technology should make school management easier, not harder."],[MapPin,"Accessibility","Digital tools should reach schools beyond major cities."],[HeartHandshake,"Connection","Schools, teachers, students and parents should stay connected."],[TrendingUp,"Growth","Help schools evolve from manual systems to modern operations."]];return <><section className="section"><div className="container grid items-center gap-12 lg:grid-cols-2"><div className="relative"><img src={schoolImage} alt="Students and teacher using digital learning tools" width={1600} height={1056} loading="lazy" className="aspect-[5/4] rounded-lg object-cover shadow-card"/><div className="absolute bottom-4 left-4 right-4 rounded-md bg-ink/90 p-5 text-ink-foreground backdrop-blur sm:left-auto sm:max-w-xs"><MapPin className="size-5 text-brand-warm"/><b className="mt-2 block font-display text-lg">Technology belongs everywhere.</b><p className="mt-1 text-xs leading-5 text-ink-muted">Madhubani · Darbhanga · North Bihar · Rural & semi-urban communities</p></div></div><div><SectionTitle eyebrow="Our local mission" title="Bringing Digital School Management Closer to Every School." copy="Our goal is to help schools in rural and semi-urban communities adopt modern digital management without the complexity and cost traditionally associated with custom software."/><p className="mt-6 border-l-2 border-brand-warm pl-5 font-display text-xl font-bold">Technology should not be limited to big cities or large institutions.</p></div></div></section><section className="section bg-muted/40"><div className="container"><div className="grid gap-5 lg:grid-cols-2"><div className="rounded-lg bg-primary p-8 text-primary-foreground shadow-brand"><span className="text-xs font-bold uppercase tracking-widest text-primary-foreground/70">Our mission</span><h2 className="mt-3 font-display text-3xl font-extrabold">Digitally empower every school.</h2><p className="mt-4 leading-7 text-primary-foreground/80">To digitally empower schools with simple, affordable and accessible technology that reduces complexity, improves communication and creates a connected education experience.</p></div><div className="rounded-lg border border-border bg-card p-8 shadow-soft"><span className="text-xs font-bold uppercase tracking-widest text-primary">Our vision</span><h2 className="mt-3 font-display text-3xl font-extrabold">Every School. Connected. Digitally Empowered.</h2><p className="mt-4 leading-7 text-muted-foreground">A connected education ecosystem where every school, teacher, student and parent can access smarter tools in a simpler and more meaningful way.</p></div></div><div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{values.map(([I,t,d])=><div key={String(t)} className="rounded-md border border-border bg-card p-5"><I className="size-5 text-primary"/><h3 className="mt-4 text-xs font-extrabold uppercase tracking-widest">{t as string}</h3><p className="mt-2 text-xs leading-5 text-muted-foreground">{d as string}</p></div>)}</div></div></section></>}
 
-function Showcase(){return <section className="section"><div className="container"><SectionTitle eyebrow="Product showcase" title="See Your School at a Glance" copy="Understand attendance, fees, student performance and daily activity without searching through files." center/><div className="mx-auto mt-10 max-w-6xl"><Dashboard/></div></div></section>}
+function MissionPremium() {
+  const values = [[Sparkles, "Simplicity", "Technology should make school management easier, not harder."], [MapPin, "Accessibility", "Digital tools should reach schools beyond major cities."], [HeartHandshake, "Connection", "Schools, teachers, students and parents should stay connected."], [TrendingUp, "Growth", "Help schools evolve from manual systems to modern operations."]] as const;
+  const [activeValue, setActiveValue] = useState(0);
+  const [ValueIcon, valueTitle, valueCopy] = values[activeValue];
+  return <>
+    <section className="mission-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.13),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.13),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]"><div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" /><div className="container relative z-10 grid items-center gap-10 lg:grid-cols-[.95fr_1.05fr]"><div className="mission-image-card relative overflow-hidden rounded-3xl border border-[#138808]/25 bg-white p-2 shadow-card"><img src={schoolImage} alt="Students and teacher using digital learning tools" width={1600} height={1056} loading="lazy" className="aspect-[5/4] rounded-2xl object-cover" /><div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/70 bg-white/90 p-4 shadow-soft backdrop-blur sm:left-auto sm:max-w-xs"><MapPin className="size-5 text-[#FF671F]" /><b className="mt-2 block font-display text-lg text-foreground">Technology belongs everywhere.</b><p className="mt-1 text-xs leading-5 text-muted-foreground">Madhubani · Darbhanga · North Bihar · Rural & semi-urban communities</p></div></div><div><SectionTitle eyebrow="Our local mission" title="Bringing Digital School Management Closer to Every School." copy="Our goal is to help schools in rural and semi-urban communities adopt modern digital management without the complexity and cost traditionally associated with custom software." /><p className="mt-6 border-l-4 border-[#FF671F] pl-5 font-display text-xl font-black text-foreground">Technology should not be limited to big cities or large institutions.</p><div className="mt-8 grid gap-3 sm:grid-cols-2">{values.map(([Icon, title], index) => <button key={title} type="button" onClick={() => setActiveValue(index)} className={`mission-value-card rounded-2xl border p-4 text-left transition-all ${activeValue === index ? "border-[#138808]/45 bg-white shadow-card" : "border-slate-200 bg-white/70 hover:-translate-y-1 hover:border-[#FF671F]/45"}`}><Icon className={`size-5 ${activeValue === index ? "text-[#138808]" : "text-[#c2410c]"}`} /><b className="mt-2 block font-display text-sm text-foreground">{title}</b></button>)}</div><div className="mission-value-detail mt-4 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-5"><span className="text-[10px] font-extrabold uppercase tracking-widest text-emerald-700">Our guiding value</span><div className="mt-2 flex items-center gap-3"><ValueIcon className="size-5 text-emerald-600" /><b className="font-display text-lg text-emerald-950">{valueTitle}</b></div><p className="mt-2 text-sm leading-6 text-emerald-900">{valueCopy}</p></div></div></div></section>
+    <section className="vision-light section relative overflow-hidden bg-white"><div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" /><div className="container relative grid gap-5 lg:grid-cols-2"><div className="vision-card rounded-3xl border border-[#138808]/25 bg-gradient-to-br from-green-50 via-white to-orange-50 p-7 shadow-card sm:p-10"><span className="text-xs font-extrabold uppercase tracking-widest text-[#138808]">Our vision</span><h2 className="mt-3 font-display text-3xl font-black text-foreground">Every school confident. Every child digitally empowered.</h2><p className="mt-4 leading-7 text-muted-foreground">Create an education ecosystem where schools in Patna, Madhubani, Darbhanga, and remote village blocks can access world-class tools that save time, improve transparency, and help teachers focus on teaching.</p><span className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-[#c2410c] shadow-sm"><Target className="size-4" /> Bihar to India, one school at a time</span></div><div className="mission-card rounded-3xl border border-[#FF671F]/25 bg-gradient-to-br from-orange-50 via-white to-green-50 p-7 shadow-card sm:p-10"><span className="text-xs font-extrabold uppercase tracking-widest text-[#c2410c]">Our mission</span><h2 className="mt-3 font-display text-3xl font-black text-foreground">Make school technology practical, affordable, and human.</h2><div className="mt-5 space-y-3">{["Bring fee transparency to every school office.","Give teachers back hours for teaching.","Keep parents connected to progress every day."].map((item) => <div key={item} className="flex items-center gap-2 rounded-xl border border-emerald-100 bg-white/80 p-3 text-sm font-bold text-emerald-950"><Check className="size-4 text-emerald-600" />{item}</div>)}</div></div></div></section>
+  </>;
+}
+
+function Showcase(){return <section className="showcase-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.12),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.12),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]"><div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" /><div className="container relative z-10"><SectionTitle eyebrow="Product showcase" title="See Your School at a Glance" copy="Understand attendance, fees, student performance and daily activity without searching through files." center/><div className="showcase-frame mx-auto mt-10 max-w-6xl overflow-hidden rounded-3xl border border-[#138808]/25 bg-white/80 p-3 shadow-card sm:p-5"><div className="mb-3 flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-slate-200 bg-gradient-to-r from-orange-50 via-white to-green-50 px-4 py-3"><span className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#c2410c]"><span className="size-2 rounded-full bg-emerald-500 animate-pulse" /> Live school command center</span><span className="text-[10px] font-bold text-muted-foreground">Attendance • Fees • Exams • Portals</span></div><Dashboard/></div></div></section>}
 
 function MobileExperience() {
   const phones = [
@@ -2751,7 +3060,8 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section id="pricing" className="section bg-muted/40">
+    <section id="pricing" className="pricing-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.12),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.12),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <SectionTitle
@@ -2762,13 +3072,13 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
           />
 
           {/* Billing Switcher Toggle */}
-          <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-border bg-card p-1.5 shadow-xs">
+          <div className="mt-8 inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-soft">
             <button
               type="button"
               onClick={() => setIsAnnual(false)}
               className={`rounded-full px-4 py-2 text-xs font-bold transition-all ${
                 !isAnnual
-                  ? "bg-primary text-primary-foreground shadow-brand"
+                  ? "bg-[#138808] text-white shadow-[0_8px_20px_rgba(19,136,8,0.22)]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -2779,7 +3089,7 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
               onClick={() => setIsAnnual(true)}
               className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-bold transition-all ${
                 isAnnual
-                  ? "bg-primary text-primary-foreground shadow-brand"
+                  ? "bg-[#FF671F] text-white shadow-[0_8px_20px_rgba(255,103,31,0.22)]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -2794,7 +3104,7 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
         {/* Pricing Cards Comparison */}
         <div className="mt-12 grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto items-stretch">
           {/* Starter School */}
-          <div className="rounded-2xl border border-border bg-card p-7 shadow-soft flex flex-col justify-between">
+          <div className="pricing-card rounded-2xl border border-slate-200 bg-white p-7 shadow-soft flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between">
                 <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
@@ -2842,8 +3152,8 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
           </div>
 
           {/* Standard Pro (Most Popular) */}
-          <div className="relative rounded-2xl border-2 border-primary bg-gradient-to-b from-card via-card to-primary/5 p-7 shadow-card flex flex-col justify-between scale-105 z-10">
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-0.5 text-[10px] font-black uppercase tracking-wider text-primary-foreground shadow-brand">
+          <div className="pricing-card pricing-featured relative rounded-2xl border-2 border-[#138808]/50 bg-gradient-to-b from-white via-white to-green-50 p-7 shadow-card flex flex-col justify-between lg:scale-105 z-10">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-[#138808] px-3 py-0.5 text-[10px] font-black uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(19,136,8,0.24)]">
               Most Popular in Bihar
             </div>
 
@@ -2895,7 +3205,7 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
           </div>
 
           {/* Institutional / Multi-Branch */}
-          <div className="rounded-2xl border border-border bg-card p-7 shadow-soft flex flex-col justify-between">
+          <div className="pricing-card rounded-2xl border border-slate-200 bg-white p-7 shadow-soft flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between">
                 <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
@@ -2955,6 +3265,7 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
 }
 
 function WhyAndPrivacy() {
+  const [activeWhy, setActiveWhy] = useState(0);
   const why = [
     [Layers3, "Complete Platform", "Manage multiple school operations from one place."],
     [Zap, "Easy to Use", "Designed for administrators, teachers, students and parents."],
@@ -2966,7 +3277,8 @@ function WhyAndPrivacy() {
 
   return (
     <>
-      <section className="section bg-background text-foreground">
+      <section className="why-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.11),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.11),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)] text-foreground">
+        <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
         <div className="container">
           <SectionTitle
             eyebrow="A long-term partner"
@@ -2974,28 +3286,33 @@ function WhyAndPrivacy() {
             center
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {why.map(([I, t, d]) => (
+            {why.map(([I, t, d], index) => (
               <div
                 key={String(t)}
-                className="rounded-xl border border-border bg-card p-6 shadow-soft hover:border-primary/40 hover:shadow-card transition-all"
+                role="button"
+                tabIndex={0}
+                onClick={() => setActiveWhy(index)}
+                onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setActiveWhy(index); } }}
+                className={`why-card cursor-pointer rounded-2xl border p-6 shadow-soft transition-all hover:-translate-y-1 ${activeWhy === index ? "border-[#138808]/45 bg-white shadow-card ring-1 ring-[#138808]/15" : "border-slate-200 bg-white/75 hover:border-[#FF671F]/45"}`}
               >
-                <I className="size-6 text-primary" />
+                <span className={`grid size-11 place-items-center rounded-xl ${activeWhy === index ? "bg-[#138808] text-white" : "bg-orange-50 text-[#c2410c]"}`}><I className="size-6" /></span>
                 <h3 className="mt-4 font-display text-lg font-bold text-foreground">{t as string}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{d as string}</p>
+                {activeWhy === index && <span className="mt-4 inline-flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-widest text-[#c2410c]">Why it matters <ArrowRight className="size-3" /></span>}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section bg-gradient-to-b from-primary via-primary/95 to-primary text-primary-foreground relative overflow-hidden">
+      <section className="privacy-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.13),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.13),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)] text-foreground">
+        <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
         <div className="container grid gap-10 lg:grid-cols-2 items-center relative z-10">
           <div>
             <SectionTitle
               eyebrow="Thoughtful by design"
               title="Built with School Data Privacy in Mind"
               copy="EduSchool-Saathi is designed around school-level data isolation, role-based access and controlled permissions."
-              dark
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -3009,9 +3326,9 @@ function WhyAndPrivacy() {
             ].map((x) => (
               <div
                 key={x}
-                className="flex items-center gap-3 rounded-xl border border-white/20 bg-white/10 backdrop-blur-md p-4 text-xs font-bold text-white shadow-sm"
+                className="flex items-center gap-3 rounded-xl border border-emerald-200 bg-white/85 backdrop-blur-md p-4 text-xs font-bold text-foreground shadow-soft transition-all hover:-translate-y-1 hover:border-[#138808]/45"
               >
-                <LockKeyhole className="size-4 shrink-0 text-brand-warm" />
+                <LockKeyhole className="size-4 shrink-0 text-[#138808]" />
                 <span>{x}</span>
               </div>
             ))}
@@ -3022,71 +3339,83 @@ function WhyAndPrivacy() {
   );
 }
 
-function FAQ(){const [open,setOpen]=useState(0);return <section className="section"><div className="container grid gap-12 lg:grid-cols-[.7fr_1.3fr]"><SectionTitle eyebrow="Questions, answered" title="Everything You Need to Know" copy="Clear answers for school owners and directors exploring EduSchool-Saathi."/><div>{faqs.map(([q,a],i)=><div key={q} className="border-b border-border"><button type="button" className="flex w-full items-center justify-between gap-4 py-5 text-left text-sm font-bold" onClick={()=>setOpen(open===i?-1:i)} aria-expanded={open===i}>{q}<ChevronDown className={`size-4 shrink-0 transition ${open===i?"rotate-180 text-primary":""}`}/></button><div className={`grid transition-all ${open===i?"grid-rows-[1fr] pb-5":"grid-rows-[0fr]"}`}><p className="overflow-hidden text-sm leading-6 text-muted-foreground">{a}</p></div></div>)}</div></div></section>}
+function FAQ(){const [open,setOpen]=useState(0);return <section id="faq" className="faq-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.1),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.1),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]"><div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" /><div className="container grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><SectionTitle eyebrow="Questions, answered" title="Everything You Need to Know" copy="Clear answers for school owners and directors exploring EduSchool-Saathi."/><div className="faq-list rounded-2xl border border-slate-200 bg-white/85 p-3 shadow-card">{faqs.map(([q,a],i)=><div key={q} className={`faq-item rounded-xl border transition-all ${open===i?"border-[#138808]/30 bg-emerald-50/50":"border-transparent"}`}><button type="button" className="flex min-h-14 w-full items-center justify-between gap-4 px-4 py-4 text-left text-sm font-bold text-foreground" onClick={()=>setOpen(open===i?-1:i)} aria-expanded={open===i}><span className="flex items-center gap-3"><span className={`grid size-7 shrink-0 place-items-center rounded-full text-[10px] font-black ${open===i?"bg-[#138808] text-white":"bg-orange-50 text-[#c2410c]"}`}>{String(i+1).padStart(2,"0")}</span>{q}</span><ChevronDown className={`size-4 shrink-0 transition ${open===i?"rotate-180 text-[#138808]":"text-muted-foreground"}`}/></button><div className={`grid transition-all ${open===i?"grid-rows-[1fr] pb-4":"grid-rows-[0fr]"}`}><p className="overflow-hidden px-14 text-sm leading-6 text-muted-foreground">{a}</p></div></div>)}</div></div></section>}
 
 function FinalCta({ openDemo }: { openDemo: () => void }) {
   return (
-    <section id="contact" className="section bg-hero text-hero-foreground">
-      <div className="container text-center">
-        <p className="text-xs font-extrabold uppercase tracking-[.18em] text-brand-warm">Apne School Ko Digital Banayein</p>
-        <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-black sm:text-5xl">
+    <section id="contact" className="final-cta-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.16),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.16),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)] text-foreground">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="container relative grid items-center gap-10 lg:grid-cols-[.78fr_1.22fr]">
+        <div className="final-founder-poster relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-[#138808]/30 bg-white p-2 shadow-card">
+          <div className="absolute inset-x-0 top-0 z-10 h-1 tricolor-sheen" />
+          <img src={founderAdvertisementImg} alt="Abhishek Kumar, Founder and CEO of EduSchool-Saathi" className="block h-auto w-full rounded-2xl object-contain" loading="lazy" decoding="async" />
+          <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/70 bg-white/92 p-3 shadow-soft backdrop-blur">
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#c2410c]">Founder & CEO</span>
+            <b className="mt-1 block font-display text-base text-foreground">Abhishek Kumar</b>
+            <span className="text-[11px] font-semibold text-emerald-700">Building better education, one school at a time.</span>
+          </div>
+        </div>
+        <div className="text-center lg:text-left">
+        <p className="inline-flex items-center gap-2 rounded-full border border-[#FF671F]/35 bg-orange-50 px-3 py-1 text-xs font-extrabold uppercase tracking-[.18em] text-[#c2410c]">🇮🇳 Apne School Ko Digital Banayein</p>
+        <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-black text-foreground sm:text-5xl lg:mx-0">
           Ready to Take Your School Digital?
         </h2>
-        <p className="mx-auto mt-5 max-w-2xl leading-7 text-hero-muted">
+        <p className="mx-auto mt-5 max-w-2xl leading-7 text-muted-foreground lg:mx-0">
           Join the journey towards simpler, smarter and more connected school management — from Bara Bazar Madhubani and Darbhanga to schools across Bihar & India.
         </p>
-        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
           <Button onClick={openDemo}>
             Request a Free Demo <ArrowRight className="size-4" />
           </Button>
           <a
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-hero-foreground/20 px-5 py-3 text-sm font-bold transition hover:bg-hero-foreground/10"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-foreground transition hover:-translate-y-0.5 hover:border-[#138808]/40 hover:bg-green-50"
             href="mailto:eduschoolsaathi@gmail.com"
           >
             <Mail className="size-4" /> Contact EduSchool-Saathi
           </a>
         </div>
-        <div className="mx-auto mt-10 grid max-w-4xl gap-4 text-left sm:grid-cols-3">
-          <div className="rounded-lg border border-hero-foreground/15 bg-hero-foreground/5 p-4 backdrop-blur">
+        <div className="mx-auto mt-10 grid max-w-4xl gap-4 text-left sm:grid-cols-3 lg:mx-0">
+          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur">
             <div className="flex items-center gap-2 text-brand-warm">
               <MapPin className="size-4" />
               <b className="text-xs uppercase tracking-wider">Office Address</b>
             </div>
-            <p className="mt-2 text-xs font-bold text-white">Bara Bazar Madhubani</p>
-            <span className="text-[11px] text-hero-muted block mt-0.5">Bihar, India</span>
+            <p className="mt-2 text-xs font-bold text-foreground">Bara Bazar Madhubani</p>
+            <span className="text-[11px] text-muted-foreground block mt-0.5">Bihar, India</span>
           </div>
 
-          <div className="rounded-lg border border-hero-foreground/15 bg-hero-foreground/5 p-4 backdrop-blur">
+          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur">
             <div className="flex items-center gap-2 text-brand-warm">
               <Phone className="size-4" />
               <b className="text-xs uppercase tracking-wider">Call / WhatsApp</b>
             </div>
             <div className="mt-2 space-y-1">
-              <a href="tel:6200087830" className="block text-xs font-bold text-white hover:text-brand-warm transition-colors">
+              <a href="tel:6200087830" className="block text-xs font-bold text-sky-700 hover:text-[#c2410c] transition-colors">
                 +91 62000 87830
               </a>
-              <a href="tel:9934276622" className="block text-xs font-bold text-white hover:text-brand-warm transition-colors">
+              <a href="tel:9934276622" className="block text-xs font-bold text-sky-700 hover:text-[#c2410c] transition-colors">
                 +91 99342 76622
               </a>
-              <a href="tel:94700741183" className="block text-xs font-bold text-white hover:text-brand-warm transition-colors">
+              <a href="tel:94700741183" className="block text-xs font-bold text-sky-700 hover:text-[#c2410c] transition-colors">
                 +91 94700 74183 / 94700741183
               </a>
             </div>
           </div>
 
-          <div className="rounded-lg border border-hero-foreground/15 bg-hero-foreground/5 p-4 backdrop-blur">
+          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur">
             <div className="flex items-center gap-2 text-brand-warm">
               <Mail className="size-4" />
               <b className="text-xs uppercase tracking-wider">Official Email</b>
             </div>
             <a
               href="mailto:eduschoolsaathi@gmail.com"
-              className="mt-2 block text-xs font-bold text-white hover:text-brand-warm transition-colors break-all"
+              className="mt-2 block text-xs font-bold text-sky-700 hover:text-[#c2410c] transition-colors break-all"
             >
               eduschoolsaathi@gmail.com
             </a>
-            <span className="text-[11px] text-hero-muted block mt-0.5">Instant response for schools</span>
+            <span className="text-[11px] text-muted-foreground block mt-0.5">Instant response for schools</span>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -3094,6 +3423,7 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
 }
 
 function Footer() {
+  const [openFooterColumn, setOpenFooterColumn] = useState<string | null>(null);
   const cols = [
     { t: "Platform", a: [["About Platform", "#about"], ["25+ Schools Network", "/schools-network"], ["Partners", "#ecosystem"], ["All Features", "#features"], ["How It Works", "#how-it-works"], ["Pricing Plans", "#pricing"]] },
     { t: "Portals", a: [["School Management", "#roles"], ["Teacher Portal", "#roles"], ["Student Dashboard", "#roles"], ["Parent App", "#roles"]] },
@@ -3102,95 +3432,101 @@ function Footer() {
   ];
 
   return (
-    <footer className="border-t border-ink-line bg-ink py-14 text-ink-foreground">
+    <footer className="footer-light relative overflow-hidden border-t border-slate-200 bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.13),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.13),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)] py-14 text-foreground">
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="pointer-events-none absolute -right-40 top-20 size-96 rounded-full bg-[#138808]/10 blur-3xl" />
       <div className="container grid gap-10 lg:grid-cols-[1.3fr_2fr]">
         <div>
           <Brand />
-          <p className="mt-5 max-w-sm text-sm leading-6 text-ink-muted">
+          <p className="footer-description mt-5 max-w-sm text-sm leading-6 text-muted-foreground">
             EduSchool-Saathi is a next-generation multi-school ERP and educational SaaS platform designed to automate attendance, fee collection, examinations, and communication.
           </p>
 
           {/* Official Sponsorship & Powered By Badges in Footer */}
-          <div className="mt-6 rounded-lg border border-white/10 bg-white/5 p-4 space-y-2.5 max-w-sm">
-            <div className="text-[11px] font-bold text-white flex items-center gap-1.5">
-              <Sparkles className="size-3.5 text-brand-warm" /> Strategic Tech Alliances:
+          <div className="footer-alliance mt-6 max-w-sm space-y-2.5 rounded-2xl border border-[#FF671F]/25 bg-white/85 p-4 shadow-soft">
+            <div className="text-[11px] font-bold text-foreground flex items-center gap-1.5">
+              <Sparkles className="size-3.5 text-[#FF671F]" /> Strategic Tech Alliances
             </div>
-            <div className="text-xs text-ink-muted">
-              <span className="font-semibold text-emerald-400">Sponsored by:</span>{" "}
+            <div className="footer-alliance-link text-xs text-muted-foreground">
+              <span className="font-semibold text-emerald-700">Sponsored by:</span>{" "}
               <a
                 href="https://sehaat-saathi.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-white hover:text-emerald-300 underline underline-offset-2 transition-colors inline-flex items-center gap-1"
+                className="font-bold text-foreground hover:text-emerald-700 underline underline-offset-2 transition-colors inline-flex items-center gap-1"
               >
                 Sehaat Saathi App <ExternalLink className="size-2.5" />
               </a>
             </div>
-            <div className="text-xs text-ink-muted">
-              <span className="font-semibold text-sky-400">Powered BY :-</span>{" "}
+            <div className="footer-alliance-link text-xs text-muted-foreground">
+              <span className="font-semibold text-sky-700">Powered by:</span>{" "}
               <a
                 href="https://techseva-it-solutions.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-white hover:text-sky-300 underline underline-offset-2 transition-colors inline-flex items-center gap-1"
+                className="font-bold text-foreground hover:text-sky-700 underline underline-offset-2 transition-colors inline-flex items-center gap-1"
               >
                 TechSeva IT Solutions Agency <ExternalLink className="size-2.5" />
               </a>
             </div>
           </div>
 
-          <p className="mt-5 text-xs text-ink-muted leading-5">
+          <p className="footer-contact mt-5 text-xs leading-5">
             <b>Address:</b> Bara Bazar Madhubani, Bihar, India<br />
             <b>Phone:</b>{" "}
-            <a href="tel:6200087830" className="hover:text-white underline">6200087830</a> •{" "}
-            <a href="tel:9934276622" className="hover:text-white underline">9934276622</a> •{" "}
-            <a href="tel:94700741183" className="hover:text-white underline">94700741183</a><br />
+            <a href="tel:6200087830" className="footer-contact-link underline">6200087830</a> •{" "}
+            <a href="tel:9934276622" className="footer-contact-link underline">9934276622</a> •{" "}
+            <a href="tel:94700741183" className="footer-contact-link underline">94700741183</a><br />
             <b>Email:</b>{" "}
-            <a href="mailto:eduschoolsaathi@gmail.com" className="hover:text-white underline">eduschoolsaathi@gmail.com</a><br />
+            <a href="mailto:eduschoolsaathi@gmail.com" className="footer-contact-link underline">eduschoolsaathi@gmail.com</a><br />
             Empowering Rural, Semi-Urban & Growing Schools across Bihar & India
           </p>
         </div>
 
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           {cols.map((c) => (
-            <div key={c.t}>
-              <b className="text-xs font-extrabold uppercase tracking-widest text-primary">{c.t}</b>
-              <div className="mt-4 space-y-2.5">
+            <div key={c.t} className="footer-column">
+              <button type="button" onClick={() => setOpenFooterColumn(openFooterColumn === c.t ? null : c.t)} className="flex w-full items-center justify-between text-left text-xs font-extrabold uppercase tracking-widest text-[#138808] sm:pointer-events-none">
+                {c.t}<ChevronDown className={`size-4 transition sm:hidden ${openFooterColumn === c.t ? "rotate-180" : ""}`} />
+              </button>
+              <div className={`${openFooterColumn === c.t ? "grid-rows-[1fr] pb-2" : "grid-rows-[0fr]"} mt-2 grid transition-all sm:mt-4 sm:grid-rows-[1fr] sm:pb-0`}>
+              <div className="min-h-0 space-y-2.5 overflow-hidden">
                 {c.a.map(([label, href]) => (
                   <a
                     key={label}
                     href={href}
                     {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="block text-xs text-ink-muted hover:text-ink-foreground transition-colors"
+                    className="block text-xs text-muted-foreground transition-colors hover:translate-x-1 hover:text-[#c2410c]"
                   >
                     {label} {href.startsWith("http") ? "↗" : ""}
                   </a>
                 ))}
+              </div>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="container mt-12 flex flex-col gap-3 border-t border-ink-line pt-6 text-[11px] text-ink-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="container mt-12 flex flex-col gap-3 border-t border-slate-200 pt-6 text-[11px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
           <span>© 2026 </span>
           <span className="font-bold inline-flex items-center">
             <span className="text-sky-400">Edu</span>
             <span className="text-amber-400">School</span>
-            <span className="text-white/40">-</span>
-            <span className="text-emerald-400">Saathi</span>
+            <span className="text-slate-400">-</span>
+            <span className="text-emerald-700">Saathi</span>
           </span>
           <span>. All rights reserved.</span>
           <span>•</span>
-          <span className="text-amber-400 font-semibold">Har School Ka Saathi</span>
+          <span className="text-[#c2410c] font-semibold">Har School Ka Saathi</span>
         </div>
         <div className="flex flex-wrap items-center gap-4 text-[11px]">
-          <span className="text-ink-muted">#1 School Management SaaS in Bihar</span>
+          <span className="text-muted-foreground">#1 School Management SaaS in Bihar</span>
           <span>•</span>
-          <a href="#about" className="hover:text-white transition-colors">Privacy</a>
+          <a href="#about" className="hover:text-[#c2410c] transition-colors">Privacy</a>
           <span>•</span>
-          <a href="#about" className="hover:text-white transition-colors">Security</a>
+          <a href="#about" className="hover:text-[#138808] transition-colors">Security</a>
         </div>
       </div>
     </footer>
@@ -3305,6 +3641,7 @@ function Index() {
       <Navbar openDemo={() => setDemo(true)} />
       <main>
         <Hero openDemo={() => setDemo(true)} />
+        <FounderPoster />
         <TrustStrip />
         <Problems />
         <Platform openDemo={() => setDemo(true)} />
@@ -3313,7 +3650,7 @@ function Index() {
         <Roles />
         <HowItWorks />
         <Benefits />
-        <Mission />
+        <MissionPremium />
         <FounderLeadership openDemo={() => setDemo(true)} />
         <Showcase />
         <MobileExperience />
