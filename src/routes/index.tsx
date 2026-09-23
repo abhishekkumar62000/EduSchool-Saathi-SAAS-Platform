@@ -316,9 +316,12 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <Button onClick={openDemo} className={`${primaryCta} min-h-9 sm:min-h-10 px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-bold hidden sm:inline-flex`}>
+            <a
+              href="https://eduschoolsaathi.org/#trial"
+              className={`${primaryCta} min-h-9 sm:min-h-10 px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-bold hidden sm:inline-flex`}
+            >
               Request Free Demo <ArrowRight className="size-3.5 sm:size-4" />
-            </Button>
+            </a>
 
             <button
               type="button"
@@ -356,15 +359,13 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             ))}
             <div className="pt-3 border-t border-border mt-2 space-y-2">
               <InstallAppButton className="w-full justify-center py-2.5" />
-              <Button
-                onClick={() => {
-                  setMobile(false);
-                  openDemo();
-                }}
+              <a
+                href="https://eduschoolsaathi.org/#trial"
+                onClick={() => setMobile(false)}
                 className={`${primaryCta} w-full`}
               >
                 Request a Free School Demo <ArrowRight className="size-4" />
-              </Button>
+              </a>
               <div className="text-[11px] text-muted-foreground text-center pt-2">
                 📍 Bara Bazar Madhubani • ✉️ eduschoolsaathi@gmail.com
               </div>
@@ -868,9 +869,12 @@ function Hero({ openDemo }: { openDemo: () => void }) {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <Button onClick={openDemo} className={`${primaryCta} text-sm shadow-[0_0_30px_rgba(37,99,235,0.4)]`}>
+            <a
+              href="https://eduschoolsaathi.org/#trial"
+              className={`${primaryCta} text-sm shadow-[0_0_30px_rgba(37,99,235,0.4)]`}
+            >
               Request a Free Live School Demo <ArrowRight className="size-4" />
-            </Button>
+            </a>
             <a
               href="tel:6200087830"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-hero-foreground/20 bg-hero-foreground/5 px-5 py-3 text-sm font-bold text-hero-foreground backdrop-blur transition hover:bg-hero-foreground/15"
@@ -1387,11 +1391,9 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
                   </div>
 
                   <div className="pt-3 flex flex-wrap items-center gap-3">
-                    {openDemo && (
-                      <Button onClick={openDemo} className={primaryCta}>
-                        Experience Live Demo <ArrowRight className="size-4" />
-                      </Button>
-                    )}
+                    <a href="https://eduschoolsaathi.org/#trial" className={primaryCta}>
+                      Experience Live Demo <ArrowRight className="size-4" />
+                    </a>
                     <a href="tel:6200087830" className={secondaryCta}>
                       <Phone className="size-4 text-primary" /> Call Advisor: +91 62000 87830
                     </a>
@@ -2141,12 +2143,12 @@ function FounderLeadership({ openDemo }: { openDemo: () => void }) {
                   >
                     <Phone className="size-3.5" /> WhatsApp Founder
                   </a>
-                  <Button
-                    onClick={openDemo}
+                  <a
+                    href="https://eduschoolsaathi.org/#trial"
                     className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white shadow-brand hover:brightness-110 active:scale-95 transition-all"
                   >
                     Schedule Demo <ArrowRight className="size-3.5" />
-                  </Button>
+                  </a>
                 </div>
               </div>
 
@@ -2522,9 +2524,12 @@ function RoiCalculator({ openDemo }: { openDemo: () => void }) {
               </span>
             </div>
 
-            <Button onClick={openDemo} className={`${primaryCta} w-full sm:w-auto`}>
+            <a
+              href="https://eduschoolsaathi.org/#trial"
+              className={`${primaryCta} w-full sm:w-auto`}
+            >
               Schedule Free On-Site Demo <ArrowRight className="size-4" />
-            </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -3244,9 +3249,12 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
               </ul>
             </div>
 
-            <Button onClick={openDemo} className={`${secondaryCta} mt-8 w-full`}>
+            <a
+              href="https://eduschoolsaathi.org/#trial"
+              className={`${secondaryCta} mt-8 w-full`}
+            >
               Choose Starter <ArrowRight className="size-4" />
-            </Button>
+            </a>
           </div>
 
           {/* Standard Pro (Most Popular) */}
@@ -3297,9 +3305,12 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
               </ul>
             </div>
 
-            <Button onClick={openDemo} className={`${primaryCta} mt-8 w-full`}>
+            <a
+              href="https://eduschoolsaathi.org/#trial"
+              className={`${primaryCta} mt-8 w-full`}
+            >
               Start Free School Trial <ArrowRight className="size-4" />
-            </Button>
+            </a>
           </div>
 
           {/* Institutional / Multi-Branch */}
@@ -3345,9 +3356,12 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
               </ul>
             </div>
 
-            <Button onClick={openDemo} className={`${secondaryCta} mt-8 w-full`}>
+            <a
+              href="https://eduschoolsaathi.org/#trial"
+              className={`${secondaryCta} mt-8 w-full`}
+            >
               Contact For Enterprise <ArrowRight className="size-4" />
-            </Button>
+            </a>
           </div>
         </div>
 
@@ -3462,9 +3476,12 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
           Join the journey towards simpler, smarter and more connected school management — from Bara Bazar Madhubani and Darbhanga to schools across Bihar & India.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
-          <Button onClick={openDemo}>
+          <a
+            href="https://eduschoolsaathi.org/#trial"
+            className={primaryCta}
+          >
             Request a Free Demo <ArrowRight className="size-4" />
-          </Button>
+          </a>
           <a
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-foreground transition hover:-translate-y-0.5 hover:border-[#138808]/40 hover:bg-green-50"
             href="mailto:eduschoolsaathi@gmail.com"
@@ -3734,28 +3751,32 @@ function DemoModal({ open, onClose }: { open: boolean; onClose: () => void }) {
 
 function Index() {
   const [demo, setDemo] = useState(false);
+  const openTrial = () => {
+    window.location.href = "https://eduschoolsaathi.org/#trial";
+  };
+
   return (
     <>
-      <Navbar openDemo={() => setDemo(true)} />
+      <Navbar openDemo={openTrial} />
       <main>
-        <Hero openDemo={() => setDemo(true)} />
+        <Hero openDemo={openTrial} />
         <FounderPoster />
         <TrustStrip />
         <Problems />
-        <Platform openDemo={() => setDemo(true)} />
-        <RoiCalculator openDemo={() => setDemo(true)} />
+        <Platform openDemo={openTrial} />
+        <RoiCalculator openDemo={openTrial} />
         <Features />
         <Roles />
         <HowItWorks />
         <Benefits />
         <MissionPremium />
-        <FounderLeadership openDemo={() => setDemo(true)} />
+        <FounderLeadership openDemo={openTrial} />
         <Showcase />
         <MobileExperience />
-        <Pricing openDemo={() => setDemo(true)} />
+        <Pricing openDemo={openTrial} />
         <WhyAndPrivacy />
         <FAQ />
-        <FinalCta openDemo={() => setDemo(true)} />
+        <FinalCta openDemo={openTrial} />
       </main>
       <Footer />
       <DemoModal open={demo} onClose={() => setDemo(false)} />
