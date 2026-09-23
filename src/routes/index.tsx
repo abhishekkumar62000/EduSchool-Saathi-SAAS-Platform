@@ -114,15 +114,15 @@ function TricolorBrandText({ size = "text-sm sm:text-base" }: { size?: string })
 
 function Brand({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="#home" className="inline-flex items-center gap-2.5 group" aria-label="EduSchool-Saathi home">
-      <div className={`relative ${compact ? "size-9 sm:size-10" : "size-10 sm:size-12"} overflow-hidden rounded-lg border border-primary/25 bg-white p-0.5 shadow-sm transition-transform duration-300 group-hover:scale-105 shrink-0`}>
+    <a href="#home" className="inline-flex items-center gap-2 sm:gap-2.5 group shrink-0" aria-label="EduSchool-Saathi home">
+      <div className={`relative ${compact ? "size-8 sm:size-10" : "size-10 sm:size-12"} overflow-hidden rounded-lg border border-primary/25 bg-white p-0.5 shadow-sm transition-transform duration-300 group-hover:scale-105 shrink-0`}>
         <img src={logoImg} alt="EduSchool-Saathi Logo" className="h-full w-full object-contain" />
       </div>
       <div className="min-w-0">
         <b className="block leading-tight truncate">
-          <TricolorBrandText size={compact ? "text-sm sm:text-base" : "text-base sm:text-lg"} />
+          <TricolorBrandText size={compact ? "text-xs sm:text-base" : "text-base sm:text-lg"} />
         </b>
-        <span className="block text-[8px] sm:text-[9px] font-extrabold uppercase tracking-[0.14em] text-[#FF671F] truncate">
+        <span className="block text-[7.5px] sm:text-[9px] font-extrabold uppercase tracking-[0.12em] sm:tracking-[0.14em] text-[#FF671F] truncate">
           Har School Ka Saathi
         </span>
       </div>
@@ -132,61 +132,63 @@ function Brand({ compact = false }: { compact?: boolean }) {
 
 function AnnouncementBar() {
   return (
-    <div className="relative z-50 bg-gradient-to-r from-slate-950 via-teal-950 to-slate-950 border-b border-emerald-500/20 text-white text-[11px] py-1.5 px-3">
-      <div className="container flex flex-col md:flex-row items-center justify-between gap-1.5 sm:gap-2 text-center md:text-left">
+    <div className="relative z-50 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-b border-emerald-500/20 text-white text-[10px] sm:text-[11px] py-1 sm:py-1.5 px-3">
+      <div className="container flex items-center justify-between gap-2">
         {/* Left Side: SaaS Identity */}
-        <div className="flex items-center justify-center gap-2">
-          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-emerald-300 border border-emerald-500/30 shrink-0">
-            <Sparkles className="size-2.5 text-emerald-400" /> Official SaaS
+        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-1.5 sm:px-2 py-0.5 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider text-emerald-300 border border-emerald-500/30 shrink-0">
+            <Sparkles className="size-2 sm:size-2.5 text-emerald-400" /> Official SaaS
           </span>
-          <span className="font-bold text-[11px] inline-flex items-center gap-0.5">
+          <span className="font-bold text-[10.5px] sm:text-[11px] truncate inline-flex items-center gap-0.5">
             <span className="text-sky-300">Edu</span>
             <span className="text-amber-400">School</span>
             <span className="text-white/50">-</span>
             <span className="text-emerald-400">Saathi</span>
-            <span className="text-white/90 ml-1">ERP</span>
+            <span className="text-white/70 ml-1 font-semibold hidden xs:inline">ERP</span>
           </span>
-          <span className="text-white/30 hidden sm:inline">•</span>
-          <span className="text-emerald-200/80 hidden sm:inline text-[11px]">
+          <span className="text-white/30 hidden md:inline">•</span>
+          <span className="text-emerald-200/80 hidden md:inline text-[11px]">
             Smart Platform for Bihar & Beyond
           </span>
         </div>
 
         {/* Right Side: Partnerships & Direct Helpline */}
-        <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-[10px] sm:text-[11px] text-slate-300">
-          <div className="flex items-center gap-1.5">
-            <span className="text-slate-400">Sponsored:</span>
-            <a
-              href="https://sehaat-saathi.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-0.5 font-bold text-emerald-300 hover:text-white transition-colors"
-            >
-              Sehaat Saathi <ExternalLink className="size-2.5 opacity-70" />
-            </a>
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="hidden lg:flex items-center gap-2.5 text-[10.5px] sm:text-[11px] text-slate-300">
+            <div className="flex items-center gap-1">
+              <span className="text-slate-400">Sponsored:</span>
+              <a
+                href="https://sehaat-saathi.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-0.5 font-bold text-emerald-300 hover:text-white transition-colors"
+              >
+                Sehaat Saathi <ExternalLink className="size-2.5 opacity-70" />
+              </a>
+            </div>
+
+            <span className="text-white/20">|</span>
+
+            <div className="flex items-center gap-1">
+              <span className="text-slate-400">Powered by:</span>
+              <a
+                href="https://techseva-it-solutions.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-0.5 font-bold text-sky-300 hover:text-white transition-colors"
+              >
+                TechSeva <ExternalLink className="size-2.5 opacity-70" />
+              </a>
+            </div>
+
+            <span className="text-white/20">|</span>
           </div>
-
-          <span className="text-white/20 hidden sm:inline">|</span>
-
-          <div className="flex items-center gap-1.5">
-            <span className="text-slate-400">Powered by:</span>
-            <a
-              href="https://techseva-it-solutions.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-0.5 font-bold text-sky-300 hover:text-white transition-colors"
-            >
-              TechSeva <ExternalLink className="size-2.5 opacity-70" />
-            </a>
-          </div>
-
-          <span className="text-white/20 hidden sm:inline">|</span>
 
           <a
             href="tel:6200087830"
-            className="font-bold text-brand-warm hover:text-white transition-colors inline-flex items-center gap-1"
+            className="font-bold text-amber-300 hover:text-white transition-colors inline-flex items-center gap-1 bg-amber-400/10 border border-amber-400/30 px-2 py-0.5 rounded-full text-[9.5px] sm:text-[11px]"
           >
-            <Phone className="size-2.5" /> 6200087830
+            <Phone className="size-2.5 text-amber-400" /> <span className="hidden xs:inline">+91 </span>6200087830
           </a>
         </div>
       </div>
@@ -270,7 +272,7 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             : "bg-background/80 backdrop-blur-md border-b border-border/40"
         }`}
       >
-        <nav className="container flex h-16 sm:h-18 items-center justify-between gap-3" aria-label="Primary navigation">
+        <nav className="container flex h-14 sm:h-16 md:h-18 items-center justify-between gap-2 sm:gap-3" aria-label="Primary navigation">
           <Brand compact />
 
           <div className="hidden items-center gap-2 lg:flex xl:gap-4">
@@ -290,22 +292,33 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             ))}
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
+            {/* Mobile: sleek, compact Demo button */}
             <a
               href="https://eduschoolsaathi.org/#trial"
-              className={`${primaryCta} min-h-9 sm:min-h-10 px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-bold hidden sm:inline-flex`}
+              className="sm:hidden inline-flex items-center gap-1 rounded-lg bg-primary px-2.5 py-1.5 text-[11px] font-bold text-primary-foreground shadow-xs hover:bg-primary/90 transition-all shrink-0"
             >
-              Request Free Demo <ArrowRight className="size-3.5 sm:size-4" />
+              <span>Demo</span>
+              <ArrowRight className="size-3" />
+            </a>
+
+            {/* Desktop / Tablet: full Demo button */}
+            <a
+              href="https://eduschoolsaathi.org/#trial"
+              className="hidden sm:inline-flex items-center justify-center gap-1.5 rounded-md bg-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-bold text-primary-foreground shadow-brand hover:bg-primary/90 transition-all shrink-0"
+            >
+              <span>Request Free Demo</span>
+              <ArrowRight className="size-3.5 sm:size-4" />
             </a>
 
             <button
               type="button"
-              className="grid size-9 sm:size-10 place-items-center rounded-md border border-border bg-card lg:hidden touch-manipulation"
+              className="grid size-8 sm:size-10 place-items-center rounded-md border border-border bg-card lg:hidden touch-manipulation shrink-0"
               onClick={() => setMobile(!mobile)}
               aria-expanded={mobile}
               aria-label="Toggle menu"
             >
-              {mobile ? <X className="size-5" /> : <Menu className="size-5" />}
+              {mobile ? <X className="size-4 sm:size-5" /> : <Menu className="size-4 sm:size-5" />}
             </button>
           </div>
         </nav>
@@ -783,7 +796,7 @@ function Hero({ openDemo }: { openDemo: () => void }) {
   return (
     <section
       id="home"
-      className="hero-grid relative overflow-hidden bg-hero pt-28 sm:pt-32 pb-16 text-hero-foreground"
+      className="hero-grid relative overflow-hidden bg-hero pt-24 sm:pt-28 md:pt-32 pb-14 sm:pb-16 text-hero-foreground"
       aria-label="EduSchool Saathi Hero — Bihar's #1 Multi-School Management SaaS Platform"
     >
       {/* Ambient background glow behind Hero */}
@@ -794,7 +807,7 @@ function Hero({ openDemo }: { openDemo: () => void }) {
       <div className="container relative z-10">
         <div className="mx-auto max-w-5xl text-center">
           {/* Top Pill with Pulsing Dot */}
-          <div className="mb-5 inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1.5 rounded-full border border-hero-foreground/20 bg-hero-foreground/5 px-3.5 py-2 text-[11px] leading-tight sm:text-xs font-bold text-hero-muted backdrop-blur-xl shadow-lg">
+          <div className="mb-4 sm:mb-5 inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-hero-foreground/20 bg-hero-foreground/5 px-3 py-1.5 text-[10.5px] leading-tight sm:text-xs font-bold text-hero-muted backdrop-blur-xl shadow-lg">
             <span className="flex items-center gap-1.5 text-emerald-400 font-extrabold">
               <span className="size-2 rounded-full bg-emerald-400 animate-ping" />
               Live Cloud ERP
@@ -842,24 +855,43 @@ function Hero({ openDemo }: { openDemo: () => void }) {
             </a>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-hero-muted sm:text-lg sm:leading-7">
+          <p className="mx-auto mt-4 sm:mt-5 max-w-3xl text-sm leading-relaxed text-hero-muted sm:text-lg sm:leading-7">
             Say goodbye to paper registers, cash confusion, and expensive software traps. Empower your administration, teachers, students, and parents with an all-in-one cloud ERP designed specifically for ground realities in Bihar and across India.
           </p>
 
-          {/* Strategic Alliance & Sponsorship Badges */}
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs font-semibold text-hero-muted">
-            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-3 py-1 text-emerald-300">
-              Sponsored by:{" "}
-              <a href="https://sehaat-saathi.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-white">
-                Sehaat Saathi App ↗
-              </a>
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-sky-500/15 border border-sky-500/30 px-3 py-1 text-sky-300">
-              Powered by:{" "}
-              <a href="https://techseva-it-solutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-white">
-                TechSeva IT Solutions ↗
-              </a>
-            </span>
+          {/* Strategic Alliance & Sponsorship Badges — Modern Responsive Glass Card */}
+          <div className="mt-4 sm:mt-5 mx-auto inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 rounded-2xl sm:rounded-full border border-white/15 bg-white/[0.05] p-1.5 sm:px-4 sm:py-1.5 backdrop-blur-md shadow-sm">
+            {/* Sponsored by Sehaat Saathi */}
+            <a
+              href="https://sehaat-saathi.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1.5 rounded-xl sm:rounded-full px-2.5 py-1 text-slate-300 hover:text-white transition-all hover:bg-emerald-500/15"
+            >
+              <span className="text-[9px] font-extrabold uppercase tracking-wider text-emerald-300 bg-emerald-500/25 border border-emerald-500/35 px-1.5 py-0.5 rounded">
+                Sponsored
+              </span>
+              <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors inline-flex items-center gap-1">
+                Sehaat Saathi App <ExternalLink className="size-3 text-emerald-400 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              </span>
+            </a>
+
+            <span className="text-white/20 hidden sm:inline">•</span>
+
+            {/* Powered by TechSeva */}
+            <a
+              href="https://techseva-it-solutions.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1.5 rounded-xl sm:rounded-full px-2.5 py-1 text-slate-300 hover:text-white transition-all hover:bg-sky-500/15"
+            >
+              <span className="text-[9px] font-extrabold uppercase tracking-wider text-sky-300 bg-sky-500/25 border border-sky-500/35 px-1.5 py-0.5 rounded">
+                Powered by
+              </span>
+              <span className="text-xs font-bold text-white group-hover:text-sky-300 transition-colors inline-flex items-center gap-1">
+                TechSeva IT Solutions <ExternalLink className="size-3 text-sky-400 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              </span>
+            </a>
           </div>
 
           <p className="mt-3 text-xs sm:text-sm font-bold text-brand-warm">

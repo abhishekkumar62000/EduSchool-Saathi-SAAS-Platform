@@ -378,8 +378,8 @@ export function DesktopPwaInstallWidget() {
 
   return (
     <>
-      {/* Floating Install App Widget (Visible on BOTH Mobile & Desktop, docked above Chatbot) */}
-      <div className="flex items-center gap-2 rounded-full border border-primary/30 bg-slate-950/95 py-1 pl-1.5 pr-2.5 sm:py-1.5 sm:pl-2 sm:pr-3 text-white shadow-xl backdrop-blur-xl ring-1 ring-white/10 transition-all hover:scale-105 hover:border-primary/60 group">
+      {/* Floating Install App Widget (Docked above Chatbot on tablet/desktop only — prevents mobile clutter) */}
+      <div className="hidden sm:flex items-center gap-2 rounded-full border border-primary/30 bg-slate-950/95 py-1 pl-1.5 pr-2.5 sm:py-1.5 sm:pl-2 sm:pr-3 text-white shadow-xl backdrop-blur-xl ring-1 ring-white/10 transition-all hover:scale-105 hover:border-primary/60 group">
         <div className="size-6 sm:size-7 rounded-full bg-white p-0.5 shadow-sm overflow-hidden shrink-0 flex items-center justify-center">
           <img src="/logo-optimized.png" alt="EduSchool Logo" className="size-full object-contain" />
         </div>
