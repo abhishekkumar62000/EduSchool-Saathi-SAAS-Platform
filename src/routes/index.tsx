@@ -124,7 +124,39 @@ function Brand({ compact = false }: { compact?: boolean }) {
 
 function AnnouncementBar() {
   return (
-    <div className="relative z-50 bg-gradient-to-r from-slate-950 via-teal-950 to-slate-950 border-b border-emerald-500/20 text-white text-[11px] py-1.5 px-3">
+    <div className="relative z-50 flex flex-col bg-gradient-to-r from-slate-950 via-teal-950 to-slate-950 border-b border-emerald-500/20 text-white text-[11px]">
+
+      {/* ✅ TOP ROW — Official Website & Trial Access — BOLD & PROMINENT */}
+      <div className="bg-gradient-to-r from-[#FF671F]/25 via-[#1E40AF]/30 to-[#047857]/25 border-b border-white/10 py-1.5 px-3">
+        <div className="container flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center">
+          <span className="inline-flex items-center gap-1 rounded-full bg-amber-400/20 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-amber-300 border border-amber-400/40 shrink-0">
+            🌐 Official Website
+          </span>
+          <a
+            href="https://eduschoolsaathi.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 font-black text-xs sm:text-[13px] text-amber-300 hover:text-white transition-colors underline underline-offset-2 decoration-amber-400/60"
+          >
+            eduschoolsaathi.org <ExternalLink className="size-3 opacity-80" />
+          </a>
+          <span className="text-white/30 hidden sm:inline">•</span>
+          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/25 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-emerald-300 border border-emerald-500/30 shrink-0">
+            🚀 Free Trial Login
+          </span>
+          <a
+            href="https://app.eduschoolsaathi.org/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 font-black text-xs sm:text-[13px] text-emerald-300 hover:text-white transition-colors underline underline-offset-2 decoration-emerald-400/60"
+          >
+            app.eduschoolsaathi.org/login <ExternalLink className="size-3 opacity-80" />
+          </a>
+        </div>
+      </div>
+
+      {/* BOTTOM ROW — SaaS Identity + Partners */}
+      <div className="py-1.5 px-3">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-1.5 sm:gap-2 text-center md:text-left">
         {/* Left Side: SaaS Identity */}
         <div className="flex items-center justify-center gap-2">
@@ -158,7 +190,7 @@ function AnnouncementBar() {
             </a>
           </div>
 
-          <span className="text-white/20">|</span>
+          <span className="text-white/20 hidden sm:inline">|</span>
 
           <div className="flex items-center gap-1.5">
             <span className="text-slate-400">Powered by:</span>
@@ -172,7 +204,7 @@ function AnnouncementBar() {
             </a>
           </div>
 
-          <span className="text-white/20 hidden xs:inline">|</span>
+          <span className="text-white/20 hidden sm:inline">|</span>
 
           <a
             href="tel:6200087830"
@@ -181,6 +213,7 @@ function AnnouncementBar() {
             <Phone className="size-2.5" /> 6200087830
           </a>
         </div>
+      </div>
       </div>
     </div>
   );
@@ -212,7 +245,7 @@ function SectionTitle({
         {eyebrow}
       </div>
       <h2
-        className={`animate-section-heading font-display text-3xl font-extrabold leading-[1.12] sm:text-4xl lg:text-5xl ${
+        className={`animate-section-heading font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.14] ${
           dark ? "text-white" : "text-foreground"
         }`}
       >
@@ -220,7 +253,7 @@ function SectionTitle({
       </h2>
       {copy && (
         <p
-          className={`mt-5 text-base leading-7 sm:text-lg ${
+          className={`mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-7 ${
             dark ? "text-slate-300" : "text-muted-foreground"
           }`}
         >
@@ -253,7 +286,7 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 transition-all">
+    <header className="fixed inset-x-0 top-0 z-50 transition-all gpu-layer">
       <AnnouncementBar />
       <div
         className={`transition-all ${
@@ -262,17 +295,17 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             : "bg-background/80 backdrop-blur-md border-b border-border/40"
         }`}
       >
-        <nav className="container flex h-16 sm:h-18 items-center justify-between" aria-label="Primary navigation">
+        <nav className="container flex h-16 sm:h-18 items-center justify-between gap-3" aria-label="Primary navigation">
           <Brand compact />
 
-          <div className="hidden items-center gap-4 xl:gap-5 xl:flex">
+          <div className="hidden items-center gap-2 lg:flex xl:gap-4">
             {links.map(([label, id]) => (
               <a
                 key={id}
                 href={id === "schools-network-link" ? "/schools-network" : `#${id}`}
-                className={`text-xs font-bold transition-colors ${
+                className={`text-[11px] xl:text-xs font-bold transition-colors whitespace-nowrap ${
                   id === "schools-network-link"
-                    ? "text-sky-400 hover:text-sky-300 font-extrabold flex items-center gap-1 bg-sky-500/10 border border-sky-400/30 px-2.5 py-1 rounded-full"
+                    ? "text-sky-400 hover:text-sky-300 font-extrabold flex items-center gap-1 bg-sky-500/10 border border-sky-400/30 px-2 py-0.5 xl:px-2.5 xl:py-1 rounded-full"
                     : "text-muted-foreground hover:text-primary"
                 }`}
               >
@@ -282,21 +315,21 @@ function Navbar({ openDemo }: { openDemo: () => void }) {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
-            <Button onClick={openDemo} className={`${primaryCta} min-h-10 px-4 py-2 text-xs`}>
-              Request Free Demo <ArrowRight className="size-4" />
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Button onClick={openDemo} className={`${primaryCta} min-h-9 sm:min-h-10 px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-bold hidden sm:inline-flex`}>
+              Request Free Demo <ArrowRight className="size-3.5 sm:size-4" />
             </Button>
-          </div>
 
-          <button
-            type="button"
-            className="grid size-10 place-items-center rounded-md border border-border bg-card lg:hidden"
-            onClick={() => setMobile(!mobile)}
-            aria-expanded={mobile}
-            aria-label="Toggle menu"
-          >
-            {mobile ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+            <button
+              type="button"
+              className="grid size-9 sm:size-10 place-items-center rounded-md border border-border bg-card lg:hidden touch-manipulation"
+              onClick={() => setMobile(!mobile)}
+              aria-expanded={mobile}
+              aria-label="Toggle menu"
+            >
+              {mobile ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
+          </div>
         </nav>
       </div>
 
@@ -431,6 +464,31 @@ function Dashboard({ compact = false }: { compact?: boolean }) {
         </div>
       </div>
 
+      {/* Mobile View Switcher - Interactive tabs for smartphones */}
+      {!compact && (
+        <div className="flex sm:hidden overflow-x-auto no-scrollbar gap-1 border-b border-dashboard-line bg-dashboard-panel/90 p-1.5 text-[10px]">
+          {[
+            { id: "overview", label: "Principal 360°" },
+            { id: "attendance", label: "⚡ 10s Attendance" },
+            { id: "fees", label: "💳 Fee Receipts" },
+            { id: "exams", label: "📊 Gradecards" },
+          ].map(tab => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setActiveTab(tab.id as any)}
+              className={`px-2.5 py-1 rounded font-bold whitespace-nowrap transition-all shrink-0 ${
+                activeTab === tab.id
+                  ? "bg-primary text-primary-foreground shadow-xs"
+                  : "text-dashboard-muted hover:text-white"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      )}
+
       {/* Main OS Body */}
       <div className="flex">
         {!compact && (
@@ -469,7 +527,7 @@ function Dashboard({ compact = false }: { compact?: boolean }) {
           </aside>
         )}
 
-        <div className="min-w-0 flex-1 p-3.5 sm:p-5">
+        <div className="min-w-0 flex-1 p-3 sm:p-5">
           {/* Header Banner inside screen */}
           <div className="mb-3.5 flex flex-wrap items-center justify-between gap-2 border-b border-dashboard-line/50 pb-2.5">
             <div>
@@ -510,8 +568,8 @@ function Dashboard({ compact = false }: { compact?: boolean }) {
                 ))}
               </div>
 
-              <div className="grid grid-cols-5 gap-2.5">
-                <div className="col-span-3 rounded-lg border border-dashboard-line bg-dashboard-panel p-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5">
+                <div className="col-span-1 sm:col-span-3 rounded-lg border border-dashboard-line bg-dashboard-panel p-3.5">
                   <div className="flex justify-between items-center text-[10px] mb-2">
                     <b className="text-white">Weekly Attendance Flow</b>
                     <span className="text-dashboard-muted">Avg 94.8%</span>
@@ -531,7 +589,7 @@ function Dashboard({ compact = false }: { compact?: boolean }) {
                   </div>
                 </div>
 
-                <div className="col-span-2 rounded-lg border border-dashboard-line bg-dashboard-panel p-3.5 flex flex-col justify-between">
+                <div className="col-span-1 sm:col-span-2 rounded-lg border border-dashboard-line bg-dashboard-panel p-3.5 flex flex-col justify-between">
                   <div className="flex justify-between items-center text-[10px]">
                     <b className="text-white">Fee Target</b>
                     <span className="text-emerald-400 font-bold">82% Rec</span>
@@ -747,7 +805,7 @@ function Dashboard({ compact = false }: { compact?: boolean }) {
 
 function Hero({ openDemo }: { openDemo: () => void }) {
   return (
-    <section id="home" className="hero-grid relative overflow-hidden bg-hero pt-36 sm:pt-32 pb-16 text-hero-foreground">
+    <section id="home" className="hero-grid relative overflow-hidden bg-hero pt-28 sm:pt-32 pb-16 text-hero-foreground">
       {/* Ambient background glow behind Hero */}
       <div className="absolute top-16 left-1/2 -translate-x-1/2 size-[600px] rounded-full bg-gradient-to-b from-primary/20 via-brand-sky/10 to-transparent blur-3xl pointer-events-none" />
       <div className="absolute top-40 -left-20 size-72 rounded-full bg-[#FF671F]/10 blur-3xl pointer-events-none" />
@@ -821,13 +879,53 @@ function Hero({ openDemo }: { openDemo: () => void }) {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.14em] text-hero-muted">
+          {/* ✅ OFFICIAL WEBSITE & FREE TRIAL ACCESS — BOLD PROMINENT LINKS */}
+          <div className="mt-6 mx-auto max-w-2xl rounded-2xl border border-amber-400/30 bg-gradient-to-r from-[#FF671F]/15 via-[#1E40AF]/20 to-[#047857]/15 p-4 backdrop-blur-md shadow-lg">
+            <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-amber-300 text-center mb-3">
+              🌐 Official Platform — Direct Access Links
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              {/* Main Website */}
+              <a
+                href="https://eduschoolsaathi.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-xl border-2 border-amber-400/60 bg-amber-400/10 px-5 py-2.5 text-sm font-black text-amber-300 hover:bg-amber-400/25 hover:text-white hover:border-amber-400 transition-all shadow-md w-full sm:w-auto justify-center"
+              >
+                <span className="text-base">🔗</span>
+                <span>
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-amber-400/80 leading-tight">Official Website</span>
+                  <span className="font-black text-sm sm:text-base">eduschoolsaathi.org</span>
+                </span>
+                <ExternalLink className="size-4 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              </a>
+
+              <span className="text-white/30 text-xl hidden sm:inline">|</span>
+
+              {/* Trial Login */}
+              <a
+                href="https://app.eduschoolsaathi.org/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-xl border-2 border-emerald-400/60 bg-emerald-400/10 px-5 py-2.5 text-sm font-black text-emerald-300 hover:bg-emerald-400/25 hover:text-white hover:border-emerald-400 transition-all shadow-md w-full sm:w-auto justify-center"
+              >
+                <span className="text-base">🚀</span>
+                <span>
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-emerald-400/80 leading-tight">Free Trial Login</span>
+                  <span className="font-black text-sm sm:text-base">app.eduschoolsaathi.org/login</span>
+                </span>
+                <ExternalLink className="size-4 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-[0.14em] text-hero-muted">
             <span className="flex items-center gap-1.5"><Check className="size-3.5 text-success" /> 10-Second Attendance</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5"><Check className="size-3.5 text-success" /> Zero Hardware Needed</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5"><Check className="size-3.5 text-success" /> Instant WhatsApp Fee Receipts</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5"><Check className="size-3.5 text-success" /> 100% Isolated Data</span>
           </div>
 
@@ -1003,7 +1101,7 @@ function TrustStrip() {
           Built Specifically for the Daily Operations of Indian Schools
         </h3>
 
-        <div className="mx-auto mt-7 grid max-w-5xl gap-4 text-left lg:grid-cols-[1fr_1.15fr]">
+        <div className="mx-auto mt-7 grid max-w-5xl gap-4 text-left grid-cols-1 lg:grid-cols-[1fr_1.15fr]">
           <div className="flex flex-wrap content-start justify-center gap-2 rounded-2xl border border-border bg-card p-4 shadow-soft">
             {capabilities.map(([Icon, title], idx) => (
               <button
@@ -1120,7 +1218,7 @@ function Problems() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-stretch">
+        <div className="mt-10 grid gap-5 grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] lg:items-stretch">
           <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-3 shadow-card">
             <div className="absolute bottom-5 left-7 top-5 w-px bg-gradient-to-b from-[#FF671F] via-slate-200 to-[#138808]" />
             <div className="relative space-y-1">
@@ -2452,7 +2550,7 @@ function Features() {
   const selectedModule = filteredList.find((module) => module.title === selectedFeature) ?? filteredList[0];
 
   return (
-    <section id="features" className="features-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_15%,rgba(255,103,31,0.13),transparent_28%),radial-gradient(circle_at_92%_82%,rgba(19,136,8,0.13),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]">
+    <section id="features" className="features-light section content-auto relative overflow-hidden bg-[radial-gradient(circle_at_8%_15%,rgba(255,103,31,0.13),transparent_28%),radial-gradient(circle_at_92%_82%,rgba(19,136,8,0.13),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]">
       {/* Ambient glows */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1 tricolor-sheen" />
       <div className="pointer-events-none absolute -top-40 left-1/4 size-96 rounded-full bg-[#FF671F]/10 blur-3xl" />
@@ -2737,7 +2835,7 @@ function Roles() {
           </div>
 
           {/* Right Column: Live Simulator View */}
-          <div className="role-preview relative bg-gradient-to-br from-orange-50/70 via-white to-green-50/70 p-5 sm:p-8 flex flex-col justify-center">
+          <div className="role-preview relative bg-gradient-to-br from-orange-50/70 via-white to-green-50/70 p-5 sm:p-8 flex flex-col justify-center border-t border-slate-200 lg:border-t-0 lg:border-l">
             <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-soft sm:p-6">
               <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                 <div>
@@ -2813,8 +2911,8 @@ function HowItWorks() {
       <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
       <div className="container relative z-10">
         <SectionTitle eyebrow="Simple onboarding" title="Get Your School Digitally Connected in Simple Steps" copy="A guided path from first conversation to a confident, connected school operation." center />
-        <div className="onboarding-journey mt-10 grid gap-4 lg:grid-cols-[1.15fr_.85fr]">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="onboarding-journey mt-10 grid gap-4 grid-cols-1 lg:grid-cols-[1.15fr_.85fr]">
+          <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
             {steps.map(([Icon, title], index) => (
               <button
                 key={title}
@@ -3003,7 +3101,7 @@ function MobileExperience() {
           center
           dark
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
           {phones.map((p, i) => (
             <div
               key={p.title}
@@ -3102,7 +3200,7 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
         </div>
 
         {/* Pricing Cards Comparison */}
-        <div className="mt-12 grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto items-stretch">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto items-stretch">
           {/* Starter School */}
           <div className="pricing-card rounded-2xl border border-slate-200 bg-white p-7 shadow-soft flex flex-col justify-between">
             <div>
@@ -3152,7 +3250,7 @@ function Pricing({ openDemo }: { openDemo: () => void }) {
           </div>
 
           {/* Standard Pro (Most Popular) */}
-          <div className="pricing-card pricing-featured relative rounded-2xl border-2 border-[#138808]/50 bg-gradient-to-b from-white via-white to-green-50 p-7 shadow-card flex flex-col justify-between lg:scale-105 z-10">
+          <div className="pricing-card pricing-featured relative rounded-2xl border-2 border-[#138808]/50 bg-gradient-to-b from-white via-white to-green-50 p-7 shadow-card flex flex-col justify-between sm:col-span-2 lg:col-span-1 lg:scale-105 z-10">
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-[#138808] px-3 py-0.5 text-[10px] font-black uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(19,136,8,0.24)]">
               Most Popular in Bihar
             </div>
@@ -3357,7 +3455,7 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
         </div>
         <div className="text-center lg:text-left">
         <p className="inline-flex items-center gap-2 rounded-full border border-[#FF671F]/35 bg-orange-50 px-3 py-1 text-xs font-extrabold uppercase tracking-[.18em] text-[#c2410c]">🇮🇳 Apne School Ko Digital Banayein</p>
-        <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-black text-foreground sm:text-5xl lg:mx-0">
+        <h2 className="mx-auto mt-4 max-w-3xl font-display text-3xl font-black text-foreground sm:text-5xl lg:mx-0">
           Ready to Take Your School Digital?
         </h2>
         <p className="mx-auto mt-5 max-w-2xl leading-7 text-muted-foreground lg:mx-0">
@@ -3374,7 +3472,7 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
             <Mail className="size-4" /> Contact EduSchool-Saathi
           </a>
         </div>
-        <div className="mx-auto mt-10 grid max-w-4xl gap-4 text-left sm:grid-cols-3 lg:mx-0">
+        <div className="mx-auto mt-10 grid max-w-4xl gap-4 text-left grid-cols-1 sm:grid-cols-3 lg:mx-0">
           <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur">
             <div className="flex items-center gap-2 text-brand-warm">
               <MapPin className="size-4" />
