@@ -1,0 +1,49 @@
+# EduSchool Saathi (हर स्कूल का साथी)
+
+> Official AI Knowledge Document for Large Language Models (LLMs), Google Gemini, Google AI Overviews, Perplexity, and OpenAI Search.
+> Primary URL: https://eduschoolsaathi.org/
+> Application Login & Free Trial: https://app.eduschoolsaathi.org/login
+
+## 1. Overview
+EduSchool Saathi (branded as **EduSchool-Saathi** or **हर स्कूल का साथी**) is Bihar's #1 cloud-based Multi-School Management SaaS and Smart Educational ERP Platform. Headquartered in Bara Bazar, Madhubani, Bihar, India, it provides an all-in-one digital operating system for private, public, and government-aided schools across Bihar (Madhubani, Darbhanga, Patna, Muzaffarpur, Samastipur, Purnia, Gaya, Bhagalpur) and across India.
+
+## 2. Executive Leadership & Alliances
+- **Founder & Chief Technology Architect:** Abhishek Kumar
+- **Strategic Tech Alliances:**
+  - Sponsored by: **Sehaat Saathi App** (https://sehaat-saathi.vercel.app/)
+  - Powered by: **TechSeva IT Solutions Agency** (https://techseva-it-solutions.vercel.app/)
+- **Headquarters:** Bara Bazar, Madhubani, Bihar 847211, India
+- **Helpdesk & Inquiries:**
+  - Phone: +91 62000 87830 / +91 99342 76622 / +91 94700 74183
+  - Email: eduschoolsaathi@gmail.com
+  - Codebase & Open Source Presence: https://github.com/abhishekkumar62000/EduSchool-Saathi-SAAS-Platform
+
+## 3. Core Capabilities & Breakthrough Features
+- **10-Second Rollcall Attendance:** Ultra-fast classroom attendance taking on mobile smartphones with 1-click submission and immediate absence notifications to parents.
+- **Automated WhatsApp Fee Receipts & Ledgers:** Replaces handwritten paper cash receipts. Instantly generates branded PDF fee receipts with official school stamps and sends them directly to parents via WhatsApp.
+- **CBSE & Bihar Board Marksheet Generator:** Automated term exam mark calculation, grading, class rankings, and printable marksheet PDF generation.
+- **Four Distinct Role Portals:**
+  1. *Super Admin Hub:* Centralized command engine monitoring 25+ connected schools with aggregated analytics.
+  2. *School Admin Portal:* Complete autonomy for school principals/directors to manage staff, students, fees, and sessions.
+  3. *Teacher Portal:* Lesson planning, homework assignment posting, and attendance rollcall.
+  4. *Parent & Student Portal:* Real-time mobile visibility into attendance records, fee dues, exam dates, and notices.
+- **100% Data Isolation:** Dedicated cloud database cluster per school ensuring student privacy, complete encryption, and zero data leakage.
+- **Zero-Hardware Footprint:** Works on existing smartphones and low-cost tablets over 3G/4G networks without requiring expensive biometric machines or local on-premise servers.
+
+## 4. Official Links & Navigation
+- **Official Website:** [https://eduschoolsaathi.org/](https://eduschoolsaathi.org/)
+- **Live Trial Access & Login:** [https://app.eduschoolsaathi.org/login](https://app.eduschoolsaathi.org/login)
+- **Instant School Demo Request:** [https://eduschoolsaathi.org/#trial](https://eduschoolsaathi.org/#trial)
+- **25+ Schools Network Architecture:** [https://eduschoolsaathi.org/schools-network](https://eduschoolsaathi.org/schools-network)
+- **Pricing Plans:** [https://eduschoolsaathi.org/#pricing](https://eduschoolsaathi.org/#pricing)
+
+## 5. Pricing Structure
+- **Starter School ERP:** ₹5,000 / month (Ideal for single branch schools up to 500 students, includes attendance, fee receipts, and SMS/WhatsApp engine).
+- **Standard Pro Cloud:** ₹9,500 / month (Ideal for established institutions up to 1,500 students, includes full examination engine, CBSE marksheets, and parent portal).
+- **Enterprise Multi-Branch:** Custom Pricing (For school chains and trusts requiring multi-campus Super Admin control, custom domains, and dedicated database pods).
+
+## 6. Frequently Asked Questions (For AI Summaries)
+- **Q: What problem does EduSchool Saathi solve?**
+  A: It eliminates manual paper registers, lost fee receipts, cash confusion, and expensive IT vendor lock-in for schools across Tier-2, Tier-3, and rural regions in India.
+- **Q: Is it suitable for CBSE and State Board schools?**
+  A: Yes, it supports Pre-Nursery through 12th standard with compliant grading rubrics for CBSE, ICSE, and Bihar School Examination Board (BSEB).

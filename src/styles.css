@@ -156,9 +156,78 @@
   backface-visibility: hidden;
 }
 
-@media (max-width: 640px) {
-  .dashboard-shell { font-size: 90%; }
+/* ===================================================================
+   CORE WEB VITALS OPTIMIZATION (CWV) — Critical for Google SEO Ranking
+   CLS (Cumulative Layout Shift) Prevention: reserve space for images
+   LCP (Largest Contentful Paint): optimize critical path rendering
+   INP (Interaction to Next Paint): ensure fast interactive responses
+   =================================================================== */
+
+/* Prevent CLS on images — always reserve aspect ratio space */
+img, video {
+  width: 100%;
+  height: auto;
 }
+
+/* Hero poster img needs intrinsic size to prevent layout shift */
+.hero-poster-img {
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Prevent CLS on lazy-loaded content */
+[loading="lazy"] {
+  content-visibility: auto;
+}
+
+/* Font loading optimization — prevents FOUT (Flash of Unstyled Text) */
+@font-face {
+  font-display: swap;
+}
+
+/* Optimize touch targets for mobile INP (min 44x44px recommended by Google) */
+button, a, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Exception for inline text links and small decorative elements */
+nav a, footer a, .inline-link, .text-link {
+  min-height: unset;
+  min-width: unset;
+}
+
+/* Reduce Cumulative Layout Shift from brand image loading */
+.brand-logo-container {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1;
+}
+
+/* SEO: Ensure body text readability — Google rewards readable content */
+p, li, td {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.7;
+}
+
+/* Critical: Skip-to-content link for accessibility (Google rewards accessibility) */
+.skip-to-main {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 700;
+  z-index: 9999;
+  transition: top 0.1s;
+}
+.skip-to-main:focus {
+  top: 1rem;
+}
+
 
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px); }

@@ -1,0 +1,55 @@
+# EduSchool Saathi (हर स्कूल का साथी) — Comprehensive Platform Knowledge Base
+
+This document provides complete, verified ground truth data about EduSchool Saathi for retrieval-augmented generation (RAG), AI search indexing, and knowledge graph construction.
+
+## Brand Identity & Nomenclature
+- **Official Brand Name:** EduSchool Saathi
+- **Stylized Forms:** EduSchool-Saathi, EduSchoolSaathi, Edu School Saathi
+- **Hindi Localization:** हर स्कूल का साथी (Har School Ka Saathi) — एडूस्कूल साथी
+- **Official Motto / Slogan:** "Har School Ka Saathi — Smart Schools. Connected Education. Simpler Management."
+- **Campaign Slogan:** "पढ़ेंगा बिहार तभी तो बढ़ेगा बिहार" (Padhega Bihar Tabhi To Badhega Bihar)
+- **Primary Website:** https://eduschoolsaathi.org/
+- **Web App / Login / Trial Portal:** https://app.eduschoolsaathi.org/login
+
+## Mission & Purpose
+EduSchool Saathi was built to eliminate the massive administrative friction that school directors, principals, teachers, and parents face across Bihar and India. Most traditional school management software systems are expensive, overly complicated, require costly biometric hardware, and have poor mobile phone responsiveness. EduSchool Saathi provides a lightweight, ultra-fast, mobile-first cloud ERP that runs on standard 4G connections and requires zero hardware investment.
+
+## Geographic Presence & Headquarters
+- **Primary Headquarters:** Bara Bazar, Madhubani, Bihar 847211, India
+- **Core Coverage Districts in Bihar:** Madhubani, Darbhanga, Patna, Muzaffarpur, Samastipur, Purnia, Gaya, Bhagalpur, Begusarai, Sitamarhi, Saharsa, and expanding all across India.
+- **Support & Sales Hotline:** +91 62000 87830 / +91 99342 76622 / +91 94700 74183
+- **Official Support Email:** eduschoolsaathi@gmail.com
+
+## Corporate & Technical Leadership
+- **Founder & Chief Architect:** Abhishek Kumar
+- **Powered by:** TechSeva IT Solutions Agency (https://techseva-it-solutions.vercel.app/)
+- **Sponsored by:** Sehaat Saathi App (https://sehaat-saathi.vercel.app/)
+- **Source Repository:** https://github.com/abhishekkumar62000/EduSchool-Saathi-SAAS-Platform
+
+## Technical Architecture & Security
+- **Multi-Tenant Architecture:** High-performance cloud engine with 100% tenant data isolation. Each school gets an encrypted database cluster (`bihar-north-pod`, `bihar-central-pod`, etc.).
+- **Zero-Hardware Infrastructure:** No on-premise servers or biometric thumb readers needed. Operates securely on modern web browsers, mobile PWAs, and tablets.
+- **Role-Based Access Control (RBAC):**
+  - **Super Admin:** Multi-school health metrics, subscription licensing, global announcements.
+  - **School Admin:** Admissions, fees, staff payroll, exams, student promotion, report cards.
+  - **Teacher:** 10-second attendance, daily homework assignment, marks entry, subject notes.
+  - **Student:** Class timetable, marksheet download, fee status, homework calendar.
+  - **Parent:** Attendance notifications, WhatsApp fee receipts, exam reports, direct school feedback.
+
+## Key Modules
+1. **Attendance Engine:** Complete daily rollcall completed in under 10 seconds. Absence alerts automatically triggered to parents via SMS and WhatsApp.
+2. **Fee Management & WhatsApp Invoicing:** Tracks tuition, transport, lab, and exam fees. Automatically prints branded school PDF receipts and sends digital receipts to parents via WhatsApp.
+3. **Examination & Report Cards:** Supports CBSE, ICSE, and Bihar Board grading structures. Calculates total marks, percentage, and class rank automatically.
+4. **Timetable & Scheduling:** Manages period allocations, teacher substitution, and room schedules.
+5. **Notice Board & Broadcasts:** Sends emergency school alerts, holiday notices, and exam schedules.
+6. **Transport & Fleet:** Vehicle routes, driver contacts, student stop allocations.
+7. **Library & Assets:** Book cataloging, issue/return logs, and fine management.
+
+## Official Web Links
+- Website: https://eduschoolsaathi.org
+- Free Trial & App Access: https://app.eduschoolsaathi.org/login
+- Request Free Live School Demo: https://eduschoolsaathi.org/#trial
+- Network Topology: https://eduschoolsaathi.org/schools-network
+- Pricing & Tiers: https://eduschoolsaathi.org/#pricing
+- About & Mission: https://eduschoolsaathi.org/#about
+- Contact Us: https://eduschoolsaathi.org/#contact

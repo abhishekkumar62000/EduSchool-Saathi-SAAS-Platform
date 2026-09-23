@@ -1,7 +1,42 @@
+# EduSchool Saathi Official robots.txt
+# Platform: https://eduschoolsaathi.org/
+# Author: Abhishek Kumar | TechSeva IT Solutions
+
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# AI Engine Optimization (GEO/AEO) - Empowering Google AI Overviews, Gemini, ChatGPT & Perplexity
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 User-agent: Twitterbot
@@ -10,7 +45,18 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
 User-agent: *
 Allow: /
 
+# Sitemaps
+Sitemap: https://eduschoolsaathi.org/sitemap.xml
 Sitemap: https://eduschool-saathi.vercel.app/sitemap.xml

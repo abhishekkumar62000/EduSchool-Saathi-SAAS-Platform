@@ -12,10 +12,24 @@ import { WhatsappChatbot } from "../components/WhatsappChatbot";
 export const Route = createFileRoute("/schools-network")({
   head: () => ({
     meta: [
-      { title: "25+ Schools Network Architecture | EduSchool-Saathi SaaS" },
+      { title: "25+ Schools Network Architecture | EduSchool Saathi™ SaaS Bihar" },
       {
         name: "description",
-        content: "Explore the EduSchool-Saathi multi-tenant cloud architecture in Indian Flag Tricolor theme. Centralized Super Admin engine connecting 25+ partner schools across Bihar with 100% isolated databases and instant analytics.",
+        content: "Explore the EduSchool Saathi multi-tenant cloud architecture in Indian Flag Tricolor theme. Centralized Super Admin engine connecting 25+ partner schools across Bihar with 100% isolated databases and instant analytics.",
+      },
+      { name: "keywords", content: "EduSchool Saathi network, Bihar school ERP network, multi-tenant school architecture, Madhubani Darbhanga school SaaS, Abhishek Kumar EduSchool Saathi" },
+      { property: "og:title", content: "25+ Schools Network Architecture | EduSchool Saathi™ SaaS" },
+      { property: "og:description", content: "Super Admin central hub connecting 25+ schools across Bihar with 100% data isolation and real-time rollcall and fee analytics." },
+      { property: "og:url", content: "https://eduschoolsaathi.org/schools-network" },
+      { property: "og:image", content: "https://eduschoolsaathi.org/logo-optimized.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "25+ Schools Network Architecture | EduSchool Saathi™ SaaS" },
+      { name: "twitter:description", content: "Centralized Super Admin engine connecting 25+ partner schools across Bihar with 100% isolated databases." },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://eduschoolsaathi.org/schools-network",
       },
     ],
   }),

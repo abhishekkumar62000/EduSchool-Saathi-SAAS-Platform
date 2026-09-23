@@ -24,18 +24,24 @@ import { WhatsappChatbot } from "../components/WhatsappChatbot";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "EduSchool-Saathi | #1 Multi-School Management SaaS Platform in Bihar" },
-      { name: "description", content: "EduSchool-Saathi is a modern AI-powered School Management ERP for schools in Madhubani, Darbhanga, Patna & Bihar. Student admissions, 10-second attendance, instant fee receipts, and multi-role portals. Sponsored by Sehaat Saathi, Powered by TechSeva IT Solutions." },
-      { name: "keywords", content: "EduSchool Saathi, EduSchool-Saathi, School ERP Bihar, Madhubani School Software, Darbhanga School Management, Bihar School SaaS, School Fee Receipt System, Student Attendance Software, Pre-Nursery to Class 12 ERP, TechSeva IT Solutions, Sehaat Saathi" },
-      { property: "og:title", content: "EduSchool-Saathi | Complete Digital School Management Platform" },
-      { property: "og:description", content: "Smart Schools. Connected Education. Simpler Management. Multi-tenant SaaS platform built for schools in Bihar and beyond. Sponsored by Sehaat Saathi, Powered by TechSeva IT Solutions." },
+      { title: "EduSchool Saathi™ | #1 Multi-School Management SaaS Platform & School ERP Bihar" },
+      { name: "description", content: "EduSchool Saathi (हर स्कूल का साथी) is Bihar's #1 Cloud School Management ERP & Multi-School SaaS platform for schools in Madhubani, Darbhanga, Patna & Bihar. Student admissions, 10-second attendance, instant WhatsApp fee receipts, and multi-role portals. Official site: eduschoolsaathi.org." },
+      { name: "keywords", content: "EduSchool Saathi, EduSchool-Saathi, Edu School Saathi, eduschoolsaathi.org, app.eduschoolsaathi.org, हर स्कूल का साथी, School ERP Bihar, Best school management software Bihar, School software Madhubani, Darbhanga school management ERP, Patna school ERP, Student attendance system, Instant fee receipt software, Pre-Nursery to Class 12 ERP, TechSeva IT Solutions, Sehaat Saathi" },
+      { property: "og:title", content: "EduSchool Saathi™ | #1 School ERP & Multi-School SaaS Platform Bihar" },
+      { property: "og:description", content: "Har School Ka Saathi — Smart Schools. Connected Education. Simpler Management. Built for Bihar and beyond. Official Access at eduschoolsaathi.org." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://eduschool-saathi.vercel.app/" },
-      { property: "og:image", content: "https://eduschool-saathi.vercel.app/logo-optimized.png" },
+      { property: "og:url", content: "https://eduschoolsaathi.org/" },
+      { property: "og:image", content: "https://eduschoolsaathi.org/logo-optimized.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "EduSchool-Saathi | Digital School Management SaaS" },
-      { name: "twitter:description", content: "Empower your school with 100% digital operations, automated fee receipts, and attendance tracking." },
-      { name: "twitter:image", content: "https://eduschool-saathi.vercel.app/logo-optimized.png" },
+      { name: "twitter:title", content: "EduSchool Saathi™ | Digital School Management SaaS" },
+      { name: "twitter:description", content: "Empower your school with 100% digital operations, automated fee receipts, and 10-sec attendance tracking across Bihar & India." },
+      { name: "twitter:image", content: "https://eduschoolsaathi.org/logo-optimized.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://eduschoolsaathi.org/",
+      },
     ],
   }),
   component: Index,
@@ -78,19 +84,21 @@ const roles = {
 };
 
 const faqs = [
- ["What is EduSchool-Saathi?", "A complete digital school management platform that brings administration, teachers, students and parents together."],
- ["Is it suitable for small schools?", "Yes. The platform is designed to be simple and scalable for small, growing, rural and semi-urban schools."],
- ["Can multiple schools use the platform?", "Yes. Multiple schools can use the common platform while operating in separate school-level environments."],
- ["Can each school have separate admin access?", "Yes. Each school can have its own administrators with role-based access for that school's operations."],
- ["Can teachers, students and parents have separate accounts?", "Yes. The platform concept supports separate role-based experiences for each member of the school community."],
- ["Can schools manage attendance digitally?", "Yes. Schools can manage daily, class-wise and historical attendance with summaries and reports."],
- ["Can schools manage fees?", "Yes. Fee structures, paid and pending fees, due dates, receipts and reports can be organized digitally."],
- ["Can schools manage examinations and results?", "Yes. Exam schedules, marks, grades, results and report cards are included in the platform modules."],
- ["Can parents see their child's information?", "Yes. Parent access can include attendance, fee status, homework, results, notices and academic updates."],
- ["Can the platform be customized for a school?", "Configuration can vary based on school size, operational needs and selected modules."],
- ["Is it suitable for rural and semi-urban schools?", "Yes. EduSchool-Saathi is designed around the practical needs of schools beyond major cities, especially across Bihar."],
- ["How can my school request a demo?", "Use any Request Demo button, complete the short form and the EduSchool-Saathi team can follow up."],
- ["How does pricing work?", "Plans start from ₹5,000 per month and may vary based on school size, requirements and selected modules."],
+ ["What is EduSchool-Saathi?", "EduSchool-Saathi (eduschoolsaathi.org) is Bihar's #1 complete digital school management ERP and SaaS platform that brings administration, teachers, students, and parents together in one unified cloud system."],
+ ["Who is the founder of EduSchool-Saathi?", "EduSchool-Saathi was founded by Abhishek Kumar, Chief Technology Architect, headquartered in Bara Bazar Madhubani, Bihar. It is sponsored by Sehaat Saathi App and powered by TechSeva IT Solutions."],
+ ["Is EduSchool-Saathi suitable for small and rural schools?", "Yes. EduSchool-Saathi is specifically designed for ground realities in Bihar's rural and semi-urban schools. It works on basic smartphones over 3G/4G networks with zero hardware investment."],
+ ["Can multiple schools use the platform independently?", "Yes. Multiple schools operate via the centralized Super Admin hub while maintaining 100% separate, encrypted, and isolated database environments."],
+ ["Can each school have separate admin access?", "Yes. Each school has its own School Admin credentials with granular role-based permissions for admissions, fee collection, staff management, and exams."],
+ ["Can teachers, students and parents have separate accounts?", "Yes. The platform provides 4 distinct role portals: Super Admin, School Admin, Teacher Portal, and Student & Parent Portal."],
+ ["Can schools manage attendance digitally?", "Yes. EduSchool-Saathi's 10-second attendance rollcall engine marks a full class on any phone and instantly sends WhatsApp/SMS absence alerts to parents."],
+ ["Can schools manage fees and generate WhatsApp receipts?", "Yes. Schools can configure customizable fee structures, track paid and pending dues, and issue 1-click branded PDF fee receipts with instant WhatsApp delivery to parents."],
+ ["Can schools manage examinations and generate CBSE report cards?", "Yes. Exam schedules, marks entry, grades, automated ranking, and CBSE/Bihar Board compliant marksheet report cards are generated digitally."],
+ ["Can parents see their child's academic updates?", "Yes. Parents can view real-time daily attendance, fee ledger status, homework assignments, test marks, exam timetables, and official school notices on their mobile phone."],
+ ["Is EduSchool-Saathi suitable for CBSE and Bihar State Board schools?", "Yes. It supports Pre-Nursery through Class 12 with compliant grading rubrics for CBSE, ICSE, and Bihar School Examination Board (BSEB/Bihar Board) standards."],
+ ["What is the pricing for EduSchool-Saathi school ERP?", "Plans start from ₹5,000 per month for the Starter School ERP and ₹9,500 per month for the Standard Pro Cloud tier. Zero upfront setup fees."],
+ ["How can my school request a free live demo or trial?", "Visit https://eduschoolsaathi.org/#trial or log in at https://app.eduschoolsaathi.org/login, or call the helpdesk at +91 62000 87830 for an instant school demo."],
+ ["Does EduSchool-Saathi work on mobile phones and tablets?", "Yes. EduSchool-Saathi is a 100% mobile-first Progressive Web App (PWA) that works on any Android or iOS phone, tablet, laptop, or desktop without downloading any app."],
+ ["What is the official website of EduSchool-Saathi?", "The official website is https://eduschoolsaathi.org/ and the live login & trial portal is https://app.eduschoolsaathi.org/login."],
 ];
 
 function TricolorBrandText({ size = "text-sm sm:text-base" }: { size?: string }) {
@@ -124,39 +132,7 @@ function Brand({ compact = false }: { compact?: boolean }) {
 
 function AnnouncementBar() {
   return (
-    <div className="relative z-50 flex flex-col bg-gradient-to-r from-slate-950 via-teal-950 to-slate-950 border-b border-emerald-500/20 text-white text-[11px]">
-
-      {/* ✅ TOP ROW — Official Website & Trial Access — BOLD & PROMINENT */}
-      <div className="bg-gradient-to-r from-[#FF671F]/25 via-[#1E40AF]/30 to-[#047857]/25 border-b border-white/10 py-1.5 px-3">
-        <div className="container flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center">
-          <span className="inline-flex items-center gap-1 rounded-full bg-amber-400/20 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-amber-300 border border-amber-400/40 shrink-0">
-            🌐 Official Website
-          </span>
-          <a
-            href="https://eduschoolsaathi.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-black text-xs sm:text-[13px] text-amber-300 hover:text-white transition-colors underline underline-offset-2 decoration-amber-400/60"
-          >
-            eduschoolsaathi.org <ExternalLink className="size-3 opacity-80" />
-          </a>
-          <span className="text-white/30 hidden sm:inline">•</span>
-          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/25 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-emerald-300 border border-emerald-500/30 shrink-0">
-            🚀 Free Trial Login
-          </span>
-          <a
-            href="https://app.eduschoolsaathi.org/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-black text-xs sm:text-[13px] text-emerald-300 hover:text-white transition-colors underline underline-offset-2 decoration-emerald-400/60"
-          >
-            app.eduschoolsaathi.org/login <ExternalLink className="size-3 opacity-80" />
-          </a>
-        </div>
-      </div>
-
-      {/* BOTTOM ROW — SaaS Identity + Partners */}
-      <div className="py-1.5 px-3">
+    <div className="relative z-50 bg-gradient-to-r from-slate-950 via-teal-950 to-slate-950 border-b border-emerald-500/20 text-white text-[11px] py-1.5 px-3">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-1.5 sm:gap-2 text-center md:text-left">
         {/* Left Side: SaaS Identity */}
         <div className="flex items-center justify-center gap-2">
@@ -213,7 +189,6 @@ function AnnouncementBar() {
             <Phone className="size-2.5" /> 6200087830
           </a>
         </div>
-      </div>
       </div>
     </div>
   );
@@ -806,7 +781,11 @@ function Dashboard({ compact = false }: { compact?: boolean }) {
 
 function Hero({ openDemo }: { openDemo: () => void }) {
   return (
-    <section id="home" className="hero-grid relative overflow-hidden bg-hero pt-28 sm:pt-32 pb-16 text-hero-foreground">
+    <section
+      id="home"
+      className="hero-grid relative overflow-hidden bg-hero pt-28 sm:pt-32 pb-16 text-hero-foreground"
+      aria-label="EduSchool Saathi Hero — Bihar's #1 Multi-School Management SaaS Platform"
+    >
       {/* Ambient background glow behind Hero */}
       <div className="absolute top-16 left-1/2 -translate-x-1/2 size-[600px] rounded-full bg-gradient-to-b from-primary/20 via-brand-sky/10 to-transparent blur-3xl pointer-events-none" />
       <div className="absolute top-40 -left-20 size-72 rounded-full bg-[#FF671F]/10 blur-3xl pointer-events-none" />
@@ -831,17 +810,36 @@ function Hero({ openDemo }: { openDemo: () => void }) {
             <span className="hidden xs:inline">Pre-Nursery to 12th</span>
           </div>
 
-          <h1 className="animate-hero-title font-display text-3xl font-black leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
-            <span className="text-white/95">Har School Ka Saathi —</span>
-            <span className="mt-3 block font-black">
-              <span className="text-[#38BDF8] drop-shadow-[0_0_25px_rgba(56,189,248,0.4)]">Edu</span>
-              <span className="text-[#FB923C] drop-shadow-[0_0_25px_rgba(251,146,60,0.4)]">School</span>
-              <span className="text-white/60 mx-1">-</span>
-              <span className="text-[#4ADE80] drop-shadow-[0_0_25px_rgba(74,222,128,0.4)]">Saathi</span>
-            </span>
-            <span className="mt-3 block text-xl sm:text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-emerald-300 via-teal-200 to-sky-300 bg-clip-text text-transparent tracking-normal">
-              Complete Digital School Management ERP
-            </span>
+          <h1 className="animate-hero-title font-display text-3xl font-black leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
+            {/* Main Brand Headline -> Directly clickable to https://eduschoolsaathi.org/ */}
+            <a
+              href="https://eduschoolsaathi.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block cursor-pointer select-none transition-all duration-300 hover:scale-[1.01] focus:outline-none"
+              title="Click to visit Official Website: https://eduschoolsaathi.org/"
+            >
+              <span className="text-white/95 group-hover:text-amber-200 transition-colors duration-300 inline-block">
+                Har School Ka Saathi —
+              </span>
+              <span className="mt-1 sm:mt-1.5 block font-black">
+                <span className="text-[#38BDF8] drop-shadow-[0_0_25px_rgba(56,189,248,0.5)] group-hover:drop-shadow-[0_0_45px_rgba(56,189,248,0.95)] transition-all">Edu</span>
+                <span className="text-[#FB923C] drop-shadow-[0_0_25px_rgba(251,146,60,0.5)] group-hover:drop-shadow-[0_0_45px_rgba(251,146,60,0.95)] transition-all">School</span>
+                <span className="text-white/60 mx-1 group-hover:text-white transition-colors">-</span>
+                <span className="text-[#4ADE80] drop-shadow-[0_0_25px_rgba(74,222,128,0.5)] group-hover:drop-shadow-[0_0_45px_rgba(74,222,128,0.95)] transition-all">Saathi</span>
+              </span>
+            </a>
+
+            {/* Sub-headline -> Directly clickable to https://app.eduschoolsaathi.org/login */}
+            <a
+              href="https://app.eduschoolsaathi.org/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 sm:mt-2 inline-block text-xl sm:text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-emerald-300 via-teal-200 to-sky-300 bg-clip-text text-transparent tracking-normal hover:from-white hover:to-emerald-200 hover:scale-[1.02] drop-shadow-[0_0_20px_rgba(52,211,153,0.3)] hover:drop-shadow-[0_0_35px_rgba(52,211,153,0.7)] transition-all duration-300 cursor-pointer select-none focus:outline-none"
+              title="Click to Access App & Free Trial Login: https://app.eduschoolsaathi.org/login"
+            >
+              Complete Digital School Management ERP ↗
+            </a>
           </h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-hero-muted sm:text-lg sm:leading-7">
@@ -936,22 +934,22 @@ function Hero({ openDemo }: { openDemo: () => void }) {
           {/* ========================================================================= */}
           {/* CENTERED HERO POSTER IMAGE PRESENTATION (FULL VISIBILITY & WOW FACTOR) */}
           {/* ========================================================================= */}
-          <div className="mt-12 mx-auto max-w-4xl relative group">
+          <div className="mt-12 mx-auto max-w-4xl relative group flex justify-center items-center">
             {/* Tricolor Ambient Aura around Poster */}
             <div className="absolute -inset-2 sm:-inset-3 rounded-3xl bg-gradient-to-r from-[#FF671F] via-[#38BDF8] to-[#047857] opacity-60 blur-xl group-hover:opacity-90 transition-opacity duration-700 pointer-events-none" />
 
             {/* Poster Card Container */}
-            <div className="relative rounded-2xl sm:rounded-3xl border-2 border-white/30 bg-slate-950/90 p-2 sm:p-3.5 shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden">
+            <div className="relative rounded-2xl sm:rounded-3xl border-2 border-white/30 bg-slate-950/90 p-2 sm:p-3.5 shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden w-full flex flex-col items-center justify-center">
               <img
                 src={heroPosterImg}
                 alt="EduSchool-Saathi Official Campaign Poster - Padhega Bihar Tabhi To Badhega Bihar"
-                className="w-full h-auto max-h-[380px] sm:max-h-[500px] md:max-h-[560px] object-contain object-center rounded-xl sm:rounded-2xl mx-auto select-none transition-transform duration-500 group-hover:scale-[1.01]"
+                className="w-auto h-auto max-w-full max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] object-contain object-center rounded-xl sm:rounded-2xl mx-auto select-none transition-transform duration-500 group-hover:scale-[1.01]"
                 loading="eager"
                 decoding="async"
               />
 
               {/* Bottom Quick Feature Tagline bar below the image */}
-              <div className="mt-2.5 pt-2 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 px-2 text-[10px] sm:text-xs font-bold text-slate-300">
+              <div className="mt-3 w-full pt-2 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 px-2 text-[10px] sm:text-xs font-bold text-slate-300">
                 <span className="flex items-center gap-1 text-emerald-400">
                   <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
                   पढ़ेंगा बिहार तभी तो बढ़ेगा बिहार
@@ -1302,7 +1300,11 @@ function Platform({ openDemo }: { openDemo?: () => void }) {
 
   return (
     <>
-      <section className="section relative overflow-hidden bg-background" id="about">
+      <section
+        className="section relative overflow-hidden bg-background"
+        id="about"
+        aria-label="About EduSchool Saathi — Bihar's #1 School Management ERP Platform"
+      >
         {/* Subtle decorative glows */}
         <div className="absolute top-1/4 -left-40 size-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-0 size-96 rounded-full bg-brand-sky/5 blur-3xl pointer-events-none" />
@@ -3451,7 +3453,68 @@ function WhyAndPrivacy() {
   );
 }
 
-function FAQ(){const [open,setOpen]=useState(0);return <section id="faq" className="faq-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.1),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.1),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]"><div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" /><div className="container grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><SectionTitle eyebrow="Questions, answered" title="Everything You Need to Know" copy="Clear answers for school owners and directors exploring EduSchool-Saathi."/><div className="faq-list rounded-2xl border border-slate-200 bg-white/85 p-3 shadow-card">{faqs.map(([q,a],i)=><div key={q} className={`faq-item rounded-xl border transition-all ${open===i?"border-[#138808]/30 bg-emerald-50/50":"border-transparent"}`}><button type="button" className="flex min-h-14 w-full items-center justify-between gap-4 px-4 py-4 text-left text-sm font-bold text-foreground" onClick={()=>setOpen(open===i?-1:i)} aria-expanded={open===i}><span className="flex items-center gap-3"><span className={`grid size-7 shrink-0 place-items-center rounded-full text-[10px] font-black ${open===i?"bg-[#138808] text-white":"bg-orange-50 text-[#c2410c]"}`}>{String(i+1).padStart(2,"0")}</span>{q}</span><ChevronDown className={`size-4 shrink-0 transition ${open===i?"rotate-180 text-[#138808]":"text-muted-foreground"}`}/></button><div className={`grid transition-all ${open===i?"grid-rows-[1fr] pb-4":"grid-rows-[0fr]"}`}><p className="overflow-hidden px-14 text-sm leading-6 text-muted-foreground">{a}</p></div></div>)}</div></div></section>}
+function FAQ() {
+  const [open, setOpen] = useState(0);
+  return (
+    <section
+      id="faq"
+      className="faq-light section relative overflow-hidden bg-[radial-gradient(circle_at_8%_18%,rgba(255,103,31,0.1),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(19,136,8,0.1),transparent_30%),linear-gradient(135deg,#fffdf9,#ffffff_52%,#f4fbf3)]"
+      aria-label="Frequently Asked Questions about EduSchool Saathi"
+    >
+      <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
+      <div className="container grid gap-10 lg:grid-cols-[.7fr_1.3fr]">
+        <SectionTitle
+          eyebrow="Questions, answered"
+          title="Everything You Need to Know about EduSchool Saathi"
+          copy="Clear answers for school owners, principals, and directors exploring EduSchool-Saathi School ERP for Bihar and India."
+        />
+        {/* dl/dt/dd = semantic FAQ markup that Google uses for rich results */}
+        <dl className="faq-list rounded-2xl border border-slate-200 bg-white/85 p-3 shadow-card" itemScope itemType="https://schema.org/FAQPage">
+          {faqs.map(([q, a], i) => (
+            <div
+              key={q}
+              className={`faq-item rounded-xl border transition-all ${open === i ? "border-[#138808]/30 bg-emerald-50/50" : "border-transparent"}`}
+              itemScope
+              itemType="https://schema.org/Question"
+            >
+              <dt>
+                <button
+                  type="button"
+                  id={`faq-btn-${i}`}
+                  aria-expanded={open === i}
+                  aria-controls={`faq-panel-${i}`}
+                  className="flex min-h-14 w-full items-center justify-between gap-4 px-4 py-4 text-left text-sm font-bold text-foreground"
+                  onClick={() => setOpen(open === i ? -1 : i)}
+                  itemProp="name"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className={`grid size-7 shrink-0 place-items-center rounded-full text-[10px] font-black ${open === i ? "bg-[#138808] text-white" : "bg-orange-50 text-[#c2410c]"}`}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {q}
+                  </span>
+                  <ChevronDown className={`size-4 shrink-0 transition ${open === i ? "rotate-180 text-[#138808]" : "text-muted-foreground"}`} />
+                </button>
+              </dt>
+              <dd
+                id={`faq-panel-${i}`}
+                role="region"
+                aria-labelledby={`faq-btn-${i}`}
+                className={`grid transition-all ${open === i ? "grid-rows-[1fr] pb-4" : "grid-rows-[0fr]"}`}
+                itemScope
+                itemType="https://schema.org/Answer"
+              >
+                <p className="overflow-hidden px-14 text-sm leading-6 text-muted-foreground" itemProp="text">{a}</p>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  );
+}
+
+
 
 function FinalCta({ openDemo }: { openDemo: () => void }) {
   return (
@@ -3598,7 +3661,8 @@ function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+        {/* Footer navigation — semantic nav element for SEO crawlability */}
+        <nav className="grid grid-cols-2 gap-8 sm:grid-cols-4" aria-label="EduSchool Saathi site navigation links">
           {cols.map((c) => (
             <div key={c.t} className="footer-column">
               <button type="button" onClick={() => setOpenFooterColumn(openFooterColumn === c.t ? null : c.t)} className="flex w-full items-center justify-between text-left text-xs font-extrabold uppercase tracking-widest text-[#138808] sm:pointer-events-none">
@@ -3620,7 +3684,7 @@ function Footer() {
               </div>
             </div>
           ))}
-        </div>
+        </nav>
       </div>
 
       <div className="container mt-12 flex flex-col gap-3 border-t border-slate-200 pt-6 text-[11px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
@@ -3758,7 +3822,8 @@ function Index() {
   return (
     <>
       <Navbar openDemo={openTrial} />
-      <main>
+      {/* id="main-content" enables skip-to-content accessibility — boosts Google SEO signals */}
+      <main id="main-content" role="main" aria-label="EduSchool Saathi - Bihar's #1 School Management ERP Platform">
         <Hero openDemo={openTrial} />
         <FounderPoster />
         <TrustStrip />
@@ -3778,7 +3843,9 @@ function Index() {
         <FAQ />
         <FinalCta openDemo={openTrial} />
       </main>
-      <Footer />
+      <footer role="contentinfo" aria-label="EduSchool Saathi - Site footer, contact, and navigation links">
+        <Footer />
+      </footer>
       <DemoModal open={demo} onClose={() => setDemo(false)} />
       <PwaInstallPrompt />
       <WhatsappChatbot />
