@@ -113,7 +113,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "EduSchool Saathi™ | Smart School ERP & Multi-School SaaS Bihar" },
       { name: "twitter:description", content: "Digital school management for schools across Bihar & India. 10-sec rollcall, WhatsApp fee receipts, marksheets & multi-role portals." },
       { name: "twitter:image", content: "https://eduschoolsaathi.org/logo-optimized.png" },
-      { name: "twitter:creator", content: "@EduSchoolSaathi" },
+      { name: "twitter:creator", content: "@eduschoolsaathi" },
+      { name: "twitter:site", content: "@eduschoolsaathi" },
     ],
     links: [
       {
@@ -258,6 +259,8 @@ const schemaJsonLd = {
       "sameAs": [
         "https://eduschoolsaathi.org",
         "https://app.eduschoolsaathi.org/login",
+        "https://x.com/eduschoolsaathi",
+        "https://medium.com/@eduschoolsaathi",
         "https://www.instagram.com/eduschool_saathi",
         "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/",
         "https://eduschool-saathi.vercel.app/",
@@ -504,6 +507,8 @@ const schemaJsonLd = {
       "sameAs": [
         "https://eduschoolsaathi.org",
         "https://app.eduschoolsaathi.org/login",
+        "https://x.com/eduschoolsaathi",
+        "https://medium.com/@eduschoolsaathi",
         "https://www.instagram.com/eduschool_saathi",
         "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/",
         "https://github.com/abhishekkumar62000/EduSchool-Saathi-SAAS-Platform"

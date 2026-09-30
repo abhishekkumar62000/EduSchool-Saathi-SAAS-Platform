@@ -112,6 +112,22 @@ function TricolorBrandText({ size = "text-sm sm:text-base" }: { size?: string })
   );
 }
 
+function XTwitterIcon({ className = "size-3.5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+function MediumIcon({ className = "size-3.5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.74 1.19-5.74c.66 0 1.19 2.57 1.19 5.74" />
+    </svg>
+  );
+}
+
 function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <a href="#home" className="inline-flex items-center gap-2 sm:gap-2.5 group shrink-0" aria-label="EduSchool-Saathi home">
@@ -3631,13 +3647,13 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
               <span className="size-2 rounded-full bg-[#138808] animate-pulse" />
               <b className="text-xs uppercase tracking-wider">Official Social Pages</b>
             </div>
-            <div className="mt-2 space-y-2">
+            <div className="mt-2.5 space-y-2">
               <a
                 href="https://www.instagram.com/eduschool_saathi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-xs font-bold text-foreground hover:text-pink-600 transition-colors"
-                title="Follow EduSchool Saathi on Instagram"
+                title="Follow EduSchool Saathi on Instagram: @eduschool_saathi"
               >
                 <span className="grid size-6 shrink-0 place-items-center rounded-md bg-gradient-to-tr from-[#FD1D1D] via-[#E1306C] to-[#833AB4] text-white shadow-xs group-hover:scale-110 transition-transform">
                   <Instagram className="size-3.5" />
@@ -3650,14 +3666,41 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-xs font-bold text-foreground hover:text-blue-600 transition-colors"
-                title="Follow EduSchool Saathi on Facebook"
+                title="Follow EduSchool Saathi on Facebook Page"
               >
                 <span className="grid size-6 shrink-0 place-items-center rounded-md bg-[#1877F2] text-white shadow-xs group-hover:scale-110 transition-transform">
                   <Facebook className="size-3.5" />
                 </span>
                 <span className="truncate">Facebook Page ↗</span>
               </a>
+
+              <a
+                href="https://x.com/eduschoolsaathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-xs font-bold text-foreground hover:text-slate-900 transition-colors"
+                title="Follow EduSchool Saathi on Twitter X: @eduschoolsaathi"
+              >
+                <span className="grid size-6 shrink-0 place-items-center rounded-md bg-black text-white shadow-xs group-hover:scale-110 transition-transform">
+                  <XTwitterIcon className="size-3.5" />
+                </span>
+                <span className="truncate">@eduschoolsaathi (X) ↗</span>
+              </a>
+
+              <a
+                href="https://medium.com/@eduschoolsaathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-xs font-bold text-foreground hover:text-emerald-700 transition-colors"
+                title="Read EduSchool Saathi Articles on Medium Blog"
+              >
+                <span className="grid size-6 shrink-0 place-items-center rounded-md bg-[#00AB6C] text-white shadow-xs group-hover:scale-110 transition-transform">
+                  <MediumIcon className="size-3.5" />
+                </span>
+                <span className="truncate">Medium Blog ↗</span>
+              </a>
             </div>
+            <span className="text-[10px] text-muted-foreground block mt-2 border-t border-slate-100 pt-1.5">Official Verified Channels</span>
           </div>
         </div>
         </div>
@@ -3672,7 +3715,7 @@ function Footer() {
     { t: "Platform", a: [["About Platform", "#about"], ["25+ Schools Network", "/schools-network"], ["Partners", "#ecosystem"], ["All Features", "#features"], ["How It Works", "#how-it-works"], ["Pricing Plans", "#pricing"]] },
     { t: "Portals", a: [["School Management", "#roles"], ["Teacher Portal", "#roles"], ["Student Dashboard", "#roles"], ["Parent App", "#roles"]] },
     { t: "Resources", a: [["FAQ", "#faq"], ["Request Demo", "#home"], ["School Benefits", "#benefits"], ["Contact Us", "#contact"]] },
-    { t: "Ecosystem", a: [["Sehaat Saathi App", "https://sehaat-saathi.vercel.app/"], ["TechSeva IT Solutions", "https://techseva-it-solutions.vercel.app/"], ["Instagram (@eduschool_saathi)", "https://www.instagram.com/eduschool_saathi"], ["Facebook Page", "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"], ["Privacy Policy", "#about"]] },
+    { t: "Ecosystem", a: [["Sehaat Saathi App", "https://sehaat-saathi.vercel.app/"], ["TechSeva IT Solutions", "https://techseva-it-solutions.vercel.app/"], ["Twitter / X (@eduschoolsaathi)", "https://x.com/eduschoolsaathi"], ["Medium Blog (@eduschoolsaathi)", "https://medium.com/@eduschoolsaathi"], ["Instagram (@eduschool_saathi)", "https://www.instagram.com/eduschool_saathi"], ["Facebook Page", "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"], ["Privacy Policy", "#about"]] },
   ];
 
   return (
@@ -3725,30 +3768,52 @@ function Footer() {
                 href="https://www.instagram.com/eduschool_saathi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1.5 rounded-xl border border-pink-500/25 bg-gradient-to-r from-pink-500/10 via-rose-500/10 to-amber-500/10 px-3 py-1.5 text-xs font-bold text-slate-800 hover:text-pink-600 hover:border-pink-500/50 hover:shadow-xs transition-all"
+                className="group inline-flex items-center gap-1.5 rounded-xl border border-pink-500/25 bg-gradient-to-r from-pink-500/10 via-rose-500/10 to-amber-500/10 px-2.5 py-1.5 text-xs font-bold text-slate-800 hover:text-pink-600 hover:border-pink-500/50 hover:shadow-xs transition-all"
                 title="Follow EduSchool Saathi on Instagram: @eduschool_saathi"
               >
                 <span className="grid size-5 place-items-center rounded-md bg-gradient-to-tr from-[#FD1D1D] via-[#E1306C] to-[#833AB4] text-white">
                   <Instagram className="size-3" />
                 </span>
                 <span>Instagram</span>
-                <span className="text-[9px] font-extrabold text-[#E4405F] bg-white/80 px-1.5 py-0.5 rounded-full border border-pink-200">
-                  @eduschool_saathi
-                </span>
               </a>
 
               <a
                 href="https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1.5 rounded-xl border border-blue-500/25 bg-blue-500/10 px-3 py-1.5 text-xs font-bold text-slate-800 hover:text-blue-700 hover:border-blue-500/50 hover:shadow-xs transition-all"
+                className="group inline-flex items-center gap-1.5 rounded-xl border border-blue-500/25 bg-blue-500/10 px-2.5 py-1.5 text-xs font-bold text-slate-800 hover:text-blue-700 hover:border-blue-500/50 hover:shadow-xs transition-all"
                 title="Official Facebook Page of EduSchool Saathi"
               >
                 <span className="grid size-5 place-items-center rounded-md bg-[#1877F2] text-white">
                   <Facebook className="size-3" />
                 </span>
-                <span>Facebook Page</span>
-                <ExternalLink className="size-2.5 opacity-60 group-hover:opacity-100" />
+                <span>Facebook</span>
+              </a>
+
+              <a
+                href="https://x.com/eduschoolsaathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 rounded-xl border border-slate-300 bg-slate-900/5 px-2.5 py-1.5 text-xs font-bold text-slate-800 hover:text-black hover:border-slate-900/50 hover:shadow-xs transition-all"
+                title="Follow EduSchool Saathi on Twitter X: @eduschoolsaathi"
+              >
+                <span className="grid size-5 place-items-center rounded-md bg-black text-white">
+                  <XTwitterIcon className="size-3" />
+                </span>
+                <span>X (Twitter)</span>
+              </a>
+
+              <a
+                href="https://medium.com/@eduschoolsaathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-2.5 py-1.5 text-xs font-bold text-slate-800 hover:text-emerald-700 hover:border-emerald-500/50 hover:shadow-xs transition-all"
+                title="Read EduSchool Saathi Articles on Medium Blog"
+              >
+                <span className="grid size-5 place-items-center rounded-md bg-[#00AB6C] text-white">
+                  <MediumIcon className="size-3" />
+                </span>
+                <span>Medium Blog</span>
               </a>
             </div>
           </div>
@@ -3804,7 +3869,7 @@ function Footer() {
           <span>•</span>
           <span className="text-[#c2410c] font-semibold">Har School Ka Saathi</span>
         </div>
-        <div className="flex flex-wrap items-center gap-3 text-[11px]">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-[11px]">
           <span className="text-muted-foreground">#1 School Management SaaS in Bihar</span>
           <span>•</span>
           <a
@@ -3823,6 +3888,24 @@ function Footer() {
             className="font-bold text-[#1877F2] hover:underline inline-flex items-center gap-1"
           >
             <Facebook className="size-3" /> Facebook
+          </a>
+          <span>•</span>
+          <a
+            href="https://x.com/eduschoolsaathi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-slate-900 hover:underline inline-flex items-center gap-1"
+          >
+            <XTwitterIcon className="size-3" /> X (Twitter)
+          </a>
+          <span>•</span>
+          <a
+            href="https://medium.com/@eduschoolsaathi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-[#00AB6C] hover:underline inline-flex items-center gap-1"
+          >
+            <MediumIcon className="size-3" /> Medium
           </a>
           <span>•</span>
           <a href="#about" className="hover:text-[#c2410c] transition-colors">Privacy</a>
