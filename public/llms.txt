@@ -16,6 +16,8 @@ EduSchool Saathi (branded as **EduSchool-Saathi** or **हर स्कूल �
 - **Helpdesk & Inquiries:**
   - Phone: +91 62000 87830 / +91 99342 76622 / +91 94700 74183
   - Email: eduschoolsaathi@gmail.com
+  - Instagram: https://www.instagram.com/eduschool_saathi (@eduschool_saathi)
+  - Facebook Page: https://www.facebook.com/people/EduSchool-Saathi/61595015457438/
   - Codebase & Open Source Presence: https://github.com/abhishekkumar62000/EduSchool-Saathi-SAAS-Platform
 
 ## 3. Core Capabilities & Breakthrough Features

@@ -19,6 +19,9 @@ EduSchool Saathi was built to eliminate the massive administrative friction that
 - **Core Coverage Districts in Bihar:** Madhubani, Darbhanga, Patna, Muzaffarpur, Samastipur, Purnia, Gaya, Bhagalpur, Begusarai, Sitamarhi, Saharsa, and expanding all across India.
 - **Support & Sales Hotline:** +91 62000 87830 / +91 99342 76622 / +91 94700 74183
 - **Official Support Email:** eduschoolsaathi@gmail.com
+- **Official Social Media Channels:**
+  - Instagram: https://www.instagram.com/eduschool_saathi (@eduschool_saathi)
+  - Facebook Page: https://www.facebook.com/people/EduSchool-Saathi/61595015457438/
 
 ## Corporate & Technical Leadership
 - **Founder & Chief Architect:** Abhishek Kumar
@@ -53,3 +56,5 @@ EduSchool Saathi was built to eliminate the massive administrative friction that
 - Pricing & Tiers: https://eduschoolsaathi.org/#pricing
 - About & Mission: https://eduschoolsaathi.org/#about
 - Contact Us: https://eduschoolsaathi.org/#contact
+- Instagram: https://www.instagram.com/eduschool_saathi
+- Facebook: https://www.facebook.com/people/EduSchool-Saathi/61595015457438/

@@ -7,7 +7,7 @@ import {
   Library, LockKeyhole, Mail, MapPin, Menu, MessageCircle, MonitorSmartphone,
   Package, Phone, Play, Route as RouteIcon, School, Search, Settings, ShieldCheck,
   Sparkles, Star, TrendingUp, UserCheck, Users, X, Zap, Award, CheckCheck,
-  XCircle, Flame, Target, Compass
+  XCircle, Flame, Target, Compass, Instagram, Facebook
 } from "lucide-react";
 import schoolImage from "../assets/bihar-school-classroom.jpg";
 import logoImg from "../assets/logo-optimized.png";
@@ -3584,17 +3584,17 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
             <Mail className="size-4" /> Contact EduSchool-Saathi
           </a>
         </div>
-        <div className="mx-auto mt-10 grid max-w-4xl gap-4 text-left grid-cols-1 sm:grid-cols-3 lg:mx-0">
-          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur">
+        <div className="mx-auto mt-10 grid max-w-5xl gap-4 text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:mx-0">
+          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur shadow-xs">
             <div className="flex items-center gap-2 text-brand-warm">
               <MapPin className="size-4" />
               <b className="text-xs uppercase tracking-wider">Office Address</b>
             </div>
             <p className="mt-2 text-xs font-bold text-foreground">Bara Bazar Madhubani</p>
-            <span className="text-[11px] text-muted-foreground block mt-0.5">Bihar, India</span>
+            <span className="text-[11px] text-muted-foreground block mt-0.5">Bihar 847211, India</span>
           </div>
 
-          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur">
+          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur shadow-xs">
             <div className="flex items-center gap-2 text-brand-warm">
               <Phone className="size-4" />
               <b className="text-xs uppercase tracking-wider">Call / WhatsApp</b>
@@ -3607,12 +3607,12 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
                 +91 99342 76622
               </a>
               <a href="tel:94700741183" className="block text-xs font-bold text-sky-700 hover:text-[#c2410c] transition-colors">
-                +91 94700 74183 / 94700741183
+                +91 94700 74183
               </a>
             </div>
           </div>
 
-          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur">
+          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur shadow-xs">
             <div className="flex items-center gap-2 text-brand-warm">
               <Mail className="size-4" />
               <b className="text-xs uppercase tracking-wider">Official Email</b>
@@ -3624,6 +3624,40 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
               eduschoolsaathi@gmail.com
             </a>
             <span className="text-[11px] text-muted-foreground block mt-0.5">Instant response for schools</span>
+          </div>
+
+          <div className="cta-contact-card rounded-2xl border border-slate-200 bg-white/85 p-4 backdrop-blur shadow-xs">
+            <div className="flex items-center gap-2 text-brand-warm">
+              <span className="size-2 rounded-full bg-[#138808] animate-pulse" />
+              <b className="text-xs uppercase tracking-wider">Official Social Pages</b>
+            </div>
+            <div className="mt-2 space-y-2">
+              <a
+                href="https://www.instagram.com/eduschool_saathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-xs font-bold text-foreground hover:text-pink-600 transition-colors"
+                title="Follow EduSchool Saathi on Instagram"
+              >
+                <span className="grid size-6 shrink-0 place-items-center rounded-md bg-gradient-to-tr from-[#FD1D1D] via-[#E1306C] to-[#833AB4] text-white shadow-xs group-hover:scale-110 transition-transform">
+                  <Instagram className="size-3.5" />
+                </span>
+                <span className="truncate">@eduschool_saathi ↗</span>
+              </a>
+
+              <a
+                href="https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-xs font-bold text-foreground hover:text-blue-600 transition-colors"
+                title="Follow EduSchool Saathi on Facebook"
+              >
+                <span className="grid size-6 shrink-0 place-items-center rounded-md bg-[#1877F2] text-white shadow-xs group-hover:scale-110 transition-transform">
+                  <Facebook className="size-3.5" />
+                </span>
+                <span className="truncate">Facebook Page ↗</span>
+              </a>
+            </div>
           </div>
         </div>
         </div>
@@ -3638,7 +3672,7 @@ function Footer() {
     { t: "Platform", a: [["About Platform", "#about"], ["25+ Schools Network", "/schools-network"], ["Partners", "#ecosystem"], ["All Features", "#features"], ["How It Works", "#how-it-works"], ["Pricing Plans", "#pricing"]] },
     { t: "Portals", a: [["School Management", "#roles"], ["Teacher Portal", "#roles"], ["Student Dashboard", "#roles"], ["Parent App", "#roles"]] },
     { t: "Resources", a: [["FAQ", "#faq"], ["Request Demo", "#home"], ["School Benefits", "#benefits"], ["Contact Us", "#contact"]] },
-    { t: "Ecosystem", a: [["Sehaat Saathi App", "https://sehaat-saathi.vercel.app/"], ["TechSeva IT Solutions", "https://techseva-it-solutions.vercel.app/"], ["Privacy Policy", "#about"], ["Terms of Service", "#about"]] },
+    { t: "Ecosystem", a: [["Sehaat Saathi App", "https://sehaat-saathi.vercel.app/"], ["TechSeva IT Solutions", "https://techseva-it-solutions.vercel.app/"], ["Instagram (@eduschool_saathi)", "https://www.instagram.com/eduschool_saathi"], ["Facebook Page", "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"], ["Privacy Policy", "#about"]] },
   ];
 
   return (
@@ -3677,6 +3711,44 @@ function Footer() {
                 className="font-bold text-foreground hover:text-sky-700 underline underline-offset-2 transition-colors inline-flex items-center gap-1"
               >
                 TechSeva IT Solutions Agency <ExternalLink className="size-2.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Official Social Media Channels — Highlighted Card */}
+          <div className="mt-5 max-w-sm rounded-2xl border border-slate-200 bg-white/85 p-3.5 shadow-soft">
+            <span className="text-[11px] font-black uppercase tracking-wider text-foreground flex items-center gap-1.5">
+              <span className="size-2 rounded-full bg-[#138808] animate-pulse" /> Official Social Channels
+            </span>
+            <div className="mt-2.5 flex flex-wrap items-center gap-2">
+              <a
+                href="https://www.instagram.com/eduschool_saathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 rounded-xl border border-pink-500/25 bg-gradient-to-r from-pink-500/10 via-rose-500/10 to-amber-500/10 px-3 py-1.5 text-xs font-bold text-slate-800 hover:text-pink-600 hover:border-pink-500/50 hover:shadow-xs transition-all"
+                title="Follow EduSchool Saathi on Instagram: @eduschool_saathi"
+              >
+                <span className="grid size-5 place-items-center rounded-md bg-gradient-to-tr from-[#FD1D1D] via-[#E1306C] to-[#833AB4] text-white">
+                  <Instagram className="size-3" />
+                </span>
+                <span>Instagram</span>
+                <span className="text-[9px] font-extrabold text-[#E4405F] bg-white/80 px-1.5 py-0.5 rounded-full border border-pink-200">
+                  @eduschool_saathi
+                </span>
+              </a>
+
+              <a
+                href="https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 rounded-xl border border-blue-500/25 bg-blue-500/10 px-3 py-1.5 text-xs font-bold text-slate-800 hover:text-blue-700 hover:border-blue-500/50 hover:shadow-xs transition-all"
+                title="Official Facebook Page of EduSchool Saathi"
+              >
+                <span className="grid size-5 place-items-center rounded-md bg-[#1877F2] text-white">
+                  <Facebook className="size-3" />
+                </span>
+                <span>Facebook Page</span>
+                <ExternalLink className="size-2.5 opacity-60 group-hover:opacity-100" />
               </a>
             </div>
           </div>
@@ -3732,8 +3804,26 @@ function Footer() {
           <span>•</span>
           <span className="text-[#c2410c] font-semibold">Har School Ka Saathi</span>
         </div>
-        <div className="flex flex-wrap items-center gap-4 text-[11px]">
+        <div className="flex flex-wrap items-center gap-3 text-[11px]">
           <span className="text-muted-foreground">#1 School Management SaaS in Bihar</span>
+          <span>•</span>
+          <a
+            href="https://www.instagram.com/eduschool_saathi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-[#E4405F] hover:underline inline-flex items-center gap-1"
+          >
+            <Instagram className="size-3" /> Instagram
+          </a>
+          <span>•</span>
+          <a
+            href="https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-[#1877F2] hover:underline inline-flex items-center gap-1"
+          >
+            <Facebook className="size-3" /> Facebook
+          </a>
           <span>•</span>
           <a href="#about" className="hover:text-[#c2410c] transition-colors">Privacy</a>
           <span>•</span>

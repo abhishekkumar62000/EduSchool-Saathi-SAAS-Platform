@@ -258,6 +258,8 @@ const schemaJsonLd = {
       "sameAs": [
         "https://eduschoolsaathi.org",
         "https://app.eduschoolsaathi.org/login",
+        "https://www.instagram.com/eduschool_saathi",
+        "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/",
         "https://eduschool-saathi.vercel.app/",
         "https://github.com/abhishekkumar62000/EduSchool-Saathi-SAAS-Platform",
         "https://sehaat-saathi.vercel.app/",
@@ -502,6 +504,8 @@ const schemaJsonLd = {
       "sameAs": [
         "https://eduschoolsaathi.org",
         "https://app.eduschoolsaathi.org/login",
+        "https://www.instagram.com/eduschool_saathi",
+        "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/",
         "https://github.com/abhishekkumar62000/EduSchool-Saathi-SAAS-Platform"
       ],
       "aggregateRating": {
