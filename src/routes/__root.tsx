@@ -261,6 +261,7 @@ const schemaJsonLd = {
         "https://app.eduschoolsaathi.org/login",
         "https://x.com/eduschoolsaathi",
         "https://medium.com/@eduschoolsaathi",
+        "https://www.quora.com/profile/EduSchool-Saathi",
         "https://www.instagram.com/eduschool_saathi",
         "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/",
         "https://eduschool-saathi.vercel.app/",
@@ -509,6 +510,7 @@ const schemaJsonLd = {
         "https://app.eduschoolsaathi.org/login",
         "https://x.com/eduschoolsaathi",
         "https://medium.com/@eduschoolsaathi",
+        "https://www.quora.com/profile/EduSchool-Saathi",
         "https://www.instagram.com/eduschool_saathi",
         "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/",
         "https://github.com/abhishekkumar62000/EduSchool-Saathi-SAAS-Platform"

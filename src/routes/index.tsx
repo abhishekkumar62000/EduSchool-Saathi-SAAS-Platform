@@ -83,22 +83,126 @@ const roles = {
   Parent: { icon: HeartHandshake, copy: "Stay connected with your child's complete school journey.", stats: [["Attendance", "95%"], ["Fee status", "Paid"], ["Homework", "4"], ["Notices", "2"]], tasks: ["Attendance updated today", "New English homework", "Exam schedule published"] },
 };
 
-const faqs = [
- ["What is EduSchool-Saathi?", "EduSchool-Saathi (eduschoolsaathi.org) is Bihar's #1 complete digital school management ERP and SaaS platform that brings administration, teachers, students, and parents together in one unified cloud system."],
- ["Who is the founder of EduSchool-Saathi?", "EduSchool-Saathi was founded by Abhishek Kumar, Chief Technology Architect, headquartered in Bara Bazar Madhubani, Bihar. It is sponsored by Sehaat Saathi App and powered by TechSeva IT Solutions."],
- ["Is EduSchool-Saathi suitable for small and rural schools?", "Yes. EduSchool-Saathi is specifically designed for ground realities in Bihar's rural and semi-urban schools. It works on basic smartphones over 3G/4G networks with zero hardware investment."],
- ["Can multiple schools use the platform independently?", "Yes. Multiple schools operate via the centralized Super Admin hub while maintaining 100% separate, encrypted, and isolated database environments."],
- ["Can each school have separate admin access?", "Yes. Each school has its own School Admin credentials with granular role-based permissions for admissions, fee collection, staff management, and exams."],
- ["Can teachers, students and parents have separate accounts?", "Yes. The platform provides 4 distinct role portals: Super Admin, School Admin, Teacher Portal, and Student & Parent Portal."],
- ["Can schools manage attendance digitally?", "Yes. EduSchool-Saathi's 10-second attendance rollcall engine marks a full class on any phone and instantly sends WhatsApp/SMS absence alerts to parents."],
- ["Can schools manage fees and generate WhatsApp receipts?", "Yes. Schools can configure customizable fee structures, track paid and pending dues, and issue 1-click branded PDF fee receipts with instant WhatsApp delivery to parents."],
- ["Can schools manage examinations and generate CBSE report cards?", "Yes. Exam schedules, marks entry, grades, automated ranking, and CBSE/Bihar Board compliant marksheet report cards are generated digitally."],
- ["Can parents see their child's academic updates?", "Yes. Parents can view real-time daily attendance, fee ledger status, homework assignments, test marks, exam timetables, and official school notices on their mobile phone."],
- ["Is EduSchool-Saathi suitable for CBSE and Bihar State Board schools?", "Yes. It supports Pre-Nursery through Class 12 with compliant grading rubrics for CBSE, ICSE, and Bihar School Examination Board (BSEB/Bihar Board) standards."],
- ["What is the pricing for EduSchool-Saathi school ERP?", "Plans start from ₹5,000 per month for the Starter School ERP and ₹9,500 per month for the Standard Pro Cloud tier. Zero upfront setup fees."],
- ["How can my school request a free live demo or trial?", "Visit https://eduschoolsaathi.org/#trial or log in at https://app.eduschoolsaathi.org/login, or call the helpdesk at +91 62000 87830 for an instant school demo."],
- ["Does EduSchool-Saathi work on mobile phones and tablets?", "Yes. EduSchool-Saathi is a 100% mobile-first Progressive Web App (PWA) that works on any Android or iOS phone, tablet, laptop, or desktop without downloading any app."],
- ["What is the official website of EduSchool-Saathi?", "The official website is https://eduschoolsaathi.org/ and the live login & trial portal is https://app.eduschoolsaathi.org/login."],
+interface FAQItem {
+  q: string;
+  a: string;
+  category: "Platform" | "Attendance" | "Fees & Exams" | "Pricing & Trial";
+  takeaway: string;
+  linkText?: string;
+  linkHref?: string;
+}
+
+const faqs: FAQItem[] = [
+  {
+    category: "Platform",
+    q: "What is EduSchool-Saathi?",
+    a: "EduSchool-Saathi (eduschoolsaathi.org) is Bihar's #1 complete digital school management ERP and SaaS platform that brings administration, teachers, students, and parents together in one unified cloud system.",
+    takeaway: "All-in-one multi-school cloud ERP engineered specifically for schools in Bihar & India.",
+    linkText: "Explore Role Portals",
+    linkHref: "#roles",
+  },
+  {
+    category: "Platform",
+    q: "Who is the founder of EduSchool-Saathi?",
+    a: "EduSchool-Saathi was founded by Abhishek Kumar, Chief Technology Architect, headquartered in Bara Bazar Madhubani, Bihar. It is sponsored by Sehaat Saathi App and powered by TechSeva IT Solutions Agency.",
+    takeaway: "Founded by Abhishek Kumar in Bara Bazar Madhubani, backed by Sehaat Saathi and TechSeva.",
+    linkText: "Meet the Founder",
+    linkHref: "#contact",
+  },
+  {
+    category: "Platform",
+    q: "Is EduSchool-Saathi suitable for small and rural schools?",
+    a: "Yes. EduSchool-Saathi is specifically engineered for ground realities in Bihar's rural and semi-urban schools. It works smoothly on basic smartphones over standard 3G/4G connections with zero expensive server or computer hardware investment.",
+    takeaway: "100% lightweight and cloud-native; runs reliably on basic smartphones with zero hardware cost.",
+    linkText: "View School Benefits",
+    linkHref: "#benefits",
+  },
+  {
+    category: "Platform",
+    q: "Can multiple schools use the platform independently?",
+    a: "Yes. Multiple schools operate via the centralized Super Admin hub while maintaining 100% separate, encrypted, and isolated database environments for complete data privacy and institutional independence.",
+    takeaway: "Centralized governance with 100% isolated, encrypted multi-tenant databases.",
+    linkText: "View 25+ Schools Network",
+    linkHref: "/schools-network",
+  },
+  {
+    category: "Platform",
+    q: "Can each school have separate admin access?",
+    a: "Yes. Each school receives its own dedicated School Admin credentials with granular role-based permissions for admissions, fee collection, staff management, examinations, and notice boards.",
+    takeaway: "Granular Role-Based Access Control (RBAC) ensures complete administrative privacy.",
+  },
+  {
+    category: "Attendance",
+    q: "Can teachers, students and parents have separate accounts?",
+    a: "Yes. The platform provides 4 distinct, purpose-built role portals: Super Admin, School Admin, Teacher Portal, and Student & Parent Portal, each tailored with dedicated dashboards and mobile workflows.",
+    takeaway: "4 custom web portals designed specifically for teachers, students, parents, and school admins.",
+    linkText: "Explore 4 Portals",
+    linkHref: "#roles",
+  },
+  {
+    category: "Attendance",
+    q: "Can schools manage attendance digitally on mobile phones?",
+    a: "Yes. EduSchool-Saathi features a proprietary 10-second attendance rollcall engine that marks a full class of 50+ students on any phone and automatically sends instant WhatsApp and SMS absence alerts to parents.",
+    takeaway: "Mark 50+ students in under 10 seconds with automated instant WhatsApp absence notifications.",
+    linkText: "See Attendance Features",
+    linkHref: "#features",
+  },
+  {
+    category: "Attendance",
+    q: "Does EduSchool-Saathi work on mobile phones and tablets?",
+    a: "Yes. EduSchool-Saathi is a 100% mobile-first Progressive Web App (PWA) that works seamlessly on any Android or iOS smartphone, tablet, laptop, or desktop without downloading bulky apps from app stores.",
+    takeaway: "Zero download required — open any mobile browser and get full ERP capability instantly.",
+  },
+  {
+    category: "Fees & Exams",
+    q: "Can schools manage fees and generate instant WhatsApp receipts?",
+    a: "Yes. Schools can configure customizable fee structures (monthly, quarterly, transport, admission), track paid and pending dues in real time, and issue 1-click branded PDF fee receipts with instant WhatsApp delivery to parents.",
+    takeaway: "Eliminate fee leakage with 1-click branded WhatsApp PDF receipts and automated due reminders.",
+    linkText: "Check Fee Management",
+    linkHref: "#features",
+  },
+  {
+    category: "Fees & Exams",
+    q: "Can schools manage examinations and generate CBSE report cards?",
+    a: "Yes. Exam schedules, marks entry, grades, automated merit ranking, and CBSE/Bihar Board compliant marksheet report cards with school logos and signatures are generated digitally in 1 click.",
+    takeaway: "Automated grading, percentages, and instant CBSE & BSEB compliant marksheet PDF printing.",
+  },
+  {
+    category: "Fees & Exams",
+    q: "Can parents see their child's academic updates?",
+    a: "Yes. Parents can view real-time daily attendance, fee ledger status, homework assignments, test marks, exam timetables, and official school notices directly on their mobile phones in Hindi or English.",
+    takeaway: "Bilingual, transparent parent portal keeping parents informed 24/7 on attendance and exams.",
+  },
+  {
+    category: "Fees & Exams",
+    q: "Is EduSchool-Saathi suitable for CBSE and Bihar State Board schools?",
+    a: "Yes. It supports Pre-Nursery through Class 12 with compliant grading rubrics for CBSE, ICSE, and Bihar School Examination Board (BSEB/Bihar Board) standards, as well as state curriculum frameworks.",
+    takeaway: "Pre-Nursery to 12th standard curriculum coverage across CBSE, ICSE, and Bihar State Boards.",
+  },
+  {
+    category: "Pricing & Trial",
+    q: "What is the pricing for EduSchool-Saathi school ERP?",
+    a: "Plans start from ₹3,499/month (₹29,000/year one-time) for the Starter School ERP and ₹6,999/month (₹59,000/year one-time) for the Standard Pro Cloud tier (0–700 students). Zero upfront setup fees and zero hidden charges.",
+    takeaway: "Affordable transparent pricing with significant annual savings and zero upfront setup fees.",
+    linkText: "View Pricing Plans",
+    linkHref: "#pricing",
+  },
+  {
+    category: "Pricing & Trial",
+    q: "How can my school request a free live demo or trial?",
+    a: "Visit https://eduschoolsaathi.org/#trial or log in at https://app.eduschoolsaathi.org/login, or call/WhatsApp the Madhubani HQ helpdesk at +91 62000 87830 for an instant 14-day free school onboarding demo.",
+    takeaway: "14-day free trial with full feature access and dedicated onsite/online staff onboarding.",
+    linkText: "Request 14-Day Free Trial ↗",
+    linkHref: "https://eduschoolsaathi.org/#trial",
+  },
+  {
+    category: "Pricing & Trial",
+    q: "What are the official website and social blog channels?",
+    a: "The official website is https://eduschoolsaathi.org/ and the live app is https://app.eduschoolsaathi.org/login. Official community and publication pages include Quora (quora.com/profile/EduSchool-Saathi), Medium (@eduschoolsaathi), Twitter X (@eduschoolsaathi), Instagram (@eduschool_saathi), and Facebook.",
+    takeaway: "Official verified presence on Quora Blog, Medium, Twitter X, Instagram, and Facebook.",
+    linkText: "Visit Quora Blog Page ↗",
+    linkHref: "https://www.quora.com/profile/EduSchool-Saathi",
+  },
 ];
 
 function TricolorBrandText({ size = "text-sm sm:text-base" }: { size?: string }) {
@@ -124,6 +228,14 @@ function MediumIcon({ className = "size-3.5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
       <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.74 1.19-5.74c.66 0 1.19 2.57 1.19 5.74" />
+    </svg>
+  );
+}
+
+function QuoraIcon({ className = "size-3.5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12.729 18.025c-.71 0-1.397-.075-2.03-.223-.746 1.488-1.996 2.47-3.479 2.766-.464.093-.93.072-1.378-.052-.395-.11-.532-.423-.393-.787.288-.756.974-1.745 1.583-2.618C5.234 15.69 4 13.565 4 10.97 4 5.926 7.915 2 12.729 2 17.554 2 21.469 5.926 21.469 10.97c0 5.044-3.915 9.055-8.74 9.055zm.081-14.156c-3.793 0-6.879 3.176-6.879 7.101 0 2.217 1.01 4.195 2.593 5.485.228.185.348.473.308.761-.09.645-.378 1.492-.767 2.215.89-.356 1.636-1.127 2.115-2.222.128-.293.424-.467.742-.429.62.075 1.25.115 1.888.115 3.793 0 6.879-3.176 6.879-7.025 0-3.849-3.086-7.001-6.879-7.001z" />
     </svg>
   );
 }
@@ -3502,7 +3614,30 @@ function WhyAndPrivacy() {
 }
 
 function FAQ() {
-  const [open, setOpen] = useState(0);
+  const [activeTab, setActiveTab] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const categories = [
+    { id: "All", label: "✨ All Questions", count: faqs.length },
+    { id: "Platform", label: "🏫 Platform & Founder", count: faqs.filter(f => f.category === "Platform").length },
+    { id: "Attendance", label: "📱 Attendance & Mobile", count: faqs.filter(f => f.category === "Attendance").length },
+    { id: "Fees & Exams", label: "💳 Fees & CBSE Exams", count: faqs.filter(f => f.category === "Fees & Exams").length },
+    { id: "Pricing & Trial", label: "🚀 Pricing & Free Trial", count: faqs.filter(f => f.category === "Pricing & Trial").length },
+  ];
+
+  const filteredFaqs = faqs.filter((faq) => {
+    const matchesCategory = activeTab === "All" || faq.category === activeTab;
+    const q = searchQuery.toLowerCase().trim();
+    if (!q) return matchesCategory;
+    const matchesQuery =
+      faq.q.toLowerCase().includes(q) ||
+      faq.a.toLowerCase().includes(q) ||
+      faq.takeaway.toLowerCase().includes(q) ||
+      faq.category.toLowerCase().includes(q);
+    return matchesCategory && matchesQuery;
+  });
+
   return (
     <section
       id="faq"
@@ -3510,53 +3645,290 @@ function FAQ() {
       aria-label="Frequently Asked Questions about EduSchool Saathi"
     >
       <div className="absolute inset-x-0 top-0 h-1 tricolor-sheen" />
-      <div className="container grid gap-10 lg:grid-cols-[.7fr_1.3fr]">
-        <SectionTitle
-          eyebrow="Questions, answered"
-          title="Everything You Need to Know about EduSchool Saathi"
-          copy="Clear answers for school owners, principals, and directors exploring EduSchool-Saathi School ERP for Bihar and India."
-        />
-        {/* dl/dt/dd = semantic FAQ markup that Google uses for rich results */}
-        <dl className="faq-list rounded-2xl border border-slate-200 bg-white/85 p-3 shadow-card" itemScope itemType="https://schema.org/FAQPage">
-          {faqs.map(([q, a], i) => (
-            <div
-              key={q}
-              className={`faq-item rounded-xl border transition-all ${open === i ? "border-[#138808]/30 bg-emerald-50/50" : "border-transparent"}`}
-              itemScope
-              itemType="https://schema.org/Question"
-            >
-              <dt>
-                <button
-                  type="button"
-                  id={`faq-btn-${i}`}
-                  aria-expanded={open === i}
-                  aria-controls={`faq-panel-${i}`}
-                  className="flex min-h-14 w-full items-center justify-between gap-4 px-4 py-4 text-left text-sm font-bold text-foreground"
-                  onClick={() => setOpen(open === i ? -1 : i)}
-                  itemProp="name"
-                >
-                  <span className="flex items-center gap-3">
-                    <span className={`grid size-7 shrink-0 place-items-center rounded-full text-[10px] font-black ${open === i ? "bg-[#138808] text-white" : "bg-orange-50 text-[#c2410c]"}`}>
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    {q}
-                  </span>
-                  <ChevronDown className={`size-4 shrink-0 transition ${open === i ? "rotate-180 text-[#138808]" : "text-muted-foreground"}`} />
-                </button>
-              </dt>
-              <dd
-                id={`faq-panel-${i}`}
-                role="region"
-                aria-labelledby={`faq-btn-${i}`}
-                className={`grid transition-all ${open === i ? "grid-rows-[1fr] pb-4" : "grid-rows-[0fr]"}`}
-                itemScope
-                itemType="https://schema.org/Answer"
-              >
-                <p className="overflow-hidden px-14 text-sm leading-6 text-muted-foreground" itemProp="text">{a}</p>
-              </dd>
+      <div className="container grid gap-10 lg:grid-cols-[.78fr_1.22fr] items-start">
+        {/* Left Column: Heading & Quick Assistance Card */}
+        <div className="space-y-6 lg:sticky lg:top-24">
+          <SectionTitle
+            eyebrow="Questions, answered"
+            title="Everything You Need to Know about EduSchool Saathi"
+            copy="Clear, AI-verified answers for school owners, principals, and directors exploring Bihar's #1 School Management SaaS platform."
+          />
+
+          {/* Quick Helpdesk & Community Card */}
+          <div className="rounded-2xl border border-emerald-500/25 bg-white/90 p-5 shadow-card backdrop-blur-sm">
+            <div className="flex items-center gap-2 text-foreground font-black text-xs uppercase tracking-wider">
+              <span className="size-2 rounded-full bg-[#138808] animate-pulse" />
+              <span>Instant Helpdesk & Support</span>
             </div>
-          ))}
-        </dl>
+            <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+              Have a custom requirement or question not listed here? Talk directly to our onboarding team in Madhubani HQ.
+            </p>
+
+            <div className="mt-4 space-y-2">
+              <a
+                href="https://wa.me/916200087830?text=Hello%20EduSchool%20Saathi%20Team%2C%20I%20have%20a%20question%20regarding%20the%20platform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-2.5 text-xs font-bold text-emerald-900 hover:bg-emerald-500/20 transition-all group"
+              >
+                <span className="flex items-center gap-2">
+                  <MessageCircle className="size-4 text-[#138808]" />
+                  <span>WhatsApp Chat (+91 62000 87830)</span>
+                </span>
+                <ArrowRight className="size-3.5 text-emerald-700 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+              <a
+                href="tel:6200087830"
+                className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-xs font-bold text-foreground hover:border-[#138808]/40 hover:bg-green-50/50 transition-all group"
+              >
+                <span className="flex items-center gap-2">
+                  <Phone className="size-4 text-sky-700" />
+                  <span>Call Madhubani Helpdesk</span>
+                </span>
+                <span className="text-[11px] text-muted-foreground group-hover:text-foreground">62000 87830</span>
+              </a>
+
+              <a
+                href="https://www.quora.com/profile/EduSchool-Saathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between rounded-xl border border-red-500/25 bg-red-500/5 px-3.5 py-2.5 text-xs font-bold text-slate-800 hover:bg-red-500/10 transition-all group"
+              >
+                <span className="flex items-center gap-2">
+                  <span className="grid size-4 place-items-center rounded bg-[#B92B27] text-white">
+                    <QuoraIcon className="size-2.5" />
+                  </span>
+                  <span>Ask on Quora Community Blog</span>
+                </span>
+                <span className="text-[11px] text-[#B92B27] font-semibold">@EduSchool-Saathi ↗</span>
+              </a>
+
+              <a
+                href="https://eduschoolsaathi.org/#trial"
+                className="flex items-center justify-between rounded-xl border border-primary/20 bg-primary/5 px-3.5 py-2.5 text-xs font-bold text-primary hover:bg-primary/10 transition-all group"
+              >
+                <span className="flex items-center gap-2">
+                  <Sparkles className="size-4 text-[#FF671F]" />
+                  <span>Request 14-Day Free School Trial</span>
+                </span>
+                <ArrowRight className="size-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+            </div>
+
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-muted-foreground">
+              <span>⚡ Fast Response Time</span>
+              <span className="font-semibold text-emerald-700">Under 15 Mins</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: Search Bar, Category Filter Chips, and Accordion Cards */}
+        <div className="w-full min-w-0">
+          {/* Live Search Input */}
+          <div className="relative mb-3.5">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setOpenIndex(0);
+              }}
+              placeholder="Search answers (e.g. fees, attendance, pricing, CBSE, founder)..."
+              className="w-full rounded-2xl border border-slate-200 bg-white/90 pl-10 pr-10 py-3 text-xs sm:text-sm text-foreground placeholder:text-muted-foreground focus:border-[#138808] focus:outline-none focus:ring-2 focus:ring-[#138808]/20 shadow-xs transition-all"
+              aria-label="Search frequently asked questions"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery("")}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:bg-slate-100 hover:text-foreground transition-colors"
+                title="Clear search"
+                aria-label="Clear search query"
+              >
+                <X className="size-3.5" />
+              </button>
+            )}
+          </div>
+
+          {/* Horizontally scrollable Category Tabs on mobile */}
+          <div className="mb-4 flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none sm:flex-wrap">
+            {categories.map((cat) => {
+              const isActive = activeTab === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => {
+                    setActiveTab(cat.id);
+                    setOpenIndex(0);
+                  }}
+                  className={`whitespace-nowrap shrink-0 rounded-full px-3 py-1.5 text-xs font-bold transition-all ${
+                    isActive
+                      ? "bg-[#138808] text-white shadow-xs"
+                      : "bg-white/85 text-muted-foreground border border-slate-200 hover:border-[#138808]/40 hover:text-foreground"
+                  }`}
+                >
+                  {cat.label} ({cat.count})
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Results Count & Filter Status */}
+          <div className="mb-3 flex items-center justify-between text-[11px] text-muted-foreground px-1">
+            <span>
+              Showing <b className="text-foreground">{filteredFaqs.length}</b> of {faqs.length} verified answers
+            </span>
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery("")}
+                className="text-[#c2410c] hover:underline font-semibold"
+              >
+                Clear filter
+              </button>
+            )}
+          </div>
+
+          {/* Semantic Accordion List with Schema.org Microdata */}
+          {filteredFaqs.length > 0 ? (
+            <dl className="faq-list space-y-3" itemScope itemType="https://schema.org/FAQPage">
+              {filteredFaqs.map((item, i) => {
+                const isOpen = openIndex === i;
+                const badgeColor =
+                  item.category === "Platform"
+                    ? "bg-sky-50 text-sky-700 border-sky-200"
+                    : item.category === "Attendance"
+                    ? "bg-purple-50 text-purple-700 border-purple-200"
+                    : item.category === "Fees & Exams"
+                    ? "bg-amber-50 text-amber-800 border-amber-200"
+                    : "bg-emerald-50 text-emerald-800 border-emerald-200";
+
+                return (
+                  <div
+                    key={item.q}
+                    className={`faq-item rounded-2xl border transition-all duration-200 overflow-hidden ${
+                      isOpen
+                        ? "border-[#138808]/40 bg-white shadow-card ring-1 ring-[#138808]/15"
+                        : "border-slate-200 bg-white/80 hover:border-slate-300 hover:bg-white shadow-2xs"
+                    }`}
+                    itemScope
+                    itemType="https://schema.org/Question"
+                  >
+                    <dt>
+                      <button
+                        type="button"
+                        id={`faq-btn-${i}`}
+                        aria-expanded={isOpen}
+                        aria-controls={`faq-panel-${i}`}
+                        className="flex w-full items-start justify-between gap-3 p-4 text-left sm:items-center sm:gap-4 sm:p-5"
+                        onClick={() => setOpenIndex(isOpen ? null : i)}
+                        itemProp="name"
+                      >
+                        <div className="flex items-start sm:items-center gap-3 min-w-0">
+                          <span
+                            className={`grid size-7 shrink-0 place-items-center rounded-xl text-[10px] font-black transition-colors ${
+                              isOpen ? "bg-[#138808] text-white shadow-xs" : "bg-orange-50 text-[#c2410c]"
+                            }`}
+                          >
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className={`inline-block rounded-md border px-2 py-0.5 text-[9.5px] font-black uppercase tracking-wider ${badgeColor}`}>
+                                {item.category}
+                              </span>
+                            </div>
+                            <span className="block text-xs sm:text-sm font-bold text-foreground leading-snug">
+                              {item.q}
+                            </span>
+                          </div>
+                        </div>
+                        <span
+                          className={`grid size-7 shrink-0 place-items-center rounded-full transition-transform duration-200 ${
+                            isOpen ? "rotate-180 bg-emerald-50 text-[#138808]" : "bg-slate-100 text-muted-foreground"
+                          }`}
+                        >
+                          <ChevronDown className="size-4" />
+                        </span>
+                      </button>
+                    </dt>
+                    <dd
+                      id={`faq-panel-${i}`}
+                      role="region"
+                      aria-labelledby={`faq-btn-${i}`}
+                      className={`grid transition-all duration-200 ${
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      }`}
+                      itemScope
+                      itemType="https://schema.org/Answer"
+                    >
+                      <div className="overflow-hidden border-t border-slate-100 bg-slate-50/40 px-4 sm:px-6 py-4">
+                        {/* AI-Verified Badge */}
+                        <div className="mb-2.5 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-bold text-emerald-800">
+                          <Sparkles className="size-3 text-emerald-600" />
+                          <span>AI-Verified Knowledge • Official System Overview</span>
+                        </div>
+
+                        {/* Full Answer Content */}
+                        <p className="text-xs sm:text-sm leading-6 text-foreground font-normal" itemProp="text">
+                          {item.a}
+                        </p>
+
+                        {/* Key Takeaway Callout */}
+                        <div className="mt-3.5 flex items-start gap-2.5 rounded-xl border border-emerald-200/90 bg-gradient-to-r from-emerald-50 to-teal-50/50 p-3 text-emerald-950 shadow-2xs">
+                          <CheckCircle2 className="size-4 text-[#138808] shrink-0 mt-0.5" />
+                          <div className="space-y-0.5 min-w-0">
+                            <span className="block text-[9.5px] font-black uppercase tracking-wider text-emerald-800">
+                              Key Takeaway
+                            </span>
+                            <p className="text-xs font-semibold leading-relaxed">
+                              {item.takeaway}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Direct Action Link (if applicable) */}
+                        {item.linkText && item.linkHref && (
+                          <div className="mt-3.5 flex items-center justify-end">
+                            <a
+                              href={item.linkHref}
+                              {...(item.linkHref.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-sky-700 hover:text-[#c2410c] hover:border-[#c2410c]/30 shadow-xs transition-colors"
+                            >
+                              <span>{item.linkText}</span>
+                              <ArrowRight className="size-3" />
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    </dd>
+                  </div>
+                );
+              })}
+            </dl>
+          ) : (
+            <div className="rounded-2xl border border-dashed border-slate-300 bg-white/60 p-8 text-center">
+              <Search className="mx-auto size-8 text-muted-foreground mb-3" />
+              <h4 className="font-display font-bold text-foreground text-sm">No matching questions found</h4>
+              <p className="text-xs text-muted-foreground mt-1 max-w-sm mx-auto">
+                We couldn't find any questions matching "{searchQuery}". Try searching for fees, attendance, CBSE, or WhatsApp us directly.
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchQuery("");
+                  setActiveTab("All");
+                }}
+                className="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-slate-900 text-white px-4 py-2 text-xs font-bold hover:bg-slate-800 transition-colors"
+              >
+                Reset Search Filters
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
@@ -3699,6 +4071,19 @@ function FinalCta({ openDemo }: { openDemo: () => void }) {
                 </span>
                 <span className="truncate">Medium Blog ↗</span>
               </a>
+
+              <a
+                href="https://www.quora.com/profile/EduSchool-Saathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-xs font-bold text-foreground hover:text-[#B92B27] transition-colors"
+                title="Read and Ask Questions on EduSchool Saathi Quora Blog Page"
+              >
+                <span className="grid size-6 shrink-0 place-items-center rounded-md bg-[#B92B27] text-white shadow-xs group-hover:scale-110 transition-transform">
+                  <QuoraIcon className="size-3.5" />
+                </span>
+                <span className="truncate">Quora Blog ↗</span>
+              </a>
             </div>
             <span className="text-[10px] text-muted-foreground block mt-2 border-t border-slate-100 pt-1.5">Official Verified Channels</span>
           </div>
@@ -3715,7 +4100,7 @@ function Footer() {
     { t: "Platform", a: [["About Platform", "#about"], ["25+ Schools Network", "/schools-network"], ["Partners", "#ecosystem"], ["All Features", "#features"], ["How It Works", "#how-it-works"], ["Pricing Plans", "#pricing"]] },
     { t: "Portals", a: [["School Management", "#roles"], ["Teacher Portal", "#roles"], ["Student Dashboard", "#roles"], ["Parent App", "#roles"]] },
     { t: "Resources", a: [["FAQ", "#faq"], ["Request Demo", "#home"], ["School Benefits", "#benefits"], ["Contact Us", "#contact"]] },
-    { t: "Ecosystem", a: [["Sehaat Saathi App", "https://sehaat-saathi.vercel.app/"], ["TechSeva IT Solutions", "https://techseva-it-solutions.vercel.app/"], ["Twitter / X (@eduschoolsaathi)", "https://x.com/eduschoolsaathi"], ["Medium Blog (@eduschoolsaathi)", "https://medium.com/@eduschoolsaathi"], ["Instagram (@eduschool_saathi)", "https://www.instagram.com/eduschool_saathi"], ["Facebook Page", "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"], ["Privacy Policy", "#about"]] },
+    { t: "Ecosystem", a: [["Sehaat Saathi App", "https://sehaat-saathi.vercel.app/"], ["TechSeva IT Solutions", "https://techseva-it-solutions.vercel.app/"], ["Quora Blog (@EduSchool-Saathi)", "https://www.quora.com/profile/EduSchool-Saathi"], ["Medium Blog (@eduschoolsaathi)", "https://medium.com/@eduschoolsaathi"], ["Twitter / X (@eduschoolsaathi)", "https://x.com/eduschoolsaathi"], ["Instagram (@eduschool_saathi)", "https://www.instagram.com/eduschool_saathi"], ["Facebook Page", "https://www.facebook.com/people/EduSchool-Saathi/61595015457438/"], ["Privacy Policy", "#about"]] },
   ];
 
   return (
@@ -3764,6 +4149,19 @@ function Footer() {
               <span className="size-2 rounded-full bg-[#138808] animate-pulse" /> Official Social Channels
             </span>
             <div className="mt-2.5 flex flex-wrap items-center gap-2">
+              <a
+                href="https://www.quora.com/profile/EduSchool-Saathi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 rounded-xl border border-red-500/25 bg-red-500/10 px-2.5 py-1.5 text-xs font-bold text-slate-800 hover:text-[#B92B27] hover:border-red-500/50 hover:shadow-xs transition-all"
+                title="EduSchool Saathi Official Quora Blog Page"
+              >
+                <span className="grid size-5 place-items-center rounded-md bg-[#B92B27] text-white">
+                  <QuoraIcon className="size-3" />
+                </span>
+                <span>Quora</span>
+              </a>
+
               <a
                 href="https://www.instagram.com/eduschool_saathi"
                 target="_blank"
@@ -3850,7 +4248,7 @@ function Footer() {
                   </a>
                 ))}
               </div>
-              </div>
+            </div>
             </div>
           ))}
         </nav>
@@ -3871,6 +4269,15 @@ function Footer() {
         </div>
         <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-[11px]">
           <span className="text-muted-foreground">#1 School Management SaaS in Bihar</span>
+          <span>•</span>
+          <a
+            href="https://www.quora.com/profile/EduSchool-Saathi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-[#B92B27] hover:underline inline-flex items-center gap-1"
+          >
+            <QuoraIcon className="size-3" /> Quora Blog
+          </a>
           <span>•</span>
           <a
             href="https://www.instagram.com/eduschool_saathi"
